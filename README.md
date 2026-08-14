@@ -17,3 +17,7 @@ A simple list of accessibility, assistive technology, universal design, and incl
 - Add events as plain Markdown table rows so the list stays easy to edit in GitHub.
 - Keep the scope focused. General UX, web, product, design, and tech conferences should only be listed when their published programme includes accessibility or inclusion tracks/talks.
 - Use `TBD` when price, date, or location is not confirmed.
+
+## License
+
+Except where otherwise noted, original content in this repository is licensed under the [Creative Commons Attribution 4.0 International License](LICENSE). This license does not apply to linked third-party content, trademarks, or quoted material owned by others.
