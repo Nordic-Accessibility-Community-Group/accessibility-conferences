@@ -1,0 +1,367 @@
+calendar:
+  name: Nordic accessibility conferences and events
+  description: Accessibility, assistive technology, universal design and inclusive design events worth tracking.
+  public_url: https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/
+
+conferences:
+  - id: atia-2026
+    name: ATIA 2026
+    start_date: "2026-01-29"
+    end_date: "2026-01-31"
+    location: Orlando, Florida, United States and online
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Assistive Technology Industry Association
+    url: https://www.atia.org/26conference/
+    description: The Assistive Technology Industry Association conference for assistive technology practitioners, users and suppliers.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: iaap-eu-vially-2026
+    name: IAAP EU and Vially Accessibility Hybrid Event
+    start_date: "2026-02-04"
+    end_date: "2026-02-05"
+    location: Dublin, Ireland and online
+    country_code: "IE"
+    attendance:
+      onsite: true
+      online: true
+    organizer: IAAP EU and Vially
+    url: https://www.accessibilityassociation.org/iaap-eu-event-2026
+    description: A hybrid event focused on digital accessibility.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: accessible-emergency-preparedness-2026
+    name: "Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness"
+    start_date: "2026-02-18"
+    end_date: "2026-02-18"
+    start_time: "16:30"
+    end_time: "19:30"
+    time_zone: Europe/Vienna
+    location: United Nations Office at Vienna, Austria and online
+    country_code: "AT"
+    attendance:
+      onsite: true
+      online: true
+    language: English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-accessible-future-evolving-world-technologies-shaping-emergency-2026-02-18_en
+    description: A workshop about accessible technology and inclusive emergency preparedness.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: zero-project-conference-2026
+    name: Zero Project Conference 2026
+    start_date: "2026-02-18"
+    end_date: "2026-02-20"
+    location: United Nations Office at Vienna, Austria and online
+    country_code: "AT"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Zero Project
+    url: https://zerocon26.zeroproject.org/
+    description: A global disability inclusion conference focused on accessibility, ICT and crisis response.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: axe-con-2026
+    name: axe-con 2026
+    start_date: "2026-02-24"
+    end_date: "2026-02-25"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    organizer: Deque Systems
+    url: https://www.deque.com/axe-con/
+    description: A free online conference about digital accessibility and accessibility testing.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: csun-assistive-technology-conference-2026
+    name: CSUN Assistive Technology Conference 2026
+    start_date: "2026-03-09"
+    end_date: "2026-03-13"
+    location: Anaheim, California, United States
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: false
+    organizer: CSUN Center on Disabilities
+    url: https://w2.csun.edu/cod/conference
+    description: A conference about assistive technology, accessibility research and practical solutions.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: accessibility-club-summit-2026
+    name: Accessibility Club Summit 2026
+    start_date: "2026-05-09"
+    end_date: "2026-05-10"
+    location: Würzburg, Germany and online
+    country_code: "DE"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Accessibility Club
+    url: https://accessibility.club/event/accessibility-club-summit-2026
+    description: A community-run summit with accessibility presentations, a BarCamp and practical workshops.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: john-slatin-accessu-2026
+    name: John Slatin AccessU 2026
+    start_date: "2026-05-11"
+    end_date: "2026-05-14"
+    location: Austin, Texas, United States and online
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Knowbility
+    url: https://knowbility.org/programs/john-slatin-accessu-2026
+    description: A hands-on hybrid training conference about accessible digital design.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: gather-2026
+    name: Gather 2026
+    start_date: "2026-05-19"
+    end_date: "2026-05-21"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    organizer: AHEAD Ireland
+    url: https://www.ahead.ie/event/gather-2026/index
+    description: An online conference about discovering and using assistive technology.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: a-tag-2026
+    name: A-Tag 2026
+    start_date: "2026-05-21"
+    end_date: "2026-05-21"
+    location: Vienna, Austria
+    country_code: "AT"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Accessible Media
+    url: https://atag.accessible-media.at/
+    description: An event about accessibility and accessible media.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: accessible-transport-2026
+    name: "AccessibleEU European Event: Advancing Accessibility in Transport"
+    start_date: "2026-06-09"
+    end_date: "2026-06-09"
+    location: Dublin, Ireland and online
+    country_code: "IE"
+    attendance:
+      onsite: true
+      online: true
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-advancing-accessibility-transport-26-aw-eu-01-2026-06-09_en
+    description: A hybrid European event focused on advancing accessibility in transport.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: digst-web-accessibility-network-june-2026
+    name: Netværksmøde om webtilgængelighed juni 2026
+    start_date: "2026-06-16"
+    end_date: "2026-06-16"
+    start_time: "09:15"
+    end_time: "11:15"
+    time_zone: Europe/Copenhagen
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    language: Danish
+    organizer: Danish Agency for Digital Government
+    url: https://digst.dk/tilsyn/webtilgaengelighed/nyheder-og-netvaerk/tilmeld-dig-netvaerket/netvaerksmoede-om-webtilgaengelighed-juni-2026/
+    description: A Danish network meeting about web accessibility, accessibility law, certification and testing tools.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: icchp-2026
+    name: International Conference on Computers Helping People with Special Needs 2026
+    start_date: "2026-07-13"
+    end_date: "2026-07-17"
+    location: Brno, Czech Republic
+    country_code: "CZ"
+    attendance:
+      onsite: true
+      online: false
+    organizer: ICCHP
+    url: https://icchp.org/
+    description: Pre-conference sessions from 13 to 14 July and the main assistive technology and accessibility conference from 15 to 17 July.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: icdvrat-2026
+    name: International Conference on Disability, Virtual Reality and Associated Technologies 2026
+    start_date: "2026-09-15"
+    end_date: "2026-09-18"
+    location: Copenhagen, Denmark
+    country_code: "DK"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Aalborg University
+    url: https://www.icdvrat2026.aau.dk/
+    description: A conference about disability, rehabilitation, immersive technology and assistive technology.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: inclusive-design-24-2026
+    name: Inclusive Design 24
+    start_date: "2026-09-24"
+    end_date: "2026-09-24"
+    start_time: "00:00"
+    end_time: "23:59"
+    time_zone: UTC
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    url: https://inclusivedesign24.org/2026/
+    description: A free 24-hour online event about inclusive design and accessibility.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: wad-iceland-onboard-2026
+    name: "WAD: Iceland onboard, from requirements to reality"
+    start_date: "2026-10-01"
+    end_date: "2026-10-01"
+    location: Reykjavik, Iceland and online
+    country_code: "IS"
+    attendance:
+      onsite: true
+      online: true
+    language: English
+    organizer: IAAP Nordic and ÖBÍ
+    url: https://iaap-nordic.org/en/whats-up/
+    description: A full-day event about implementing the Web Accessibility Directive in Iceland.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: m-enabling-summit-2026
+    name: M-Enabling Summit 2026
+    start_date: "2026-10-05"
+    end_date: "2026-10-07"
+    location: Arlington, Virginia, United States
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: false
+    language: English
+    organizer: G3ict
+    url: https://g3ict.org/what-we-do/m-enabling-summit
+    description: A global conference for digital accessibility leaders, policymakers, technology providers, advocates and the disability community.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: assets-2026
+    name: ASSETS 2026
+    start_date: "2026-10-25"
+    end_date: "2026-10-28"
+    location: Porto, Portugal
+    country_code: "PT"
+    attendance:
+      onsite: true
+      online: false
+    organizer: ACM SIGACCESS
+    url: https://assets26.sigaccess.org
+    description: An academic conference about computing and accessibility.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: unikt-forum-oslo-2026
+    name: IAAP Nordic at UnIKT
+    start_date: "2026-10-28"
+    end_date: "2026-10-28"
+    location: Oslo, Norway
+    country_code: "NO"
+    attendance:
+      onsite: true
+      online: false
+    language: Norwegian
+    organizer: Bufdir, with participation from IAAP Nordic
+    url: https://iaap-nordic.org/en/whats-up/
+    description: An event about universal design and digital participation.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: universal-design-2026
+    name: Universal Design 2026
+    start_date: "2026-11-04"
+    end_date: "2026-11-06"
+    location: Galway, Ireland and online
+    country_code: "IE"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Centre for Excellence in Universal Design and University of Galway
+    url: https://ud26.ie/
+    description: An international conference about practical and research approaches to universal design.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: saavuta-helsinki-2026
+    name: IAAP Nordic workshop at Saavuta
+    start_date: "2026-11-11"
+    end_date: "2026-11-11"
+    location: Helsinki, Finland
+    country_code: "FI"
+    attendance:
+      onsite: true
+      online: false
+    language: Finnish and English
+    organizer: Saavuta, with a workshop from IAAP Nordic
+    url: https://iaap-nordic.org/en/whats-up/
+    description: A workshop about interpreting and using European standards supporting the European Accessibility Act.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-08-16"
+
+  - id: techshare-pro-2026
+    name: TechShare Pro 2026
+    start_date: "2026-11-18"
+    end_date: "2026-11-19"
+    location: London, United Kingdom
+    country_code: "GB"
+    attendance:
+      onsite: true
+      online: false
+    organizer: AbilityNet
+    url: https://abilitynet.org.uk/techshare-pro-livestream
+    description: An accessibility and disability inclusion conference. The linked page has not yet been updated with the 2026 details.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-08-16"

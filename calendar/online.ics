@@ -1,0 +1,224 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events: Online access
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking. Events offering online attendance\,
+  including hybrid events.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:atia-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260129
+DTEND;VALUE=DATE:20260201
+SUMMARY:ATIA 2026
+DESCRIPTION:The Assistive Technology Industry Association conference for as
+ sistive technology practitioners\, users and suppliers.\nAttendance: Hybri
+ d\nOrganizer: Assistive Technology Industry Association
+LOCATION:Orlando\, Florida\, United States and online
+URL:https://www.atia.org/26conference/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:iaap-eu-vially-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260204
+DTEND;VALUE=DATE:20260206
+SUMMARY:IAAP EU and Vially Accessibility Hybrid Event
+DESCRIPTION:A hybrid event focused on digital accessibility.\nAttendance: H
+ ybrid\nOrganizer: IAAP EU and Vially
+LOCATION:Dublin\, Ireland and online
+URL:https://www.accessibilityassociation.org/iaap-eu-event-2026
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessible-emergency-preparedness-2026@nordic-accessibility-community-g
+ roup.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART:20260218T153000Z
+DTEND:20260218T183000Z
+SUMMARY:Accessible Future in an Evolving World: Technologies Shaping Emerge
+ ncy Preparedness
+DESCRIPTION:A workshop about accessible technology and inclusive emergency
+  preparedness.\nAttendance: Hybrid\nOrganizer: AccessibleEU\nLanguage: Eng
+ lish
+LOCATION:United Nations Office at Vienna\, Austria and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-european-event-accessible-future-evolving-world-technologies-shaping
+ -emergency-2026-02-18_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:zero-project-conference-2026@nordic-accessibility-community-group.githu
+ b.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260221
+SUMMARY:Zero Project Conference 2026
+DESCRIPTION:A global disability inclusion conference focused on accessibili
+ ty\, ICT and crisis response.\nAttendance: Hybrid\nOrganizer: Zero Project
+LOCATION:United Nations Office at Vienna\, Austria and online
+URL:https://zerocon26.zeroproject.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:axe-con-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260224
+DTEND;VALUE=DATE:20260226
+SUMMARY:axe-con 2026
+DESCRIPTION:A free online conference about digital accessibility and access
+ ibility testing.\nAttendance: Online\nOrganizer: Deque Systems
+LOCATION:Online
+URL:https://www.deque.com/axe-con/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibility-club-summit-2026@nordic-accessibility-community-group.git
+ hub.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260509
+DTEND;VALUE=DATE:20260511
+SUMMARY:Accessibility Club Summit 2026
+DESCRIPTION:A community-run summit with accessibility presentations\, a Bar
+ Camp and practical workshops.\nAttendance: Hybrid\nOrganizer: Accessibilit
+ y Club
+LOCATION:Würzburg\, Germany and online
+URL:https://accessibility.club/event/accessibility-club-summit-2026
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:john-slatin-accessu-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260511
+DTEND;VALUE=DATE:20260515
+SUMMARY:John Slatin AccessU 2026
+DESCRIPTION:A hands-on hybrid training conference about accessible digital
+  design.\nAttendance: Hybrid\nOrganizer: Knowbility
+LOCATION:Austin\, Texas\, United States and online
+URL:https://knowbility.org/programs/john-slatin-accessu-2026
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:gather-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260519
+DTEND;VALUE=DATE:20260522
+SUMMARY:Gather 2026
+DESCRIPTION:An online conference about discovering and using assistive tech
+ nology.\nAttendance: Online\nOrganizer: AHEAD Ireland
+LOCATION:Online
+URL:https://www.ahead.ie/event/gather-2026/index
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessible-transport-2026@nordic-accessibility-community-group.github.i
+ o
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260609
+DTEND;VALUE=DATE:20260610
+SUMMARY:AccessibleEU European Event: Advancing Accessibility in Transport
+DESCRIPTION:A hybrid European event focused on advancing accessibility in t
+ ransport.\nAttendance: Hybrid\nOrganizer: AccessibleEU
+LOCATION:Dublin\, Ireland and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-european-event-advancing-accessibility-transport-26-aw-eu-01-2026-06
+ -09_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:digst-web-accessibility-network-june-2026@nordic-accessibility-communit
+ y-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART:20260616T071500Z
+DTEND:20260616T091500Z
+SUMMARY:Netværksmøde om webtilgængelighed juni 2026
+DESCRIPTION:A Danish network meeting about web accessibility\, accessibilit
+ y law\, certification and testing tools.\nAttendance: Online\nOrganizer: D
+ anish Agency for Digital Government\nLanguage: Danish
+LOCATION:Online
+URL:https://digst.dk/tilsyn/webtilgaengelighed/nyheder-og-netvaerk/tilmeld-
+ dig-netvaerket/netvaerksmoede-om-webtilgaengelighed-juni-2026/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:inclusive-design-24-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART:20260924T000000Z
+DTEND:20260924T235900Z
+SUMMARY:Inclusive Design 24
+DESCRIPTION:A free 24-hour online event about inclusive design and accessib
+ ility.\nAttendance: Online
+LOCATION:Online
+URL:https://inclusivedesign24.org/2026/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:wad-iceland-onboard-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:WAD: Iceland onboard\, from requirements to reality
+DESCRIPTION:A full-day event about implementing the Web Accessibility Direc
+ tive in Iceland.\nAttendance: Hybrid\nOrganizer: IAAP Nordic and ÖBÍ\nLa
+ nguage: English
+LOCATION:Reykjavik\, Iceland and online
+URL:https://iaap-nordic.org/en/whats-up/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:universal-design-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261107
+SUMMARY:Universal Design 2026
+DESCRIPTION:An international conference about practical and research approa
+ ches to universal design.\nAttendance: Hybrid\nOrganizer: Centre for Excel
+ lence in Universal Design and University of Galway
+LOCATION:Galway\, Ireland and online
+URL:https://ud26.ie/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

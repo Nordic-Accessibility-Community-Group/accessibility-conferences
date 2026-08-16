@@ -28,10 +28,14 @@ MARKDOWN_LINK = re.compile(r"\[[^\]]+\]\(https?://[^)]+\)")
 YEAR_HEADING = re.compile(r"^#\s+(\d{4})\s+events\s*$", re.IGNORECASE)
 
 ALLOWED_HEADERS = {
+    ("Date", "Event", "Format", "Location", "Calendar"),
     ("Dates", "Event", "Focus", "Location"),
     ("Dates", "Event", "Focus"),
     ("Dates", "List", "Focus"),
     ("Dates", "Event", "Location"),
+}
+IGNORED_HEADERS = {
+    ("Calendar", "Includes", "Download", "Subscription URL"),
 }
 
 
@@ -91,6 +95,12 @@ def validate_file(path: Path) -> tuple[int, int]:
         separator = split_row(lines[index + 1])
         if not header or not is_separator(separator):
             index += 1
+            continue
+
+        if tuple(header) in IGNORED_HEADERS:
+            index += 2
+            while index < len(lines) and lines[index].lstrip().startswith("|"):
+                index += 1
             continue
 
         if tuple(header) not in ALLOWED_HEADERS:
