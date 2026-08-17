@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:atia-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260129
+DTEND;VALUE=DATE:20260201
+SUMMARY:ATIA 2026
+DESCRIPTION:The Assistive Technology Industry Association conference for as
+ sistive technology practitioners\, users and suppliers.\nAttendance: Hybri
+ d\nOrganizer: Assistive Technology Industry Association
+LOCATION:Orlando\, Florida\, United States and online
+URL:https://www.atia.org/26conference/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:zero-project-conference-2026@nordic-accessibility-community-group.githu
+ b.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260221
+SUMMARY:Zero Project Conference 2026
+DESCRIPTION:A global disability inclusion conference focused on accessibili
+ ty\, ICT and crisis response.\nAttendance: Hybrid\nOrganizer: Zero Project
+LOCATION:United Nations Office at Vienna\, Austria and online
+URL:https://zerocon26.zeroproject.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

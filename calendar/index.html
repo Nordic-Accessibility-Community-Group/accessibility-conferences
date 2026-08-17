@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessibility, assistive technology, universal design and inclusive design events worth tracking.">
+  <title>Nordic accessibility conferences and events</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f7f6f1;
+      --surface: #ffffff;
+      --text: #17221d;
+      --muted: #4b5b53;
+      --accent: #075c46;
+      --accent-hover: #043f30;
+      --border: #cbd4cf;
+      --focus: #ffbf47;
+      --radius: 0.75rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-underline-offset: 0.18em; }
+    a:hover { color: var(--accent-hover); }
+    a:focus-visible, input:focus-visible { outline: 0.25rem solid var(--focus); outline-offset: 0.2rem; }
+
+    header, main, footer { width: min(76rem, calc(100% - 2rem)); margin-inline: auto; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding-block: 1.25rem;
+    }
+
+    header a { font-weight: 700; }
+
+    main { padding-block: clamp(2rem, 6vw, 5rem); }
+    h1 { max-width: 18ch; margin: 0; font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1.02; letter-spacing: -0.035em; }
+    h2 { margin-top: 0; font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.15; }
+    h3 { margin-top: 0; font-size: 1.3rem; line-height: 1.2; }
+    .intro { max-width: 48rem; margin: 1.5rem 0 3rem; color: var(--muted); font-size: 1.2rem; }
+
+    section { margin-block: 3rem; }
+    .panel { padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .subscription-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .subscription-card { padding: 1.25rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }
+    .subscription-card > p { color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-block: 1.5rem; }
+    .button {
+      display: inline-block;
+      padding: 0.7rem 1rem;
+      border: 2px solid var(--accent);
+      border-radius: 0.4rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .button.primary { background: var(--accent); color: #ffffff; }
+    .button.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #ffffff; }
+
+    label { display: block; margin-bottom: 0.35rem; font-weight: 700; }
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 0.3rem;
+      background: var(--background);
+      color: var(--text);
+      font: inherit;
+    }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 1rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: color-mix(in srgb, var(--surface), var(--accent) 8%); }
+    td p { min-width: 18rem; margin: 0.35rem 0 0; color: var(--muted); }
+    tr:last-child td { border-bottom: 0; }
+    .status { display: inline-block; margin-left: 0.35rem; font-size: 0.9rem; font-weight: 700; }
+
+    footer { padding-block: 2rem; border-top: 1px solid var(--border); color: var(--muted); }
+
+    @media (max-width: 40rem) {
+      header { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #111814;
+        --surface: #18231d;
+        --text: #f2f6f3;
+        --muted: #c2cec7;
+        --accent: #7ee0bd;
+        --accent-hover: #a3efd3;
+        --border: #42564b;
+      }
+      .button.primary { color: #102019; }
+      .button.primary:hover { color: #102019; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences">Nordic Accessibility Community Group</a>
+    <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences/blob/main/events/2026.md">View on GitHub</a>
+  </header>
+  <main>
+    <h1>Accessibility conferences and events</h1>
+    <p class="intro">Accessibility, assistive technology, universal design and inclusive design events worth tracking.</p>
+
+    <section class="panel" aria-labelledby="subscribe-heading">
+      <h2 id="subscribe-heading">Subscribe to the calendar</h2>
+      <p>Choose the events you want. Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
+      <div class="subscription-grid">
+        <article class="subscription-card">
+          <h3>Everything</h3>
+          <p>Every conference and event in the calendar.</p>
+          <div class="actions">
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" download>Download ICS</a>
+          </div>
+          <label for="all-subscription-url">Subscription URL for Everything</label>
+          <input id="all-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" onclick="this.select()">
+        </article>
+        <article class="subscription-card">
+          <h3>European Union</h3>
+          <p>Events with onsite attendance in an EU member country.</p>
+          <div class="actions">
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" download>Download ICS</a>
+          </div>
+          <label for="eu-subscription-url">Subscription URL for European Union</label>
+          <input id="eu-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" onclick="this.select()">
+        </article>
+        <article class="subscription-card">
+          <h3>United States</h3>
+          <p>Events with onsite attendance in the United States.</p>
+          <div class="actions">
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" download>Download ICS</a>
+          </div>
+          <label for="us-subscription-url">Subscription URL for United States</label>
+          <input id="us-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" onclick="this.select()">
+        </article>
+        <article class="subscription-card">
+          <h3>Online access</h3>
+          <p>Events offering online attendance, including hybrid events.</p>
+          <div class="actions">
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" download>Download ICS</a>
+          </div>
+          <label for="online-subscription-url">Subscription URL for Online access</label>
+          <input id="online-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" onclick="this.select()">
+        </article>
+      </div>
+      <p>For Google Calendar, copy the subscription URL and add it using <strong>Other calendars</strong>, then <strong>From URL</strong>. Calendar applications control how frequently subscriptions refresh.</p>
+    </section>
+
+    <section aria-labelledby="events-heading">
+      <h2 id="events-heading">Events</h2>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Event</th>
+              <th scope="col">Format</th>
+              <th scope="col">Location</th>
+              <th scope="col">Calendar</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><time datetime="2026-01-29">29–31 January 2026</time></td>
+            <td>
+              <a href="https://www.atia.org/26conference/">ATIA 2026</a>
+              <p>The Assistive Technology Industry Association conference for assistive technology practitioners, users and suppliers.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Orlando, Florida, United States and online</td>
+            <td><a href="events/atia-2026.ics" aria-label="Add ATIA 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-02-04">4–5 February 2026</time></td>
+            <td>
+              <a href="https://www.accessibilityassociation.org/iaap-eu-event-2026">IAAP EU and Vially Accessibility Hybrid Event</a>
+              <p>A hybrid event focused on digital accessibility.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Dublin, Ireland and online</td>
+            <td><a href="events/iaap-eu-vially-2026.ics" aria-label="Add IAAP EU and Vially Accessibility Hybrid Event to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-02-18">18 February 2026, 16:30–19:30 CET</time></td>
+            <td>
+              <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-accessible-future-evolving-world-technologies-shaping-emergency-2026-02-18_en">Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness</a>
+              <p>A workshop about accessible technology and inclusive emergency preparedness.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>United Nations Office at Vienna, Austria and online</td>
+            <td><a href="events/accessible-emergency-preparedness-2026.ics" aria-label="Add Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-02-18">18–20 February 2026</time></td>
+            <td>
+              <a href="https://zerocon26.zeroproject.org/">Zero Project Conference 2026</a>
+              <p>A global disability inclusion conference focused on accessibility, ICT and crisis response.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>United Nations Office at Vienna, Austria and online</td>
+            <td><a href="events/zero-project-conference-2026.ics" aria-label="Add Zero Project Conference 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-02-24">24–25 February 2026</time></td>
+            <td>
+              <a href="https://www.deque.com/axe-con/">axe-con 2026</a>
+              <p>A free online conference about digital accessibility and accessibility testing.</p>
+            </td>
+            <td>Online</td>
+            <td>Online</td>
+            <td><a href="events/axe-con-2026.ics" aria-label="Add axe-con 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-03-09">9–13 March 2026</time></td>
+            <td>
+              <a href="https://w2.csun.edu/cod/conference">CSUN Assistive Technology Conference 2026</a>
+              <p>A conference about assistive technology, accessibility research and practical solutions.</p>
+            </td>
+            <td>In person</td>
+            <td>Anaheim, California, United States</td>
+            <td><a href="events/csun-assistive-technology-conference-2026.ics" aria-label="Add CSUN Assistive Technology Conference 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-05-09">9–10 May 2026</time></td>
+            <td>
+              <a href="https://accessibility.club/event/accessibility-club-summit-2026">Accessibility Club Summit 2026</a>
+              <p>A community-run summit with accessibility presentations, a BarCamp and practical workshops.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Würzburg, Germany and online</td>
+            <td><a href="events/accessibility-club-summit-2026.ics" aria-label="Add Accessibility Club Summit 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-05-11">11–14 May 2026</time></td>
+            <td>
+              <a href="https://knowbility.org/programs/john-slatin-accessu-2026">John Slatin AccessU 2026</a>
+              <p>A hands-on hybrid training conference about accessible digital design.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Austin, Texas, United States and online</td>
+            <td><a href="events/john-slatin-accessu-2026.ics" aria-label="Add John Slatin AccessU 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-05-19">19–21 May 2026</time></td>
+            <td>
+              <a href="https://www.ahead.ie/event/gather-2026/index">Gather 2026</a>
+              <p>An online conference about discovering and using assistive technology.</p>
+            </td>
+            <td>Online</td>
+            <td>Online</td>
+            <td><a href="events/gather-2026.ics" aria-label="Add Gather 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-05-21">21 May 2026</time></td>
+            <td>
+              <a href="https://atag.accessible-media.at/">A-Tag 2026</a>
+              <p>An event about accessibility and accessible media.</p>
+            </td>
+            <td>In person</td>
+            <td>Vienna, Austria</td>
+            <td><a href="events/a-tag-2026.ics" aria-label="Add A-Tag 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-06-09">9 June 2026</time></td>
+            <td>
+              <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-advancing-accessibility-transport-26-aw-eu-01-2026-06-09_en">AccessibleEU European Event: Advancing Accessibility in Transport</a>
+              <p>A hybrid European event focused on advancing accessibility in transport.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Dublin, Ireland and online</td>
+            <td><a href="events/accessible-transport-2026.ics" aria-label="Add AccessibleEU European Event: Advancing Accessibility in Transport to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-06-16">16 June 2026, 09:15–11:15 CEST</time></td>
+            <td>
+              <a href="https://digst.dk/tilsyn/webtilgaengelighed/nyheder-og-netvaerk/tilmeld-dig-netvaerket/netvaerksmoede-om-webtilgaengelighed-juni-2026/">Netværksmøde om webtilgængelighed juni 2026</a>
+              <p>A Danish network meeting about web accessibility, accessibility law, certification and testing tools.</p>
+            </td>
+            <td>Online</td>
+            <td>Online</td>
+            <td><a href="events/digst-web-accessibility-network-june-2026.ics" aria-label="Add Netværksmøde om webtilgængelighed juni 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-07-13">13–17 July 2026</time></td>
+            <td>
+              <a href="https://icchp.org/">International Conference on Computers Helping People with Special Needs 2026</a>
+              <p>Pre-conference sessions from 13 to 14 July and the main assistive technology and accessibility conference from 15 to 17 July.</p>
+            </td>
+            <td>In person</td>
+            <td>Brno, Czech Republic</td>
+            <td><a href="events/icchp-2026.ics" aria-label="Add International Conference on Computers Helping People with Special Needs 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-09-15">15–18 September 2026</time></td>
+            <td>
+              <a href="https://www.icdvrat2026.aau.dk/">International Conference on Disability, Virtual Reality and Associated Technologies 2026</a>
+              <p>A conference about disability, rehabilitation, immersive technology and assistive technology.</p>
+            </td>
+            <td>In person</td>
+            <td>Copenhagen, Denmark</td>
+            <td><a href="events/icdvrat-2026.ics" aria-label="Add International Conference on Disability, Virtual Reality and Associated Technologies 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-09-24">24 September 2026, 00:00–23:59 UTC</time></td>
+            <td>
+              <a href="https://inclusivedesign24.org/2026/">Inclusive Design 24</a>
+              <p>A free 24-hour online event about inclusive design and accessibility.</p>
+            </td>
+            <td>Online</td>
+            <td>Online</td>
+            <td><a href="events/inclusive-design-24-2026.ics" aria-label="Add Inclusive Design 24 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-10-01">1 October 2026</time></td>
+            <td>
+              <a href="https://iaap-nordic.org/en/whats-up/">WAD: Iceland onboard, from requirements to reality</a>
+              <p>A full-day event about implementing the Web Accessibility Directive in Iceland.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Reykjavik, Iceland and online</td>
+            <td><a href="events/wad-iceland-onboard-2026.ics" aria-label="Add WAD: Iceland onboard, from requirements to reality to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-10-05">5–7 October 2026</time></td>
+            <td>
+              <a href="https://g3ict.org/what-we-do/m-enabling-summit">M-Enabling Summit 2026</a>
+              <p>A global conference for digital accessibility leaders, policymakers, technology providers, advocates and the disability community.</p>
+            </td>
+            <td>In person</td>
+            <td>Arlington, Virginia, United States</td>
+            <td><a href="events/m-enabling-summit-2026.ics" aria-label="Add M-Enabling Summit 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-10-25">25–28 October 2026</time></td>
+            <td>
+              <a href="https://assets26.sigaccess.org">ASSETS 2026</a>
+              <p>An academic conference about computing and accessibility.</p>
+            </td>
+            <td>In person</td>
+            <td>Porto, Portugal</td>
+            <td><a href="events/assets-2026.ics" aria-label="Add ASSETS 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-10-28">28 October 2026</time></td>
+            <td>
+              <a href="https://iaap-nordic.org/en/whats-up/">IAAP Nordic at UnIKT</a>
+              <p>An event about universal design and digital participation.</p>
+            </td>
+            <td>In person</td>
+            <td>Oslo, Norway</td>
+            <td><a href="events/unikt-forum-oslo-2026.ics" aria-label="Add IAAP Nordic at UnIKT to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-11-04">4–6 November 2026</time></td>
+            <td>
+              <a href="https://ud26.ie/">Universal Design 2026</a>
+              <p>An international conference about practical and research approaches to universal design.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Galway, Ireland and online</td>
+            <td><a href="events/universal-design-2026.ics" aria-label="Add Universal Design 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-11-11">11 November 2026</time></td>
+            <td>
+              <a href="https://iaap-nordic.org/en/whats-up/">IAAP Nordic workshop at Saavuta</a>
+              <p>A workshop about interpreting and using European standards supporting the European Accessibility Act.</p>
+            </td>
+            <td>In person</td>
+            <td>Helsinki, Finland</td>
+            <td><a href="events/saavuta-helsinki-2026.ics" aria-label="Add IAAP Nordic workshop at Saavuta to calendar">Add event</a></td>
+          </tr>
+          <tr>
+            <td><time datetime="2026-11-18">18–19 November 2026</time></td>
+            <td>
+              <a href="https://abilitynet.org.uk/techshare-pro-livestream">TechShare Pro 2026 <span class="status">Tentative</span></a>
+              <p>An accessibility and disability inclusion conference. The linked page has not yet been updated with the 2026 details.</p>
+            </td>
+            <td>In person</td>
+            <td>London, United Kingdom</td>
+            <td><a href="events/techshare-pro-2026.ics" aria-label="Add TechShare Pro 2026 to calendar">Add event</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="suggest-heading">
+      <h2 id="suggest-heading">Suggest an event or correction</h2>
+      <p>You do not need to know Git or edit data files. A guided form collects the information maintainers need to review the official source.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences/issues/new?template=conference-addition.yml">Suggest an event</a>
+        <a class="button" href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences/issues/new?template=conference-correction.yml">Report a correction</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Calendar data is maintained in the <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences">accessibility conferences repository</a>.</p>
+  </footer>
+</body>
+</html>

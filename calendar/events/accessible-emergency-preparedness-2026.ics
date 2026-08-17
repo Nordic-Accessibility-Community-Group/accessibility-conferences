@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessible-emergency-preparedness-2026@nordic-accessibility-community-g
+ roup.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART:20260218T153000Z
+DTEND:20260218T183000Z
+SUMMARY:Accessible Future in an Evolving World: Technologies Shaping Emerge
+ ncy Preparedness
+DESCRIPTION:A workshop about accessible technology and inclusive emergency
+  preparedness.\nAttendance: Hybrid\nOrganizer: AccessibleEU\nLanguage: Eng
+ lish
+LOCATION:United Nations Office at Vienna\, Austria and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-european-event-accessible-future-evolving-world-technologies-shaping
+ -emergency-2026-02-18_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

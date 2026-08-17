@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:axe-con-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20260224
+DTEND;VALUE=DATE:20260226
+SUMMARY:axe-con 2026
+DESCRIPTION:A free online conference about digital accessibility and access
+ ibility testing.\nAttendance: Online\nOrganizer: Deque Systems
+LOCATION:Online
+URL:https://www.deque.com/axe-con/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

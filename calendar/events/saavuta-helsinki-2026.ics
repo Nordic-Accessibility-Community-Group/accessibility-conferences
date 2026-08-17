@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:saavuta-helsinki-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20260816T000000Z
+LAST-MODIFIED:20260816T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:IAAP Nordic workshop at Saavuta
+DESCRIPTION:A workshop about interpreting and using European standards supp
+ orting the European Accessibility Act.\nAttendance: In person\nOrganizer:
+  Saavuta\, with a workshop from IAAP Nordic\nLanguage: Finnish and English
+LOCATION:Helsinki\, Finland
+URL:https://iaap-nordic.org/en/whats-up/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
