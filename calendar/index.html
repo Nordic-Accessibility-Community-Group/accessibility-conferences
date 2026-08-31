@@ -32,7 +32,7 @@
 
     a { color: var(--accent); text-underline-offset: 0.18em; }
     a:hover { color: var(--accent-hover); }
-    a:focus-visible, input:focus-visible { outline: 0.25rem solid var(--focus); outline-offset: 0.2rem; }
+    a:focus-visible, input:focus-visible, button:focus-visible, summary:focus-visible { outline: 0.25rem solid var(--focus); outline-offset: 0.2rem; }
 
     header, main, footer { width: min(76rem, calc(100% - 2rem)); margin-inline: auto; }
 
@@ -65,9 +65,13 @@
 
     section { margin-block: 3rem; }
     .panel { padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
-    .subscription-options { margin-top: 1.5rem; }
+    .subscription-options { display: inline-block; margin-block: 1.5rem; }
     summary { cursor: pointer; font-weight: 700; }
     details[open] > summary { margin-bottom: 1.5rem; }
+    .subscription-options > summary { list-style: none; }
+    .subscription-options > summary::-webkit-details-marker { display: none; }
+    .subscription-options[open] { display: block; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .subscription-options[open] > summary { display: inline-block; }
     .subscription-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; }
     .subscription-card { padding: 1.25rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }
     .subscription-card > p { color: var(--muted); }
@@ -93,6 +97,17 @@
       color: var(--text);
       font: inherit;
     }
+
+    .event-filters { margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .event-filters[open] > summary { margin-bottom: 1rem; }
+    .filter-options { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; }
+    .filter-groups { display: grid; gap: 1rem; }
+    .filter-groups fieldset { margin: 0; }
+    .filter-options label { display: flex; gap: 0.5rem; align-items: center; margin: 0; font-weight: 400; }
+    .filter-options input { width: 1.25rem; height: 1.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: var(--accent); }
+    button { padding: 0.45rem 0.7rem; border: 1px solid var(--accent); border-radius: 0.3rem; background: transparent; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
+    button:hover { background: color-mix(in srgb, var(--surface), var(--accent) 10%); color: var(--accent-hover); }
+    .filter-status { margin: 1rem 0 0; color: var(--muted); }
 
     .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
     table { width: 100%; border-collapse: collapse; }
@@ -132,19 +147,18 @@
     <h1>Accessibility conferences and events</h1>
     <p class="intro">Accessibility, assistive technology, universal design and inclusive design events worth tracking.</p>
 
-    <section class="panel" aria-labelledby="subscribe-heading">
-      <h2 id="subscribe-heading">Subscribe to the calendar</h2>
-      <p>Use this optional section to subscribe to updates in your calendar app.</p>
-      <details class="subscription-options" aria-labelledby="subscribe-heading">
-        <summary>Choose a calendar to subscribe to</summary>
-        <p>Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
+    <section aria-labelledby="subscribe-heading">
+      <h2 class="visually-hidden" id="subscribe-heading">Subscribe to the calendar</h2>
+      <details class="subscription-options">
+        <summary class="button primary">Subscribe to calendars</summary>
+        <p>Subscribe to keep the calendar updated. Download a one-time copy (.ics) instead if you do not need future updates.</p>
         <div class="subscription-grid">
         <article class="subscription-card">
           <h3>Everything</h3>
           <p>Every conference and event in the calendar.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" aria-label="Subscribe to Everything calendar">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" download aria-label="Download ICS for Everything">Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" aria-label="Subscribe to Everything calendar">Subscribe for updates</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" download aria-label="Download one-time .ics file for Everything">Download one-time file (.ics)</a>
           </div>
           <label for="all-subscription-url">Subscription URL for Everything</label>
           <input id="all-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" onclick="this.select()">
@@ -153,8 +167,8 @@
           <h3>European Union</h3>
           <p>Events with onsite attendance in an EU member country.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" aria-label="Subscribe to European Union calendar">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" download aria-label="Download ICS for European Union">Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" aria-label="Subscribe to European Union calendar">Subscribe for updates</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" download aria-label="Download one-time .ics file for European Union">Download one-time file (.ics)</a>
           </div>
           <label for="eu-subscription-url">Subscription URL for European Union</label>
           <input id="eu-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" onclick="this.select()">
@@ -163,8 +177,8 @@
           <h3>United States</h3>
           <p>Events with onsite attendance in the United States.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" aria-label="Subscribe to United States calendar">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" download aria-label="Download ICS for United States">Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" aria-label="Subscribe to United States calendar">Subscribe for updates</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" download aria-label="Download one-time .ics file for United States">Download one-time file (.ics)</a>
           </div>
           <label for="us-subscription-url">Subscription URL for United States</label>
           <input id="us-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" onclick="this.select()">
@@ -173,8 +187,8 @@
           <h3>Online access</h3>
           <p>Events offering online attendance, including hybrid events.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" aria-label="Subscribe to Online access calendar">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" download aria-label="Download ICS for Online access">Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" aria-label="Subscribe to Online access calendar">Subscribe for updates</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" download aria-label="Download one-time .ics file for Online access">Download one-time file (.ics)</a>
           </div>
           <label for="online-subscription-url">Subscription URL for Online access</label>
           <input id="online-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" onclick="this.select()">
@@ -186,9 +200,41 @@
 
     <section aria-labelledby="events-heading">
       <h2 id="events-heading">Events</h2>
+      <details class="event-filters">
+        <summary>Filter events</summary>
+        <div class="filter-groups">
+        <fieldset>
+          <legend>Format</legend>
+          <div class="filter-options">
+            <label><input type="checkbox" name="format" data-filter="format" value="In person" checked> In person</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Hybrid" checked> Hybrid</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Online" checked> Online</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Country or online</legend>
+          <div class="filter-options">
+            <label><input type="checkbox" name="country" data-filter="country" value="AT" checked> Austria</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="CZ" checked> Czech Republic</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="DK" checked> Denmark</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="FI" checked> Finland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="DE" checked> Germany</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="IS" checked> Iceland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="IE" checked> Ireland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="NO" checked> Norway</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="online-only" checked> Online only</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="PT" checked> Portugal</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="GB" checked> United Kingdom</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="US" checked> United States</label>
+          </div>
+        </fieldset>
+        </div>
+        <button type="button" id="reset-filters">Show all</button>
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all 22 events.</p>
+      </details>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
         <table>
-          <caption class="visually-hidden">Accessibility conferences and events: 22 events</caption>
+          <caption class="visually-hidden" id="events-caption">Accessibility conferences and events: 22 events</caption>
           <thead>
             <tr>
               <th scope="col">Date</th>
@@ -199,7 +245,7 @@
             </tr>
           </thead>
           <tbody>
-          <tr>
+          <tr data-format="Hybrid" data-country="US">
             <td><time datetime="2026-01-29">29–31 January 2026</time></td>
             <td>
               <a href="https://www.atia.org/26conference/">ATIA 2026</a>
@@ -209,7 +255,7 @@
             <td>Orlando, Florida, United States and online</td>
             <td><a href="events/atia-2026.ics" aria-label="Add event: ATIA 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="IE">
             <td><time datetime="2026-02-04">4–5 February 2026</time></td>
             <td>
               <a href="https://www.accessibilityassociation.org/iaap-eu-event-2026">IAAP EU and Vially Accessibility Hybrid Event</a>
@@ -219,7 +265,7 @@
             <td>Dublin, Ireland and online</td>
             <td><a href="events/iaap-eu-vially-2026.ics" aria-label="Add event: IAAP EU and Vially Accessibility Hybrid Event to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="AT">
             <td><time datetime="2026-02-18">18 February 2026, 16:30–19:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-accessible-future-evolving-world-technologies-shaping-emergency-2026-02-18_en">Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness</a>
@@ -229,7 +275,7 @@
             <td>United Nations Office at Vienna, Austria and online</td>
             <td><a href="events/accessible-emergency-preparedness-2026.ics" aria-label="Add event: Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="AT">
             <td><time datetime="2026-02-18">18–20 February 2026</time></td>
             <td>
               <a href="https://zerocon26.zeroproject.org/">Zero Project Conference 2026</a>
@@ -239,7 +285,7 @@
             <td>United Nations Office at Vienna, Austria and online</td>
             <td><a href="events/zero-project-conference-2026.ics" aria-label="Add event: Zero Project Conference 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Online" data-country="online-only">
             <td><time datetime="2026-02-24">24–25 February 2026</time></td>
             <td>
               <a href="https://www.deque.com/axe-con/">axe-con 2026</a>
@@ -249,7 +295,7 @@
             <td>Online</td>
             <td><a href="events/axe-con-2026.ics" aria-label="Add event: axe-con 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="US">
             <td><time datetime="2026-03-09">9–13 March 2026</time></td>
             <td>
               <a href="https://w2.csun.edu/cod/conference">CSUN Assistive Technology Conference 2026</a>
@@ -259,7 +305,7 @@
             <td>Anaheim, California, United States</td>
             <td><a href="events/csun-assistive-technology-conference-2026.ics" aria-label="Add event: CSUN Assistive Technology Conference 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="DE">
             <td><time datetime="2026-05-09">9–10 May 2026</time></td>
             <td>
               <a href="https://accessibility.club/event/accessibility-club-summit-2026">Accessibility Club Summit 2026</a>
@@ -269,7 +315,7 @@
             <td>Würzburg, Germany and online</td>
             <td><a href="events/accessibility-club-summit-2026.ics" aria-label="Add event: Accessibility Club Summit 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="US">
             <td><time datetime="2026-05-11">11–14 May 2026</time></td>
             <td>
               <a href="https://knowbility.org/programs/john-slatin-accessu-2026">John Slatin AccessU 2026</a>
@@ -279,7 +325,7 @@
             <td>Austin, Texas, United States and online</td>
             <td><a href="events/john-slatin-accessu-2026.ics" aria-label="Add event: John Slatin AccessU 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Online" data-country="online-only">
             <td><time datetime="2026-05-19">19–21 May 2026</time></td>
             <td>
               <a href="https://www.ahead.ie/event/gather-2026/index">Gather 2026</a>
@@ -289,7 +335,7 @@
             <td>Online</td>
             <td><a href="events/gather-2026.ics" aria-label="Add event: Gather 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="AT">
             <td><time datetime="2026-05-21">21 May 2026</time></td>
             <td>
               <a href="https://atag.accessible-media.at/">A-Tag 2026</a>
@@ -299,7 +345,7 @@
             <td>Vienna, Austria</td>
             <td><a href="events/a-tag-2026.ics" aria-label="Add event: A-Tag 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="IE">
             <td><time datetime="2026-06-09">9 June 2026</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-advancing-accessibility-transport-26-aw-eu-01-2026-06-09_en">AccessibleEU European Event: Advancing Accessibility in Transport</a>
@@ -309,7 +355,7 @@
             <td>Dublin, Ireland and online</td>
             <td><a href="events/accessible-transport-2026.ics" aria-label="Add event: AccessibleEU European Event: Advancing Accessibility in Transport to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Online" data-country="online-only">
             <td><time datetime="2026-06-16">16 June 2026, 09:15–11:15 CEST</time></td>
             <td>
               <a href="https://digst.dk/tilsyn/webtilgaengelighed/nyheder-og-netvaerk/tilmeld-dig-netvaerket/netvaerksmoede-om-webtilgaengelighed-juni-2026/">Netværksmøde om webtilgængelighed juni 2026</a>
@@ -319,7 +365,7 @@
             <td>Online</td>
             <td><a href="events/digst-web-accessibility-network-june-2026.ics" aria-label="Add event: Netværksmøde om webtilgængelighed juni 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="CZ">
             <td><time datetime="2026-07-13">13–17 July 2026</time></td>
             <td>
               <a href="https://icchp.org/">International Conference on Computers Helping People with Special Needs 2026</a>
@@ -329,7 +375,7 @@
             <td>Brno, Czech Republic</td>
             <td><a href="events/icchp-2026.ics" aria-label="Add event: International Conference on Computers Helping People with Special Needs 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="DK">
             <td><time datetime="2026-09-15">15–18 September 2026</time></td>
             <td>
               <a href="https://www.icdvrat2026.aau.dk/">International Conference on Disability, Virtual Reality and Associated Technologies 2026</a>
@@ -339,7 +385,7 @@
             <td>Copenhagen, Denmark</td>
             <td><a href="events/icdvrat-2026.ics" aria-label="Add event: International Conference on Disability, Virtual Reality and Associated Technologies 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Online" data-country="online-only">
             <td><time datetime="2026-09-24">24 September 2026, 00:00–23:59 UTC</time></td>
             <td>
               <a href="https://inclusivedesign24.org/2026/">Inclusive Design 24</a>
@@ -349,7 +395,7 @@
             <td>Online</td>
             <td><a href="events/inclusive-design-24-2026.ics" aria-label="Add event: Inclusive Design 24 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="IS">
             <td><time datetime="2026-10-01">1 October 2026</time></td>
             <td>
               <a href="https://iaap-nordic.org/en/whats-up/">WAD: Iceland onboard, from requirements to reality</a>
@@ -359,7 +405,7 @@
             <td>Reykjavik, Iceland and online</td>
             <td><a href="events/wad-iceland-onboard-2026.ics" aria-label="Add event: WAD: Iceland onboard, from requirements to reality to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="US">
             <td><time datetime="2026-10-05">5–7 October 2026</time></td>
             <td>
               <a href="https://g3ict.org/what-we-do/m-enabling-summit">M-Enabling Summit 2026</a>
@@ -369,7 +415,7 @@
             <td>Arlington, Virginia, United States</td>
             <td><a href="events/m-enabling-summit-2026.ics" aria-label="Add event: M-Enabling Summit 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="PT">
             <td><time datetime="2026-10-25">25–28 October 2026</time></td>
             <td>
               <a href="https://assets26.sigaccess.org">ASSETS 2026</a>
@@ -379,7 +425,7 @@
             <td>Porto, Portugal</td>
             <td><a href="events/assets-2026.ics" aria-label="Add event: ASSETS 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="NO">
             <td><time datetime="2026-10-28">28 October 2026</time></td>
             <td>
               <a href="https://iaap-nordic.org/en/whats-up/">IAAP Nordic at UnIKT</a>
@@ -389,7 +435,7 @@
             <td>Oslo, Norway</td>
             <td><a href="events/unikt-forum-oslo-2026.ics" aria-label="Add event: IAAP Nordic at UnIKT to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="Hybrid" data-country="IE">
             <td><time datetime="2026-11-04">4–6 November 2026</time></td>
             <td>
               <a href="https://ud26.ie/">Universal Design 2026</a>
@@ -399,7 +445,7 @@
             <td>Galway, Ireland and online</td>
             <td><a href="events/universal-design-2026.ics" aria-label="Add event: Universal Design 2026 to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="FI">
             <td><time datetime="2026-11-11">11 November 2026</time></td>
             <td>
               <a href="https://iaap-nordic.org/en/whats-up/">IAAP Nordic workshop at Saavuta</a>
@@ -409,7 +455,7 @@
             <td>Helsinki, Finland</td>
             <td><a href="events/saavuta-helsinki-2026.ics" aria-label="Add event: IAAP Nordic workshop at Saavuta to calendar">Add event</a></td>
           </tr>
-          <tr>
+          <tr data-format="In person" data-country="GB">
             <td><time datetime="2026-11-18">18–19 November 2026</time></td>
             <td>
               <a href="https://abilitynet.org.uk/techshare-pro-livestream">TechShare Pro 2026 <span class="status">Tentative</span></a>
@@ -418,6 +464,9 @@
             <td>In person</td>
             <td>London, United Kingdom</td>
             <td><a href="events/techshare-pro-2026.ics" aria-label="Add event: TechShare Pro 2026 to calendar">Add event</a></td>
+          </tr>
+          <tr id="no-filter-results" hidden>
+            <td colspan="5">No events match the selected filters.</td>
           </tr>
           </tbody>
         </table>
@@ -436,5 +485,43 @@
   <footer>
     <p>Calendar data is maintained in the <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences">accessibility conferences repository</a>.</p>
   </footer>
+  <script>
+    const filters = document.querySelectorAll('input[data-filter]');
+    const formatFilters = document.querySelectorAll('input[data-filter="format"]');
+    const countryFilters = document.querySelectorAll('input[data-filter="country"]');
+    const rows = document.querySelectorAll('tbody tr[data-format]');
+    const status = document.querySelector('#filter-status');
+    const caption = document.querySelector('#events-caption');
+    const emptyState = document.querySelector('#no-filter-results');
+    const reset = document.querySelector('#reset-filters');
+
+    function updateFilters() {
+      const selectedFormats = [...formatFilters].filter((filter) => filter.checked).map((filter) => filter.value);
+      const selectedCountries = [...countryFilters].filter((filter) => filter.checked).map((filter) => filter.value);
+      let visibleCount = 0;
+      rows.forEach((row) => {
+        const visible = selectedFormats.includes(row.dataset.format)
+          && selectedCountries.includes(row.dataset.country);
+        row.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+      const eventWord = visibleCount === 1 ? 'event' : 'events';
+      const allFiltersSelected = selectedFormats.length === formatFilters.length
+        && selectedCountries.length === countryFilters.length;
+      emptyState.hidden = visibleCount !== 0;
+      caption.textContent = allFiltersSelected
+        ? `Accessibility conferences and events: ${visibleCount} ${eventWord}`
+        : `Accessibility conferences and events: ${visibleCount} of ${rows.length} ${eventWord} shown`;
+      status.textContent = allFiltersSelected
+        ? `Showing all ${visibleCount} ${eventWord}.`
+        : `Showing ${visibleCount} of ${rows.length} ${eventWord}.`;
+    }
+
+    filters.forEach((filter) => filter.addEventListener('change', updateFilters));
+    reset.addEventListener('click', () => {
+      filters.forEach((filter) => { filter.checked = true; });
+      updateFilters();
+    });
+  </script>
 </body>
 </html>
