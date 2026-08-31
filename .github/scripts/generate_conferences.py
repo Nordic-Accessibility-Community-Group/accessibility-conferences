@@ -656,7 +656,7 @@ def html_event_name(event: Conference) -> str:
 def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str:
     rows = []
     for event in conferences:
-        add_label = html.escape(f"Add {event.name} to calendar", quote=True)
+        add_label = html.escape(f"Add event: {event.name} to calendar", quote=True)
         rows.append(
             f"""          <tr>
             <td><time datetime="{event.start_date.isoformat()}">{html.escape(format_event_date(event))}</time></td>
@@ -680,13 +680,19 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
         feed_url = html.escape(calendar.feed_url(feed.filename), quote=True)
         webcal_url = html.escape(calendar.webcal_url(feed.filename), quote=True)
         feed_name = html.escape(feed.name)
+        subscribe_label = html.escape(
+            f"Subscribe to {feed.name} calendar", quote=True
+        )
+        download_label = html.escape(
+            f"Download ICS for {feed.name}", quote=True
+        )
         subscription_cards.append(
             f"""        <article class="subscription-card">
           <h3>{feed_name}</h3>
           <p>{html.escape(feed.description)}</p>
           <div class="actions">
-            <a class="button primary" href="{webcal_url}">Subscribe</a>
-            <a class="button" href="{feed_url}" download>Download ICS</a>
+            <a class="button primary" href="{webcal_url}" aria-label="{subscribe_label}">Subscribe</a>
+            <a class="button" href="{feed_url}" download aria-label="{download_label}">Download ICS</a>
           </div>
           <label for="{feed.key}-subscription-url">Subscription URL for {feed_name}</label>
           <input id="{feed.key}-subscription-url" type="url" readonly value="{feed_url}" onclick="this.select()">
@@ -752,7 +758,10 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 
     section {{ margin-block: 3rem; }}
     .panel {{ padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
-    .subscription-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; margin-top: 1.5rem; }}
+    .subscription-options {{ margin-top: 1.5rem; }}
+    summary {{ cursor: pointer; font-weight: 700; }}
+    details[open] > summary {{ margin-bottom: 1.5rem; }}
+    .subscription-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; }}
     .subscription-card {{ padding: 1.25rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }}
     .subscription-card > p {{ color: var(--muted); }}
     .actions {{ display: flex; flex-wrap: wrap; gap: 0.75rem; margin-block: 1.5rem; }}
@@ -818,11 +827,15 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 
     <section class="panel" aria-labelledby="subscribe-heading">
       <h2 id="subscribe-heading">Subscribe to the calendar</h2>
-      <p>Choose the events you want. Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
-      <div class="subscription-grid">
+      <p>Use this optional section to subscribe to updates in your calendar app.</p>
+      <details class="subscription-options">
+        <summary>Choose a calendar to subscribe to</summary>
+        <p>Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
+        <div class="subscription-grid">
 {chr(10).join(subscription_cards)}
-      </div>
-      <p>For Google Calendar, copy the subscription URL and add it using <strong>Other calendars</strong>, then <strong>From URL</strong>. Calendar applications control how frequently subscriptions refresh.</p>
+        </div>
+        <p>For Google Calendar, copy the subscription URL and add it using <strong>Other calendars</strong>, then <strong>From URL</strong>. Calendar applications control how frequently subscriptions refresh.</p>
+      </details>
     </section>
 
     <section aria-labelledby="events-heading">

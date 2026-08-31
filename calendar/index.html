@@ -54,7 +54,10 @@
 
     section { margin-block: 3rem; }
     .panel { padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
-    .subscription-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .subscription-options { margin-top: 1.5rem; }
+    summary { cursor: pointer; font-weight: 700; }
+    details[open] > summary { margin-bottom: 1.5rem; }
+    .subscription-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; }
     .subscription-card { padding: 1.25rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }
     .subscription-card > p { color: var(--muted); }
     .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-block: 1.5rem; }
@@ -120,14 +123,17 @@
 
     <section class="panel" aria-labelledby="subscribe-heading">
       <h2 id="subscribe-heading">Subscribe to the calendar</h2>
-      <p>Choose the events you want. Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
-      <div class="subscription-grid">
+      <p>Use this optional section to subscribe to updates in your calendar app.</p>
+      <details class="subscription-options">
+        <summary>Choose a calendar to subscribe to</summary>
+        <p>Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
+        <div class="subscription-grid">
         <article class="subscription-card">
           <h3>Everything</h3>
           <p>Every conference and event in the calendar.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" download>Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" aria-label="Subscribe to Everything calendar">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" download aria-label="Download ICS for Everything">Download ICS</a>
           </div>
           <label for="all-subscription-url">Subscription URL for Everything</label>
           <input id="all-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/conferences.ics" onclick="this.select()">
@@ -136,8 +142,8 @@
           <h3>European Union</h3>
           <p>Events with onsite attendance in an EU member country.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" download>Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" aria-label="Subscribe to European Union calendar">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" download aria-label="Download ICS for European Union">Download ICS</a>
           </div>
           <label for="eu-subscription-url">Subscription URL for European Union</label>
           <input id="eu-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/eu.ics" onclick="this.select()">
@@ -146,8 +152,8 @@
           <h3>United States</h3>
           <p>Events with onsite attendance in the United States.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" download>Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" aria-label="Subscribe to United States calendar">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" download aria-label="Download ICS for United States">Download ICS</a>
           </div>
           <label for="us-subscription-url">Subscription URL for United States</label>
           <input id="us-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/us.ics" onclick="this.select()">
@@ -156,14 +162,15 @@
           <h3>Online access</h3>
           <p>Events offering online attendance, including hybrid events.</p>
           <div class="actions">
-            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics">Subscribe</a>
-            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" download>Download ICS</a>
+            <a class="button primary" href="webcal://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" aria-label="Subscribe to Online access calendar">Subscribe</a>
+            <a class="button" href="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" download aria-label="Download ICS for Online access">Download ICS</a>
           </div>
           <label for="online-subscription-url">Subscription URL for Online access</label>
           <input id="online-subscription-url" type="url" readonly value="https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/online.ics" onclick="this.select()">
         </article>
-      </div>
-      <p>For Google Calendar, copy the subscription URL and add it using <strong>Other calendars</strong>, then <strong>From URL</strong>. Calendar applications control how frequently subscriptions refresh.</p>
+        </div>
+        <p>For Google Calendar, copy the subscription URL and add it using <strong>Other calendars</strong>, then <strong>From URL</strong>. Calendar applications control how frequently subscriptions refresh.</p>
+      </details>
     </section>
 
     <section aria-labelledby="events-heading">
@@ -188,7 +195,7 @@
             </td>
             <td>Hybrid</td>
             <td>Orlando, Florida, United States and online</td>
-            <td><a href="events/atia-2026.ics" aria-label="Add ATIA 2026 to calendar">Add event</a></td>
+            <td><a href="events/atia-2026.ics" aria-label="Add event: ATIA 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-02-04">4–5 February 2026</time></td>
@@ -198,7 +205,7 @@
             </td>
             <td>Hybrid</td>
             <td>Dublin, Ireland and online</td>
-            <td><a href="events/iaap-eu-vially-2026.ics" aria-label="Add IAAP EU and Vially Accessibility Hybrid Event to calendar">Add event</a></td>
+            <td><a href="events/iaap-eu-vially-2026.ics" aria-label="Add event: IAAP EU and Vially Accessibility Hybrid Event to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-02-18">18 February 2026, 16:30–19:30 CET</time></td>
@@ -208,7 +215,7 @@
             </td>
             <td>Hybrid</td>
             <td>United Nations Office at Vienna, Austria and online</td>
-            <td><a href="events/accessible-emergency-preparedness-2026.ics" aria-label="Add Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness to calendar">Add event</a></td>
+            <td><a href="events/accessible-emergency-preparedness-2026.ics" aria-label="Add event: Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-02-18">18–20 February 2026</time></td>
@@ -218,7 +225,7 @@
             </td>
             <td>Hybrid</td>
             <td>United Nations Office at Vienna, Austria and online</td>
-            <td><a href="events/zero-project-conference-2026.ics" aria-label="Add Zero Project Conference 2026 to calendar">Add event</a></td>
+            <td><a href="events/zero-project-conference-2026.ics" aria-label="Add event: Zero Project Conference 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-02-24">24–25 February 2026</time></td>
@@ -228,7 +235,7 @@
             </td>
             <td>Online</td>
             <td>Online</td>
-            <td><a href="events/axe-con-2026.ics" aria-label="Add axe-con 2026 to calendar">Add event</a></td>
+            <td><a href="events/axe-con-2026.ics" aria-label="Add event: axe-con 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-03-09">9–13 March 2026</time></td>
@@ -238,7 +245,7 @@
             </td>
             <td>In person</td>
             <td>Anaheim, California, United States</td>
-            <td><a href="events/csun-assistive-technology-conference-2026.ics" aria-label="Add CSUN Assistive Technology Conference 2026 to calendar">Add event</a></td>
+            <td><a href="events/csun-assistive-technology-conference-2026.ics" aria-label="Add event: CSUN Assistive Technology Conference 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-05-09">9–10 May 2026</time></td>
@@ -248,7 +255,7 @@
             </td>
             <td>Hybrid</td>
             <td>Würzburg, Germany and online</td>
-            <td><a href="events/accessibility-club-summit-2026.ics" aria-label="Add Accessibility Club Summit 2026 to calendar">Add event</a></td>
+            <td><a href="events/accessibility-club-summit-2026.ics" aria-label="Add event: Accessibility Club Summit 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-05-11">11–14 May 2026</time></td>
@@ -258,7 +265,7 @@
             </td>
             <td>Hybrid</td>
             <td>Austin, Texas, United States and online</td>
-            <td><a href="events/john-slatin-accessu-2026.ics" aria-label="Add John Slatin AccessU 2026 to calendar">Add event</a></td>
+            <td><a href="events/john-slatin-accessu-2026.ics" aria-label="Add event: John Slatin AccessU 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-05-19">19–21 May 2026</time></td>
@@ -268,7 +275,7 @@
             </td>
             <td>Online</td>
             <td>Online</td>
-            <td><a href="events/gather-2026.ics" aria-label="Add Gather 2026 to calendar">Add event</a></td>
+            <td><a href="events/gather-2026.ics" aria-label="Add event: Gather 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-05-21">21 May 2026</time></td>
@@ -278,7 +285,7 @@
             </td>
             <td>In person</td>
             <td>Vienna, Austria</td>
-            <td><a href="events/a-tag-2026.ics" aria-label="Add A-Tag 2026 to calendar">Add event</a></td>
+            <td><a href="events/a-tag-2026.ics" aria-label="Add event: A-Tag 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-06-09">9 June 2026</time></td>
@@ -288,7 +295,7 @@
             </td>
             <td>Hybrid</td>
             <td>Dublin, Ireland and online</td>
-            <td><a href="events/accessible-transport-2026.ics" aria-label="Add AccessibleEU European Event: Advancing Accessibility in Transport to calendar">Add event</a></td>
+            <td><a href="events/accessible-transport-2026.ics" aria-label="Add event: AccessibleEU European Event: Advancing Accessibility in Transport to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-06-16">16 June 2026, 09:15–11:15 CEST</time></td>
@@ -298,7 +305,7 @@
             </td>
             <td>Online</td>
             <td>Online</td>
-            <td><a href="events/digst-web-accessibility-network-june-2026.ics" aria-label="Add Netværksmøde om webtilgængelighed juni 2026 to calendar">Add event</a></td>
+            <td><a href="events/digst-web-accessibility-network-june-2026.ics" aria-label="Add event: Netværksmøde om webtilgængelighed juni 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-07-13">13–17 July 2026</time></td>
@@ -308,7 +315,7 @@
             </td>
             <td>In person</td>
             <td>Brno, Czech Republic</td>
-            <td><a href="events/icchp-2026.ics" aria-label="Add International Conference on Computers Helping People with Special Needs 2026 to calendar">Add event</a></td>
+            <td><a href="events/icchp-2026.ics" aria-label="Add event: International Conference on Computers Helping People with Special Needs 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-09-15">15–18 September 2026</time></td>
@@ -318,7 +325,7 @@
             </td>
             <td>In person</td>
             <td>Copenhagen, Denmark</td>
-            <td><a href="events/icdvrat-2026.ics" aria-label="Add International Conference on Disability, Virtual Reality and Associated Technologies 2026 to calendar">Add event</a></td>
+            <td><a href="events/icdvrat-2026.ics" aria-label="Add event: International Conference on Disability, Virtual Reality and Associated Technologies 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-09-24">24 September 2026, 00:00–23:59 UTC</time></td>
@@ -328,7 +335,7 @@
             </td>
             <td>Online</td>
             <td>Online</td>
-            <td><a href="events/inclusive-design-24-2026.ics" aria-label="Add Inclusive Design 24 to calendar">Add event</a></td>
+            <td><a href="events/inclusive-design-24-2026.ics" aria-label="Add event: Inclusive Design 24 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-10-01">1 October 2026</time></td>
@@ -338,7 +345,7 @@
             </td>
             <td>Hybrid</td>
             <td>Reykjavik, Iceland and online</td>
-            <td><a href="events/wad-iceland-onboard-2026.ics" aria-label="Add WAD: Iceland onboard, from requirements to reality to calendar">Add event</a></td>
+            <td><a href="events/wad-iceland-onboard-2026.ics" aria-label="Add event: WAD: Iceland onboard, from requirements to reality to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-10-05">5–7 October 2026</time></td>
@@ -348,7 +355,7 @@
             </td>
             <td>In person</td>
             <td>Arlington, Virginia, United States</td>
-            <td><a href="events/m-enabling-summit-2026.ics" aria-label="Add M-Enabling Summit 2026 to calendar">Add event</a></td>
+            <td><a href="events/m-enabling-summit-2026.ics" aria-label="Add event: M-Enabling Summit 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-10-25">25–28 October 2026</time></td>
@@ -358,7 +365,7 @@
             </td>
             <td>In person</td>
             <td>Porto, Portugal</td>
-            <td><a href="events/assets-2026.ics" aria-label="Add ASSETS 2026 to calendar">Add event</a></td>
+            <td><a href="events/assets-2026.ics" aria-label="Add event: ASSETS 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-10-28">28 October 2026</time></td>
@@ -368,7 +375,7 @@
             </td>
             <td>In person</td>
             <td>Oslo, Norway</td>
-            <td><a href="events/unikt-forum-oslo-2026.ics" aria-label="Add IAAP Nordic at UnIKT to calendar">Add event</a></td>
+            <td><a href="events/unikt-forum-oslo-2026.ics" aria-label="Add event: IAAP Nordic at UnIKT to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-11-04">4–6 November 2026</time></td>
@@ -378,7 +385,7 @@
             </td>
             <td>Hybrid</td>
             <td>Galway, Ireland and online</td>
-            <td><a href="events/universal-design-2026.ics" aria-label="Add Universal Design 2026 to calendar">Add event</a></td>
+            <td><a href="events/universal-design-2026.ics" aria-label="Add event: Universal Design 2026 to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-11-11">11 November 2026</time></td>
@@ -388,7 +395,7 @@
             </td>
             <td>In person</td>
             <td>Helsinki, Finland</td>
-            <td><a href="events/saavuta-helsinki-2026.ics" aria-label="Add IAAP Nordic workshop at Saavuta to calendar">Add event</a></td>
+            <td><a href="events/saavuta-helsinki-2026.ics" aria-label="Add event: IAAP Nordic workshop at Saavuta to calendar">Add event</a></td>
           </tr>
           <tr>
             <td><time datetime="2026-11-18">18–19 November 2026</time></td>
@@ -398,7 +405,7 @@
             </td>
             <td>In person</td>
             <td>London, United Kingdom</td>
-            <td><a href="events/techshare-pro-2026.ics" aria-label="Add TechShare Pro 2026 to calendar">Add event</a></td>
+            <td><a href="events/techshare-pro-2026.ics" aria-label="Add event: TechShare Pro 2026 to calendar">Add event</a></td>
           </tr>
           </tbody>
         </table>
