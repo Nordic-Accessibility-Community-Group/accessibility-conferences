@@ -33,6 +33,10 @@ jobs:
   validate:
     name: Validate generated files
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Check out repository
