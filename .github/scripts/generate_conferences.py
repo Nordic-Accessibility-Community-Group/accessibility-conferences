@@ -654,6 +654,9 @@ def html_event_name(event: Conference) -> str:
 
 
 def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str:
+    event_count = len(conferences)
+    event_word = "event" if event_count == 1 else "events"
+    table_caption = f"Accessibility conferences and events: {event_count} {event_word}"
     rows = []
     for event in conferences:
         add_label = html.escape(f"Add event: {event.name} to calendar", quote=True)
@@ -755,6 +758,17 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     h2 {{ margin-top: 0; font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.15; }}
     h3 {{ margin-top: 0; font-size: 1.3rem; line-height: 1.2; }}
     .intro {{ max-width: 48rem; margin: 1.5rem 0 3rem; color: var(--muted); font-size: 1.2rem; }}
+    .visually-hidden {{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }}
 
     section {{ margin-block: 3rem; }}
     .panel {{ padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
@@ -842,6 +856,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       <h2 id="events-heading">Events</h2>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
         <table>
+          <caption class="visually-hidden">{table_caption}</caption>
           <thead>
             <tr>
               <th scope="col">Date</th>
