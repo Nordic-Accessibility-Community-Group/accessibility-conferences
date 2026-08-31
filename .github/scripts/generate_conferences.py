@@ -62,6 +62,20 @@ EU_COUNTRY_CODES = {
     "ES",
     "SE",
 }
+COUNTRY_FILTER_LABELS = {
+    "AT": "Austria",
+    "CZ": "Czech Republic",
+    "DK": "Denmark",
+    "FI": "Finland",
+    "DE": "Germany",
+    "IS": "Iceland",
+    "IE": "Ireland",
+    "NO": "Norway",
+    "PT": "Portugal",
+    "GB": "United Kingdom",
+    "US": "United States",
+    "online-only": "Online only",
+}
 REQUIRED_EVENT_FIELDS = {
     "attendance",
     "description",
@@ -653,6 +667,14 @@ def html_event_name(event: Conference) -> str:
     return name
 
 
+def country_filter_value(event: Conference) -> str:
+    return event.country_code or "online-only"
+
+
+def country_filter_label(country_code: str) -> str:
+    return COUNTRY_FILTER_LABELS.get(country_code, country_code)
+
+
 def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str:
     event_count = len(conferences)
     event_word = "event" if event_count == 1 else "events"
@@ -661,7 +683,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     for event in conferences:
         add_label = html.escape(f"Add event: {event.name} to calendar", quote=True)
         rows.append(
-            f"""          <tr>
+            f"""          <tr data-format="{html.escape(event.format, quote=True)}" data-country="{html.escape(country_filter_value(event), quote=True)}">
             <td><time datetime="{event.start_date.isoformat()}">{html.escape(format_event_date(event))}</time></td>
             <td>
               <a href="{html.escape(event.url, quote=True)}">{html_event_name(event)}</a>
@@ -678,6 +700,18 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
             '          <tr><td colspan="5">No events are currently listed.</td></tr>'
         )
 
+    country_filter_options = []
+    country_values = sorted(
+        {country_filter_value(event) for event in conferences},
+        key=country_filter_label,
+    )
+    for country_code in country_values:
+        country_filter_options.append(
+            f'<label><input type="checkbox" name="country" data-filter="country" '
+            f'value="{html.escape(country_code, quote=True)}" checked> '
+            f'{html.escape(country_filter_label(country_code))}</label>'
+        )
+
     subscription_cards = []
     for feed in FEED_DEFINITIONS:
         feed_url = html.escape(calendar.feed_url(feed.filename), quote=True)
@@ -687,15 +721,15 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
             f"Subscribe to {feed.name} calendar", quote=True
         )
         download_label = html.escape(
-            f"Download ICS for {feed.name}", quote=True
+            f"Download one-time .ics file for {feed.name}", quote=True
         )
         subscription_cards.append(
             f"""        <article class="subscription-card">
           <h3>{feed_name}</h3>
           <p>{html.escape(feed.description)}</p>
           <div class="actions">
-            <a class="button primary" href="{webcal_url}" aria-label="{subscribe_label}">Subscribe</a>
-            <a class="button" href="{feed_url}" download aria-label="{download_label}">Download ICS</a>
+            <a class="button primary" href="{webcal_url}" aria-label="{subscribe_label}">Subscribe for updates</a>
+            <a class="button" href="{feed_url}" download aria-label="{download_label}">Download one-time file (.ics)</a>
           </div>
           <label for="{feed.key}-subscription-url">Subscription URL for {feed_name}</label>
           <input id="{feed.key}-subscription-url" type="url" readonly value="{feed_url}" onclick="this.select()">
@@ -739,7 +773,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 
     a {{ color: var(--accent); text-underline-offset: 0.18em; }}
     a:hover {{ color: var(--accent-hover); }}
-    a:focus-visible, input:focus-visible {{ outline: 0.25rem solid var(--focus); outline-offset: 0.2rem; }}
+    a:focus-visible, input:focus-visible, button:focus-visible, summary:focus-visible {{ outline: 0.25rem solid var(--focus); outline-offset: 0.2rem; }}
 
     header, main, footer {{ width: min(76rem, calc(100% - 2rem)); margin-inline: auto; }}
 
@@ -772,9 +806,13 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 
     section {{ margin-block: 3rem; }}
     .panel {{ padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
-    .subscription-options {{ margin-top: 1.5rem; }}
+    .subscription-options {{ display: inline-block; margin-block: 1.5rem; }}
     summary {{ cursor: pointer; font-weight: 700; }}
     details[open] > summary {{ margin-bottom: 1.5rem; }}
+    .subscription-options > summary {{ list-style: none; }}
+    .subscription-options > summary::-webkit-details-marker {{ display: none; }}
+    .subscription-options[open] {{ display: block; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
+    .subscription-options[open] > summary {{ display: inline-block; }}
     .subscription-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; }}
     .subscription-card {{ padding: 1.25rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }}
     .subscription-card > p {{ color: var(--muted); }}
@@ -800,6 +838,17 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       color: var(--text);
       font: inherit;
     }}
+
+    .event-filters {{ margin-bottom: 1.5rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
+    .event-filters[open] > summary {{ margin-bottom: 1rem; }}
+    .filter-options {{ display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; }}
+    .filter-groups {{ display: grid; gap: 1rem; }}
+    .filter-groups fieldset {{ margin: 0; }}
+    .filter-options label {{ display: flex; gap: 0.5rem; align-items: center; margin: 0; font-weight: 400; }}
+    .filter-options input {{ width: 1.25rem; height: 1.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: var(--accent); }}
+    button {{ padding: 0.45rem 0.7rem; border: 1px solid var(--accent); border-radius: 0.3rem; background: transparent; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }}
+    button:hover {{ background: color-mix(in srgb, var(--surface), var(--accent) 10%); color: var(--accent-hover); }}
+    .filter-status {{ margin: 1rem 0 0; color: var(--muted); }}
 
     .table-wrap {{ overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
     table {{ width: 100%; border-collapse: collapse; }}
@@ -839,12 +888,11 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     <h1>Accessibility conferences and events</h1>
     <p class="intro">{calendar_description}</p>
 
-    <section class="panel" aria-labelledby="subscribe-heading">
-      <h2 id="subscribe-heading">Subscribe to the calendar</h2>
-      <p>Use this optional section to subscribe to updates in your calendar app.</p>
-      <details class="subscription-options" aria-labelledby="subscribe-heading">
-        <summary>Choose a calendar to subscribe to</summary>
-        <p>Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
+    <section aria-labelledby="subscribe-heading">
+      <h2 class="visually-hidden" id="subscribe-heading">Subscribe to the calendar</h2>
+      <details class="subscription-options">
+        <summary class="button primary">Subscribe to calendars</summary>
+        <p>Subscribe to keep the calendar updated. Download a one-time copy (.ics) instead if you do not need future updates.</p>
         <div class="subscription-grid">
 {chr(10).join(subscription_cards)}
         </div>
@@ -854,9 +902,30 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 
     <section aria-labelledby="events-heading">
       <h2 id="events-heading">Events</h2>
+      <details class="event-filters">
+        <summary>Filter events</summary>
+        <div class="filter-groups">
+        <fieldset>
+          <legend>Format</legend>
+          <div class="filter-options">
+            <label><input type="checkbox" name="format" data-filter="format" value="In person" checked> In person</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Hybrid" checked> Hybrid</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Online" checked> Online</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Country or online</legend>
+          <div class="filter-options">
+{chr(10).join(f'            {option}' for option in country_filter_options)}
+          </div>
+        </fieldset>
+        </div>
+        <button type="button" id="reset-filters">Show all</button>
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all {event_count} {event_word}.</p>
+      </details>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
         <table>
-          <caption class="visually-hidden">{table_caption}</caption>
+          <caption class="visually-hidden" id="events-caption">{table_caption}</caption>
           <thead>
             <tr>
               <th scope="col">Date</th>
@@ -868,6 +937,9 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
           </thead>
           <tbody>
 {chr(10).join(rows)}
+          <tr id="no-filter-results" hidden>
+            <td colspan="5">No events match the selected filters.</td>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -885,6 +957,44 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
   <footer>
     <p>Calendar data is maintained in the <a href="{REPOSITORY_URL}">accessibility conferences repository</a>.</p>
   </footer>
+  <script>
+    const filters = document.querySelectorAll('input[data-filter]');
+    const formatFilters = document.querySelectorAll('input[data-filter="format"]');
+    const countryFilters = document.querySelectorAll('input[data-filter="country"]');
+    const rows = document.querySelectorAll('tbody tr[data-format]');
+    const status = document.querySelector('#filter-status');
+    const caption = document.querySelector('#events-caption');
+    const emptyState = document.querySelector('#no-filter-results');
+    const reset = document.querySelector('#reset-filters');
+
+    function updateFilters() {{
+      const selectedFormats = [...formatFilters].filter((filter) => filter.checked).map((filter) => filter.value);
+      const selectedCountries = [...countryFilters].filter((filter) => filter.checked).map((filter) => filter.value);
+      let visibleCount = 0;
+      rows.forEach((row) => {{
+        const visible = selectedFormats.includes(row.dataset.format)
+          && selectedCountries.includes(row.dataset.country);
+        row.hidden = !visible;
+        if (visible) visibleCount += 1;
+      }});
+      const eventWord = visibleCount === 1 ? 'event' : 'events';
+      const allFiltersSelected = selectedFormats.length === formatFilters.length
+        && selectedCountries.length === countryFilters.length;
+      emptyState.hidden = visibleCount !== 0;
+      caption.textContent = allFiltersSelected
+        ? `Accessibility conferences and events: ${{visibleCount}} ${{eventWord}}`
+        : `Accessibility conferences and events: ${{visibleCount}} of ${{rows.length}} ${{eventWord}} shown`;
+      status.textContent = allFiltersSelected
+        ? `Showing all ${{visibleCount}} ${{eventWord}}.`
+        : `Showing ${{visibleCount}} of ${{rows.length}} ${{eventWord}}.`;
+    }}
+
+    filters.forEach((filter) => filter.addEventListener('change', updateFilters));
+    reset.addEventListener('click', () => {{
+      filters.forEach((filter) => {{ filter.checked = true; }});
+      updateFilters();
+    }});
+  </script>
 </body>
 </html>
 """
