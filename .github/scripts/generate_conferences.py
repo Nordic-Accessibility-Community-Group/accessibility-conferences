@@ -828,7 +828,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     <section class="panel" aria-labelledby="subscribe-heading">
       <h2 id="subscribe-heading">Subscribe to the calendar</h2>
       <p>Use this optional section to subscribe to updates in your calendar app.</p>
-      <details class="subscription-options">
+      <details class="subscription-options" aria-labelledby="subscribe-heading">
         <summary>Choose a calendar to subscribe to</summary>
         <p>Each subscription receives additions, corrections and cancellations when your calendar application refreshes the feed.</p>
         <div class="subscription-grid">
