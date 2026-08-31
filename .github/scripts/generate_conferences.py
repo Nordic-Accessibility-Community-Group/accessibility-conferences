@@ -844,7 +844,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     .filter-options {{ display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; }}
     .filter-groups {{ display: grid; gap: 1rem; }}
     .filter-groups fieldset {{ margin: 0; }}
-    .event-filters > button {{ margin-top: 1rem; }}
+    .filter-actions {{ display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }}
     .filter-options label {{ display: flex; gap: 0.5rem; align-items: center; margin: 0; font-weight: 400; }}
     .filter-options input {{ width: 1.25rem; height: 1.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: var(--accent); }}
     button {{ padding: 0.45rem 0.7rem; border: 1px solid var(--accent); border-radius: 0.3rem; background: transparent; color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }}
@@ -921,7 +921,10 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
           </div>
         </fieldset>
         </div>
-        <button type="button" id="reset-filters">Show all</button>
+        <div class="filter-actions">
+          <button type="button" id="reset-filters">Show all</button>
+          <button type="button" id="clear-filters">Hide all</button>
+        </div>
         <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all {event_count} {event_word}.</p>
       </details>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
@@ -967,6 +970,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     const caption = document.querySelector('#events-caption');
     const emptyState = document.querySelector('#no-filter-results');
     const reset = document.querySelector('#reset-filters');
+    const clear = document.querySelector('#clear-filters');
 
     function updateFilters() {{
       const selectedFormats = [...formatFilters].filter((filter) => filter.checked).map((filter) => filter.value);
@@ -993,6 +997,10 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     filters.forEach((filter) => filter.addEventListener('change', updateFilters));
     reset.addEventListener('click', () => {{
       filters.forEach((filter) => {{ filter.checked = true; }});
+      updateFilters();
+    }});
+    clear.addEventListener('click', () => {{
+      filters.forEach((filter) => {{ filter.checked = false; }});
       updateFilters();
     }});
   </script>
