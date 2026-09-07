@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-si-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260907T000000Z
+LAST-MODIFIED:20260907T000000Z
+SEQUENCE:0
+DTSTART:20260520T063000Z
+DTEND:20260520T130000Z
+SUMMARY:AccessibleEU Slovenia: Global Accessibility Awareness Day Slovenia
+DESCRIPTION:An awareness-raising event about understanding and implementing
+  accessibility in digital technologies.\nAttendance: Hybrid\nOrganizer: Ac
+ cessibleEU\nLanguage: Slovene
+LOCATION:University Rehabilitation Institute of the Republic of Slovenia So
+ ča\, Linhartova 51\, Ljubljana\, Slovenia and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-slovenia-global-accessibility-awareness-day-slovenia-gaad-slovenia-2
+ 6-aw-si-01-2026-05-20_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

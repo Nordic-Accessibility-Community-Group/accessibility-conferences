@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-es-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260907T000000Z
+LAST-MODIFIED:20260907T000000Z
+SEQUENCE:0
+DTSTART:20260122T103000Z
+DTEND:20260122T133000Z
+SUMMARY:AccessibleEU Spain: Information session on the European Accessibili
+ ty Act and the AccessibleEU European Accessibility Resource Centre
+DESCRIPTION:An information session about the European Accessibility Act and
+  the support that AccessibleEU provides for compliance.\nAttendance: Hybri
+ d\nOrganizer: AccessibleEU\nLanguage: Spanish
+LOCATION:HUB of Por Talento Digital\, Calle de Fray Luis de León 11\, 2801
+ 2 Madrid\, Spain
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-spain-information-session-european-accessibility-act-and-accessiblee
+ u-european-2026-01-22_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

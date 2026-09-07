@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-cy-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260907T000000Z
+LAST-MODIFIED:20260907T000000Z
+SEQUENCE:0
+DTSTART:20260422T140000Z
+DTEND:20260422T163000Z
+SUMMARY:AccessibleEU Cyprus: Accessibility Matters: Making Inclusive Learni
+ ng and Inclusive-Thinking Learners
+DESCRIPTION:A professional development event about strengthening accessibil
+ ity in higher education and preparing inclusive learners and professionals
+ .\nAttendance: Online\nOrganizer: AccessibleEU\nLanguage: English with tra
+ nslation into Greek
+LOCATION:Online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-cyprus-accessibility-matters-making-inclusive-learning-and-inclusive
+ -thinking-learners-2026-04-22_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

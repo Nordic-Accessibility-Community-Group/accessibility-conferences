@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-gr-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260907T000000Z
+LAST-MODIFIED:20260907T000000Z
+SEQUENCE:0
+DTSTART:20260710T070000Z
+DTEND:20260710T110000Z
+SUMMARY:AccessibleEU Greece: Municipal Initiatives for Ensuring Equal Acces
+ s to Infrastructure and Services
+DESCRIPTION:An event exchanging good practices in designing and implementin
+ g inclusive local policies.\nAttendance: Hybrid\nOrganizer: AccessibleEU\n
+ Language: Greek
+LOCATION:Hotel Titania\, 52 Panepistimiou Avenue\, Athens\, Greece and onli
+ ne
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-greece-municipal-initiatives-ensuring-equal-access-persons-disabilit
+ ies-infrastructure-2026-07-10_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

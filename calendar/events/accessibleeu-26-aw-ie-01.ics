@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-ie-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260907T000000Z
+LAST-MODIFIED:20260907T000000Z
+SEQUENCE:0
+DTSTART:20260313T093000Z
+DTEND:20260313T140000Z
+SUMMARY:AccessibleEU Ireland: Accessibility in Action. Models of Good Pract
+ ice
+DESCRIPTION:An event presenting good-practice models for universally design
+ ed and accessible public services\, including employment.\nAttendance: Hyb
+ rid\nOrganizer: AccessibleEU\nLanguage: English
+LOCATION:National Disability Authority\, 25 Clyde Road\, Dublin\, Ireland a
+ nd online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-ireland-accessibility-action-models-good-practice-26-aw-ie-01-2026-0
+ 3-13_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
