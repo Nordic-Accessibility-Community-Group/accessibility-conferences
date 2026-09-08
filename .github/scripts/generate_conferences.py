@@ -728,7 +728,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     for country_code in country_values:
         country_filter_options.append(
             f'<label><input type="checkbox" name="country" data-filter="country" '
-            f'value="{html.escape(country_code, quote=True)}" checked> '
+            f'value="{html.escape(country_code, quote=True)}"> '
             f'{html.escape(country_filter_label(country_code))}</label>'
         )
 
@@ -877,7 +877,8 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     .filter-options label {{ display: flex; gap: 0.5rem; align-items: center; margin: 0; font-weight: 400; }}
     .filter-options input {{ width: 1.25rem; height: 1.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: var(--link); }}
     button {{ padding: 0.45rem 0.7rem; border: 1px solid var(--action); border-radius: 0.3rem; background: transparent; color: var(--action); font: inherit; font-weight: 700; cursor: pointer; }}
-    button:hover {{ background: color-mix(in srgb, var(--surface), var(--action) 10%); color: var(--action-hover); }}
+    button:not(:disabled):hover {{ background: color-mix(in srgb, var(--surface), var(--action) 10%); color: var(--action-hover); }}
+    button:disabled {{ cursor: not-allowed; opacity: 0.55; }}
     .filter-status {{ margin: 1rem 0 0; color: var(--muted); }}
 
     .table-wrap {{ overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
@@ -965,7 +966,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       .filter-options label {{ min-height: 2rem; }}
       .filter-actions {{ gap: 0.6rem; }}
       button {{ min-height: 2.5rem; padding-inline: 0.85rem; border-color: var(--link); border-radius: 0.4rem; color: var(--link); font-weight: 600; }}
-      button:hover {{ background: color-mix(in srgb, var(--surface-raised), var(--link) 12%); color: var(--link-hover); }}
+      button:not(:disabled):hover {{ background: color-mix(in srgb, var(--surface-raised), var(--link) 12%); color: var(--link-hover); }}
 
       .table-wrap {{ background: var(--surface); }}
       th, td {{ padding: clamp(0.95rem, 2.5vw, 1.25rem); border-color: var(--border); }}
@@ -1019,13 +1020,14 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       <h2 id="events-heading">Events</h2>
       <details class="event-filters">
         <summary>Filter events</summary>
+        <p>Select one or more options to narrow the events. Leave a group empty to include all options in that group.</p>
         <div class="filter-groups">
         <fieldset>
           <legend>Format</legend>
           <div class="filter-options">
-            <label><input type="checkbox" name="format" data-filter="format" value="In person" checked> In person</label>
-            <label><input type="checkbox" name="format" data-filter="format" value="Hybrid" checked> Hybrid</label>
-            <label><input type="checkbox" name="format" data-filter="format" value="Online" checked> Online</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="In person"> In person</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Hybrid"> Hybrid</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Online"> Online</label>
           </div>
         </fieldset>
         <fieldset>
@@ -1036,8 +1038,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
         </fieldset>
         </div>
         <div class="filter-actions">
-          <button type="button" id="reset-filters">Show all</button>
-          <button type="button" id="clear-filters">Hide all</button>
+          <button type="button" id="clear-filters" disabled>Clear filters</button>
         </div>
         <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all {event_count} {event_word}.</p>
       </details>
@@ -1083,7 +1084,6 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     const status = document.querySelector('#filter-status');
     const caption = document.querySelector('#events-caption');
     const emptyState = document.querySelector('#no-filter-results');
-    const reset = document.querySelector('#reset-filters');
     const clear = document.querySelector('#clear-filters');
 
     function updateFilters() {{
@@ -1091,32 +1091,33 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       const selectedCountries = [...countryFilters].filter((filter) => filter.checked).map((filter) => filter.value);
       let visibleCount = 0;
       rows.forEach((row) => {{
-        const visible = selectedFormats.includes(row.dataset.format)
-          && selectedCountries.includes(row.dataset.country);
+        const formatMatches = selectedFormats.length === 0
+          || selectedFormats.includes(row.dataset.format);
+        const countryMatches = selectedCountries.length === 0
+          || selectedCountries.includes(row.dataset.country);
+        const visible = formatMatches && countryMatches;
         row.hidden = !visible;
         if (visible) visibleCount += 1;
       }});
       const eventWord = visibleCount === 1 ? 'event' : 'events';
-      const allFiltersSelected = selectedFormats.length === formatFilters.length
-        && selectedCountries.length === countryFilters.length;
+      const noFiltersSelected = selectedFormats.length === 0
+        && selectedCountries.length === 0;
+      clear.disabled = noFiltersSelected;
       emptyState.hidden = visibleCount !== 0;
-      caption.textContent = allFiltersSelected
+      caption.textContent = noFiltersSelected
         ? `Accessibility conferences and events: ${{visibleCount}} ${{eventWord}}`
         : `Accessibility conferences and events: ${{visibleCount}} of ${{rows.length}} ${{eventWord}} shown`;
-      status.textContent = allFiltersSelected
+      status.textContent = noFiltersSelected
         ? `Showing all ${{visibleCount}} ${{eventWord}}.`
         : `Showing ${{visibleCount}} of ${{rows.length}} ${{eventWord}}.`;
     }}
 
     filters.forEach((filter) => filter.addEventListener('change', updateFilters));
-    reset.addEventListener('click', () => {{
-      filters.forEach((filter) => {{ filter.checked = true; }});
-      updateFilters();
-    }});
     clear.addEventListener('click', () => {{
       filters.forEach((filter) => {{ filter.checked = false; }});
       updateFilters();
     }});
+    window.addEventListener('pageshow', updateFilters);
   </script>
 </body>
 </html>

@@ -116,7 +116,8 @@
     .filter-options label { display: flex; gap: 0.5rem; align-items: center; margin: 0; font-weight: 400; }
     .filter-options input { width: 1.25rem; height: 1.25rem; padding: 0; border: 0; border-radius: 0; background: transparent; accent-color: var(--link); }
     button { padding: 0.45rem 0.7rem; border: 1px solid var(--action); border-radius: 0.3rem; background: transparent; color: var(--action); font: inherit; font-weight: 700; cursor: pointer; }
-    button:hover { background: color-mix(in srgb, var(--surface), var(--action) 10%); color: var(--action-hover); }
+    button:not(:disabled):hover { background: color-mix(in srgb, var(--surface), var(--action) 10%); color: var(--action-hover); }
+    button:disabled { cursor: not-allowed; opacity: 0.55; }
     .filter-status { margin: 1rem 0 0; color: var(--muted); }
 
     .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
@@ -204,7 +205,7 @@
       .filter-options label { min-height: 2rem; }
       .filter-actions { gap: 0.6rem; }
       button { min-height: 2.5rem; padding-inline: 0.85rem; border-color: var(--link); border-radius: 0.4rem; color: var(--link); font-weight: 600; }
-      button:hover { background: color-mix(in srgb, var(--surface-raised), var(--link) 12%); color: var(--link-hover); }
+      button:not(:disabled):hover { background: color-mix(in srgb, var(--surface-raised), var(--link) 12%); color: var(--link-hover); }
 
       .table-wrap { background: var(--surface); }
       th, td { padding: clamp(0.95rem, 2.5vw, 1.25rem); border-color: var(--border); }
@@ -297,62 +298,62 @@
       <h2 id="events-heading">Events</h2>
       <details class="event-filters">
         <summary>Filter events</summary>
+        <p>Select one or more options to narrow the events. Leave a group empty to include all options in that group.</p>
         <div class="filter-groups">
         <fieldset>
           <legend>Format</legend>
           <div class="filter-options">
-            <label><input type="checkbox" name="format" data-filter="format" value="In person" checked> In person</label>
-            <label><input type="checkbox" name="format" data-filter="format" value="Hybrid" checked> Hybrid</label>
-            <label><input type="checkbox" name="format" data-filter="format" value="Online" checked> Online</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="In person"> In person</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Hybrid"> Hybrid</label>
+            <label><input type="checkbox" name="format" data-filter="format" value="Online"> Online</label>
           </div>
         </fieldset>
         <fieldset>
           <legend>Country or online</legend>
           <div class="filter-options">
-            <label><input type="checkbox" name="country" data-filter="country" value="AT" checked> Austria</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="BE" checked> Belgium</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="BG" checked> Bulgaria</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="HR" checked> Croatia</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="CY" checked> Cyprus</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="CZ" checked> Czech Republic</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="DK" checked> Denmark</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="EE" checked> Estonia</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="FI" checked> Finland</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="FR" checked> France</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="DE" checked> Germany</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="GR" checked> Greece</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="HU" checked> Hungary</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="IS" checked> Iceland</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="IE" checked> Ireland</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="IT" checked> Italy</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="LV" checked> Latvia</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="LT" checked> Lithuania</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="LU" checked> Luxembourg</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="MT" checked> Malta</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="NL" checked> Netherlands</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="NO" checked> Norway</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="online-only" checked> Online only</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="PL" checked> Poland</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="PT" checked> Portugal</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="RO" checked> Romania</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="SK" checked> Slovakia</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="SI" checked> Slovenia</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="ES" checked> Spain</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="SE" checked> Sweden</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="GB" checked> United Kingdom</label>
-            <label><input type="checkbox" name="country" data-filter="country" value="US" checked> United States</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="AT"> Austria</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="BE"> Belgium</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="BG"> Bulgaria</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="HR"> Croatia</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="CY"> Cyprus</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="CZ"> Czech Republic</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="DK"> Denmark</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="EE"> Estonia</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="FI"> Finland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="FR"> France</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="DE"> Germany</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="GR"> Greece</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="HU"> Hungary</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="IS"> Iceland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="IE"> Ireland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="IT"> Italy</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="LV"> Latvia</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="LT"> Lithuania</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="LU"> Luxembourg</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="MT"> Malta</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="NL"> Netherlands</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="NO"> Norway</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="online-only"> Online only</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="PL"> Poland</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="PT"> Portugal</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="RO"> Romania</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="SK"> Slovakia</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="SI"> Slovenia</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="ES"> Spain</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="SE"> Sweden</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="GB"> United Kingdom</label>
+            <label><input type="checkbox" name="country" data-filter="country" value="US"> United States</label>
           </div>
         </fieldset>
         </div>
         <div class="filter-actions">
-          <button type="button" id="reset-filters">Show all</button>
-          <button type="button" id="clear-filters">Hide all</button>
+          <button type="button" id="clear-filters" disabled>Clear filters</button>
         </div>
-        <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all 106 events.</p>
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all 102 events.</p>
       </details>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
         <table>
-          <caption class="visually-hidden" id="events-caption">Accessibility conferences and events: 106 events</caption>
+          <caption class="visually-hidden" id="events-caption">Accessibility conferences and events: 102 events</caption>
           <thead>
             <tr>
               <th scope="col">Date</th>
@@ -492,16 +493,6 @@
             <td>Hybrid</td>
             <td>National Disability Authority, 25 Clyde Road, Dublin, Ireland and online</td>
             <td><a href="events/accessibleeu-26-aw-ie-01.ics" aria-label="Add event: AccessibleEU Ireland: Accessibility in Action. Models of Good Practice to calendar">Add event</a></td>
-          </tr>
-          <tr data-format="Online" data-country="online-only">
-            <td><time datetime="2026-03-16">16 March – 31 October 2026, 00:00–23:59 CET</time></td>
-            <td>
-              <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-introduction-accessible-public-transport-rules-and-rights-europe-2nd-2026-03-16_en">AccessibleEU Online Training: Introduction to Accessible Public Transport: Rules and Rights in Europe (2nd edition)</a>
-              <p>An introductory online course about accessible public transport, passenger rights, inclusive design and the pedestrian environment.</p>
-            </td>
-            <td>Online</td>
-            <td>Online</td>
-            <td><a href="events/accessibleeu-26-ot-eu-02.ics" aria-label="Add event: AccessibleEU Online Training: Introduction to Accessible Public Transport: Rules and Rights in Europe (2nd edition) to calendar">Add event</a></td>
           </tr>
           <tr data-format="Hybrid" data-country="DK">
             <td><time datetime="2026-03-19">19 March 2026, 09:30–15:30 CET</time></td>
@@ -792,26 +783,6 @@
             <td>In person</td>
             <td>Nicosia Municipal Arts Centre, 19 Palias Ilektrikis, Nicosia, Cyprus</td>
             <td><a href="events/accessibleeu-26-nw-cy-01.ics" aria-label="Add event: AccessibleEU Cyprus: Wise and Accessible Cities: From Transport, to Information, to Culture and Beyond to calendar">Add event</a></td>
-          </tr>
-          <tr data-format="Online" data-country="online-only">
-            <td><time datetime="2026-05-25">25 May – 31 October 2026, 00:00–23:59 CEST</time></td>
-            <td>
-              <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-accessible-technology-design-4th-edition-26-ot-eu-04-2026-05-25_en">AccessibleEU Online Training: Accessible Technology Design (4th edition)</a>
-              <p>An online course teaching the fundamentals of universal accessibility in digital environments.</p>
-            </td>
-            <td>Online</td>
-            <td>Online</td>
-            <td><a href="events/accessibleeu-26-ot-eu-04.ics" aria-label="Add event: AccessibleEU Online Training: Accessible Technology Design (4th edition) to calendar">Add event</a></td>
-          </tr>
-          <tr data-format="Online" data-country="online-only">
-            <td><time datetime="2026-05-25">25 May – 31 October 2026, 00:00–23:59 CEST</time></td>
-            <td>
-              <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-introduction-accessibility-built-environment-3rd-edition-26-ot-eu-03-2026-05-25_en">AccessibleEU Online Training: Introduction to Accessibility of the Built Environment (3rd edition)</a>
-              <p>An introductory online course about accessibility of the built environment.</p>
-            </td>
-            <td>Online</td>
-            <td>Online</td>
-            <td><a href="events/accessibleeu-26-ot-eu-03.ics" aria-label="Add event: AccessibleEU Online Training: Introduction to Accessibility of the Built Environment (3rd edition) to calendar">Add event</a></td>
           </tr>
           <tr data-format="Hybrid" data-country="FR">
             <td><time datetime="2026-05-28">28 May 2026, 09:00–13:00 CEST</time></td>
@@ -1143,16 +1114,6 @@
             <td>MuseumsQuartier Wien, Museumsplatz 1/5, Vienna, Austria and online</td>
             <td><a href="events/accessibleeu-26-nw-at-01.ics" aria-label="Add event: AccessibleEU Austria: Inclusive Museums 2030: Accessible Culture for a Diverse Society to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
-            <td><time datetime="2026-09-14">14 September – 10 December 2026, 00:00–23:59 CEST</time></td>
-            <td>
-              <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-accessible-technology-design-advanced-26-ot-eu-01-2026-09-14_en">AccessibleEU Online Training: Accessible Technology Design: Advanced</a>
-              <p>An advanced online course about applying accessibility requirements when designing, developing and auditing digital products.</p>
-            </td>
-            <td>Online</td>
-            <td>Online</td>
-            <td><a href="events/accessibleeu-26-ot-eu-01.ics" aria-label="Add event: AccessibleEU Online Training: Accessible Technology Design: Advanced to calendar">Add event</a></td>
-          </tr>
           <tr data-format="Hybrid" data-country="FI">
             <td><time datetime="2026-09-15">15 September 2026, 09:00–15:00 EEST</time></td>
             <td>
@@ -1451,7 +1412,6 @@
     const status = document.querySelector('#filter-status');
     const caption = document.querySelector('#events-caption');
     const emptyState = document.querySelector('#no-filter-results');
-    const reset = document.querySelector('#reset-filters');
     const clear = document.querySelector('#clear-filters');
 
     function updateFilters() {
@@ -1459,32 +1419,33 @@
       const selectedCountries = [...countryFilters].filter((filter) => filter.checked).map((filter) => filter.value);
       let visibleCount = 0;
       rows.forEach((row) => {
-        const visible = selectedFormats.includes(row.dataset.format)
-          && selectedCountries.includes(row.dataset.country);
+        const formatMatches = selectedFormats.length === 0
+          || selectedFormats.includes(row.dataset.format);
+        const countryMatches = selectedCountries.length === 0
+          || selectedCountries.includes(row.dataset.country);
+        const visible = formatMatches && countryMatches;
         row.hidden = !visible;
         if (visible) visibleCount += 1;
       });
       const eventWord = visibleCount === 1 ? 'event' : 'events';
-      const allFiltersSelected = selectedFormats.length === formatFilters.length
-        && selectedCountries.length === countryFilters.length;
+      const noFiltersSelected = selectedFormats.length === 0
+        && selectedCountries.length === 0;
+      clear.disabled = noFiltersSelected;
       emptyState.hidden = visibleCount !== 0;
-      caption.textContent = allFiltersSelected
+      caption.textContent = noFiltersSelected
         ? `Accessibility conferences and events: ${visibleCount} ${eventWord}`
         : `Accessibility conferences and events: ${visibleCount} of ${rows.length} ${eventWord} shown`;
-      status.textContent = allFiltersSelected
+      status.textContent = noFiltersSelected
         ? `Showing all ${visibleCount} ${eventWord}.`
         : `Showing ${visibleCount} of ${rows.length} ${eventWord}.`;
     }
 
     filters.forEach((filter) => filter.addEventListener('change', updateFilters));
-    reset.addEventListener('click', () => {
-      filters.forEach((filter) => { filter.checked = true; });
-      updateFilters();
-    });
     clear.addEventListener('click', () => {
       filters.forEach((filter) => { filter.checked = false; });
       updateFilters();
     });
+    window.addEventListener('pageshow', updateFilters);
   </script>
 </body>
 </html>

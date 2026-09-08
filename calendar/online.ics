@@ -234,25 +234,6 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:accessibleeu-26-ot-eu-02@nordic-accessibility-community-group.github.io
-DTSTAMP:20260907T000000Z
-LAST-MODIFIED:20260907T000000Z
-SEQUENCE:0
-DTSTART:20260315T230000Z
-DTEND:20261031T225900Z
-SUMMARY:AccessibleEU Online Training: Introduction to Accessible Public Tra
- nsport: Rules and Rights in Europe (2nd edition)
-DESCRIPTION:An introductory online course about accessible public transport
- \, passenger rights\, inclusive design and the pedestrian environment.\nAt
- tendance: Online\nOrganizer: AccessibleEU\nLanguage: English
-LOCATION:Online
-URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
- bleeu-online-training-introduction-accessible-public-transport-rules-and-r
- ights-europe-2nd-2026-03-16_en
-STATUS:CONFIRMED
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:accessibleeu-26-nw-dk-01@nordic-accessibility-community-group.github.io
 DTSTAMP:20260907T000000Z
 LAST-MODIFIED:20260907T000000Z
@@ -598,44 +579,6 @@ LOCATION:Sapienza University of Rome\, Viale dello Scalo San Lorenzo 82\, R
  ome\, Italy and online
 URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
  bleeu-italy-accessibility-days-2026-26-aw-it-01-2026-05-21_en
-STATUS:CONFIRMED
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:accessibleeu-26-ot-eu-04@nordic-accessibility-community-group.github.io
-DTSTAMP:20260907T000000Z
-LAST-MODIFIED:20260907T000000Z
-SEQUENCE:0
-DTSTART:20260524T220000Z
-DTEND:20261031T225900Z
-SUMMARY:AccessibleEU Online Training: Accessible Technology Design (4th edi
- tion)
-DESCRIPTION:An online course teaching the fundamentals of universal accessi
- bility in digital environments.\nAttendance: Online\nOrganizer: Accessible
- EU\nLanguage: English
-LOCATION:Online
-URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
- bleeu-online-training-accessible-technology-design-4th-edition-26-ot-eu-04
- -2026-05-25_en
-STATUS:CONFIRMED
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:accessibleeu-26-ot-eu-03@nordic-accessibility-community-group.github.io
-DTSTAMP:20260907T000000Z
-LAST-MODIFIED:20260907T000000Z
-SEQUENCE:0
-DTSTART:20260524T220000Z
-DTEND:20261031T225900Z
-SUMMARY:AccessibleEU Online Training: Introduction to Accessibility of the
-  Built Environment (3rd edition)
-DESCRIPTION:An introductory online course about accessibility of the built
-  environment.\nAttendance: Online\nOrganizer: AccessibleEU\nLanguage: Engl
- ish
-LOCATION:Online
-URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
- bleeu-online-training-introduction-accessibility-built-environment-3rd-edi
- tion-26-ot-eu-03-2026-05-25_en
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -1117,25 +1060,6 @@ LOCATION:MuseumsQuartier Wien\, Museumsplatz 1/5\, Vienna\, Austria and onl
 URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
  bleeu-austria-inclusive-museums-2030-accessible-culture-diverse-society-26
  -nw-01-2026-09-14_en
-STATUS:CONFIRMED
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:accessibleeu-26-ot-eu-01@nordic-accessibility-community-group.github.io
-DTSTAMP:20260908T000000Z
-LAST-MODIFIED:20260908T000000Z
-SEQUENCE:0
-DTSTART:20260913T220000Z
-DTEND:20261210T225900Z
-SUMMARY:AccessibleEU Online Training: Accessible Technology Design: Advance
- d
-DESCRIPTION:An advanced online course about applying accessibility requirem
- ents when designing\, developing and auditing digital products.\nAttendanc
- e: Online\nOrganizer: AccessibleEU\nLanguage: English
-LOCATION:Online
-URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
- bleeu-online-training-accessible-technology-design-advanced-26-ot-eu-01-20
- 26-09-14_en
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

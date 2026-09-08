@@ -506,25 +506,6 @@ conferences:
     sequence: 0
     last_verified: "2026-09-07"
 
-  - id: accessibleeu-26-ot-eu-02
-    name: "AccessibleEU Online Training: Introduction to Accessible Public Transport: Rules and Rights in Europe (2nd edition)"
-    start_date: "2026-03-16"
-    end_date: "2026-10-31"
-    start_time: "00:00"
-    end_time: "23:59"
-    time_zone: Europe/Brussels
-    location: Online
-    attendance:
-      onsite: false
-      online: true
-    language: English
-    organizer: AccessibleEU
-    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-introduction-accessible-public-transport-rules-and-rights-europe-2nd-2026-03-16_en
-    description: An introductory online course about accessible public transport, passenger rights, inclusive design and the pedestrian environment.
-    status: confirmed
-    sequence: 0
-    last_verified: "2026-09-07"
-
   - id: accessibleeu-26-nw-dk-01
     name: "AccessibleEU Denmark: Accessible Tourism as an Opportunity"
     start_date: "2026-03-19"
@@ -1019,44 +1000,6 @@ conferences:
     organizer: AccessibleEU
     url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-cyprus-wise-and-accessible-cities-transport-information-culture-and-beyond-26-nw-cy-01-2026-05-23_en
     description: An event about interdisciplinary co-design, user engagement and creating inclusive cities and societies.
-    status: confirmed
-    sequence: 0
-    last_verified: "2026-09-07"
-
-  - id: accessibleeu-26-ot-eu-04
-    name: "AccessibleEU Online Training: Accessible Technology Design (4th edition)"
-    start_date: "2026-05-25"
-    end_date: "2026-10-31"
-    start_time: "00:00"
-    end_time: "23:59"
-    time_zone: Europe/Brussels
-    location: Online
-    attendance:
-      onsite: false
-      online: true
-    language: English
-    organizer: AccessibleEU
-    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-accessible-technology-design-4th-edition-26-ot-eu-04-2026-05-25_en
-    description: An online course teaching the fundamentals of universal accessibility in digital environments.
-    status: confirmed
-    sequence: 0
-    last_verified: "2026-09-07"
-
-  - id: accessibleeu-26-ot-eu-03
-    name: "AccessibleEU Online Training: Introduction to Accessibility of the Built Environment (3rd edition)"
-    start_date: "2026-05-25"
-    end_date: "2026-10-31"
-    start_time: "00:00"
-    end_time: "23:59"
-    time_zone: Europe/Brussels
-    location: Online
-    attendance:
-      onsite: false
-      online: true
-    language: English
-    organizer: AccessibleEU
-    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-introduction-accessibility-built-environment-3rd-edition-26-ot-eu-03-2026-05-25_en
-    description: An introductory online course about accessibility of the built environment.
     status: confirmed
     sequence: 0
     last_verified: "2026-09-07"
@@ -1632,25 +1575,6 @@ conferences:
     organizer: AccessibleEU
     url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovenia-digital-inclusion-information-society-digin-26-ws-si-01-2026-09-10_en
     description: A workshop about digital inclusion and digital transformation as a socio-technological process.
-    status: confirmed
-    sequence: 0
-    last_verified: "2026-09-08"
-
-  - id: accessibleeu-26-ot-eu-01
-    name: "AccessibleEU Online Training: Accessible Technology Design: Advanced"
-    start_date: "2026-09-14"
-    end_date: "2026-12-10"
-    start_time: "00:00"
-    end_time: "23:59"
-    time_zone: Europe/Brussels
-    location: Online
-    attendance:
-      onsite: false
-      online: true
-    language: English
-    organizer: AccessibleEU
-    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-accessible-technology-design-advanced-26-ot-eu-01-2026-09-14_en
-    description: An advanced online course about applying accessibility requirements when designing, developing and auditing digital products.
     status: confirmed
     sequence: 0
     last_verified: "2026-09-08"
