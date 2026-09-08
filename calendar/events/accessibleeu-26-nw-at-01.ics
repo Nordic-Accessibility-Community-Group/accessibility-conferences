@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-at-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260914T080000Z
+DTEND:20260914T143000Z
+SUMMARY:AccessibleEU Austria: Inclusive Museums 2030: Accessible Culture fo
+ r a Diverse Society
+DESCRIPTION:A conference about moving museums from isolated accessibility m
+ easures toward structural inclusion.\nAttendance: Hybrid\nOrganizer: Acces
+ sibleEU\nLanguage: German
+LOCATION:MuseumsQuartier Wien\, Museumsplatz 1/5\, Vienna\, Austria and onl
+ ine
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-austria-inclusive-museums-2030-accessible-culture-diverse-society-26
+ -nw-01-2026-09-14_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

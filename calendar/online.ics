@@ -1021,6 +1021,243 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:accessibleeu-26-ws-at-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260907T080000Z
+DTEND:20260907T143000Z
+SUMMARY:AccessibleEU Austria: Digital Euro and Financial Inclusion: Europe'
+ s Path Between Regulation\, Innovation and Responsibility
+DESCRIPTION:A workshop about the European Accessibility Act\, accessibility
+  requirements for financial services and the digital euro.\nAttendance: Hy
+ brid\nOrganizer: AccessibleEU\nLanguage: German
+LOCATION:Oesterreichische Nationalbank\, Otto-Wagner-Platz 3\, Vienna\, Aus
+ tria and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-austria-digital-euro-and-financial-inclusion-europes-path-between-re
+ gulation-innovation-2026-09-07_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-ro-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260907T070000Z
+DTEND:20260907T130000Z
+SUMMARY:AccessibleEU Romania: Accessible Communities: Mobility\, Safety and
+  Accessible Cultural Heritage
+DESCRIPTION:A workshop about inclusive emergency preparedness\, accessible
+  mobility and accessible cultural heritage.\nAttendance: Hybrid\nOrganizer
+ : AccessibleEU\nLanguage: Romanian
+LOCATION:University of Bucharest Rectorate Building\, 90 Panduri Avenue\, B
+ ucharest\, Romania and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-romania-accessible-communities-mobility-safety-and-accessible-cultur
+ al-heritage-26-ws-2026-09-07_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-mt-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260909T071500Z
+DTEND:20260909T104500Z
+SUMMARY:AccessibleEU Malta: From Vision to Reality: Implementing Accessible
+  Transport in Malta
+DESCRIPTION:A workshop examining accessibility in Malta's transport infrast
+ ructure and land\, sea and air travel services.\nAttendance: Hybrid\nOrgan
+ izer: AccessibleEU\nLanguage: English
+LOCATION:Aula Magna\, University of Malta Campus\, Valletta\, Malta and onl
+ ine
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-malta-vision-reality-implementing-accessible-transport-malta-26-ws-m
+ t-01-2026-09-09_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-si-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260910T070000Z
+DTEND:20260910T140000Z
+SUMMARY:AccessibleEU Slovenia: Digital Inclusion in the Information Society
+ : DIGIN
+DESCRIPTION:A workshop about digital inclusion and digital transformation a
+ s a socio-technological process.\nAttendance: Hybrid\nOrganizer: Accessibl
+ eEU\nLanguage: Slovene and English
+LOCATION:University of Maribor Faculty of Electrical Engineering and Comput
+ er Science\, Koroška cesta 46\, Maribor\, Slovenia and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-slovenia-digital-inclusion-information-society-digin-26-ws-si-01-202
+ 6-09-10_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-at-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260914T080000Z
+DTEND:20260914T143000Z
+SUMMARY:AccessibleEU Austria: Inclusive Museums 2030: Accessible Culture fo
+ r a Diverse Society
+DESCRIPTION:A conference about moving museums from isolated accessibility m
+ easures toward structural inclusion.\nAttendance: Hybrid\nOrganizer: Acces
+ sibleEU\nLanguage: German
+LOCATION:MuseumsQuartier Wien\, Museumsplatz 1/5\, Vienna\, Austria and onl
+ ine
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-austria-inclusive-museums-2030-accessible-culture-diverse-society-26
+ -nw-01-2026-09-14_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ot-eu-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260913T220000Z
+DTEND:20261210T225900Z
+SUMMARY:AccessibleEU Online Training: Accessible Technology Design: Advance
+ d
+DESCRIPTION:An advanced online course about applying accessibility requirem
+ ents when designing\, developing and auditing digital products.\nAttendanc
+ e: Online\nOrganizer: AccessibleEU\nLanguage: English
+LOCATION:Online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-online-training-accessible-technology-design-advanced-26-ot-eu-01-20
+ 26-09-14_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-fi-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260915T060000Z
+DTEND:20260915T120000Z
+SUMMARY:AccessibleEU Finland: Inclusive and Accessible Nature and Culture D
+ estinations: From Built Environment to Communication
+DESCRIPTION:An event about accessible built environments\, cultural and nat
+ ure destinations\, communication and access to destinations.\nAttendance:
+  Hybrid\nOrganizer: AccessibleEU\nLanguage: Finnish
+LOCATION:Helsinki City Hall\, Pohjoisesplanadi 11-13\, Helsinki\, Finland a
+ nd online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-finland-inclusive-and-accessible-nature-and-culture-destinations-bui
+ lt-environment-2026-09-15_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-si-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260915T070000Z
+DTEND:20260915T130000Z
+SUMMARY:AccessibleEU Slovenia: Accessibility of the Built Environment for A
+ ll
+DESCRIPTION:A conference about contemporary challenges and opportunities in
+  the accessibility of spaces.\nAttendance: Hybrid\nOrganizer: AccessibleEU
+ \nLanguage: Slovenian
+LOCATION:Faculty of Design\, Dunajska 129\, Ljubljana\, Slovenia and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-slovenia-accessibility-built-environment-all-26-nw-si-01-2026-09-15_
+ en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-pt-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260916T130000Z
+DTEND:20260916T170000Z
+SUMMARY:AccessibleEU Portugal: Accessibility\, Inclusion and Mobility in Ur
+ ban Spaces
+DESCRIPTION:An event about accessible public spaces and improving the quali
+ ty and usability of urban environments for everyone.\nAttendance: Hybrid\n
+ Organizer: AccessibleEU\nLanguage: Portuguese
+LOCATION:ISCTE Afonso de Barros Auditorium\, Avenida das Forças Armadas\,
+  Lisbon\, Portugal and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-portugal-accessibility-inclusion-and-mobility-urban-spaces-26-aw-pt-
+ 01-2026-09-16_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-ee-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260922T070000Z
+DTEND:20260922T110000Z
+SUMMARY:AccessibleEU Estonia: Accessibility School Day for Estonian Local A
+ uthorities
+DESCRIPTION:A practical accessibility school day covering communication\, e
+ vents\, digital services and the built environment for local authorities.\
+ nAttendance: Hybrid\nOrganizer: AccessibleEU\nLanguage: Estonian
+LOCATION:Öpik Conference Centre\, Supernoova\, Valukoja 8\, Tallinn\, Esto
+ nia and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-estonia-accessibility-school-day-estonian-local-authorities-26-aw-ee
+ -01-2026-09-22_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-hu-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260924T070000Z
+DTEND:20260924T120000Z
+SUMMARY:AccessibleEU Hungary: Digital Rebirth: Scaling Accessibility Beyond
+  Compliance
+DESCRIPTION:A workshop about scaling digital accessibility beyond legal com
+ pliance.\nAttendance: Hybrid\nOrganizer: AccessibleEU\nLanguage: Hungarian
+LOCATION:MVGYOSZ Head Office\, Hermina út 47\, Budapest\, Hungary and onli
+ ne
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-hungary-digital-rebirth-scaling-accessibility-beyond-compliance-26-w
+ s-hu-01-2026-09-24_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-es-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260924T073000Z
+DTEND:20260925T120000Z
+SUMMARY:AccessibleEU Spain: From the Stadium to the Playing Field: Accessib
+ ility\, Innovation and Participation
+DESCRIPTION:A two-day event about accessibility in sports\, assistive produ
+ cts\, digital manufacturing and participation.\nAttendance: Hybrid\nOrgani
+ zer: AccessibleEU\nLanguage: Spanish
+LOCATION:Estadio San Mamés\, Calle de Rafael Moreno Pitxitxi\, Bilbao\, Sp
+ ain and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-spain-stadium-playing-field-accessibility-innovation-and-participati
+ on-26-nw-es-01-2026-09-24_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:inclusive-design-24-2026@nordic-accessibility-community-group.github.io
 DTSTAMP:20260816T000000Z
 LAST-MODIFIED:20260816T000000Z
@@ -1032,6 +1269,45 @@ DESCRIPTION:A free 24-hour online event about inclusive design and accessib
  ility.\nAttendance: Online
 LOCATION:Online
 URL:https://inclusivedesign24.org/2026/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-eu-03@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260930T070000Z
+DTEND:20260930T113000Z
+SUMMARY:AccessibleEU European Event: Building an Accessible Book Ecosystem:
+  Publishers at the Heart of the EAA Transition
+DESCRIPTION:A European workshop supporting publishers and related stakehold
+ ers in the transition toward accessible books under the European Accessibi
+ lity Act.\nAttendance: Hybrid\nOrganizer: AccessibleEU\nLanguage: English
+LOCATION:Thon Hotel EU\, Rue de la Loi 75\, Brussels\, Belgium and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-european-event-building-accessible-book-ecosystem-publishers-heart-e
+ aa-transition-26-ws-2026-09-30_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-de-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260930T080000Z
+DTEND:20260930T140000Z
+SUMMARY:AccessibleEU Germany: Just Make It Simple! Accessibility for People
+  with Intellectual Disabilities
+DESCRIPTION:A networking event about cognitive accessibility for people wit
+ h intellectual disabilities.\nAttendance: Hybrid\nOrganizer: AccessibleEU\
+ nLanguage: German
+LOCATION:Campus Lebenshilfe Berlin\, Böttgerstraße 21\, Berlin\, Germany
+  and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-germany-just-make-it-simple-accessibility-people-intellectual-disabi
+ lities-26-nw-de-01-2026-09-30_en
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -1052,6 +1328,101 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:accessibleeu-26-ws-se-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20261012T110000Z
+DTEND:20261012T150000Z
+SUMMARY:AccessibleEU Sweden: An Overview of Accessibility Standards
+DESCRIPTION:A workshop presenting the accessibility standards that support
+  the European Accessibility Act.\nAttendance: Hybrid\nOrganizer: Accessibl
+ eEU\nLanguage: Swedish
+LOCATION:SIS Konferens\, Torsplan\, Stockholm\, Sweden and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-sweden-overview-accessibility-standards-26-ws-se-01-2026-10-12_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-sk-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20261013T073000Z
+DTEND:20261013T134500Z
+SUMMARY:AccessibleEU Slovakia: Independent Life 2026: Keys to Citizenship:
+  Lived Stories
+DESCRIPTION:A networking event about independent living\, inclusive educati
+ on and equal opportunities in employment.\nAttendance: Hybrid\nOrganizer:
+  AccessibleEU\nLanguage: Slovak and English
+LOCATION:Faculty of Architecture and Design\, Slovak University of Technolo
+ gy\, Námestie slobody 19\, Bratislava\, Slovakia and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-slovakia-independent-life-2026-keys-citizenship-lived-stories-26-nw-
+ sk-01-2026-10-13_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-bg-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20261016T060000Z
+DTEND:20261016T120000Z
+SUMMARY:AccessibleEU Bulgaria: From Standards to Reality: Accessibility in
+  Bulgaria
+DESCRIPTION:A networking event about achievements\, challenges and good pra
+ ctices in accessibility across Bulgaria.\nAttendance: Hybrid\nOrganizer: A
+ ccessibleEU\nLanguage: Bulgarian
+LOCATION:Shtrak\, 3 Hristo Belchev Street\, Sofia\, Bulgaria and online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-bulgaria-standards-reality-accessibility-bulgaria-26-nw-bg-01-2026-1
+ 0-16_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-it-02@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20261021T130000Z
+DTEND:20261021T150000Z
+SUMMARY:AccessibleEU Italy: European Accessibility Act: Legal Obligations\,
+  Technical Standards and Operational Strategies
+DESCRIPTION:An online workshop about the European Accessibility Act's legal
+  obligations\, technical standards and implementation strategies.\nAttenda
+ nce: Online\nOrganizer: AccessibleEU\nLanguage: Italian
+LOCATION:Online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-italy-european-accessibility-act-legal-obligations-technical-standar
+ ds-and-operational-2026-10-21_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-ws-dk-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20261102T100000Z
+DTEND:20261102T153000Z
+SUMMARY:AccessibleEU Denmark: Nordic Disability Tech Summit 2026: A Nordic
+  Pathway to Inclusive\, Fair and Accessible AI
+DESCRIPTION:A Nordic-Baltic workshop about inclusive\, fair and accessible
+  artificial intelligence.\nAttendance: Hybrid\nOrganizer: AccessibleEU\nLa
+ nguage: English
+LOCATION:D15 Conference Centre\, Drejervej 15\, Copenhagen\, Denmark and on
+ line
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-denmark-nordic-disability-tech-summit-2026-nordic-pathway-inclusive-
+ fair-and-accessible-2026-11-02_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:universal-design-2026@nordic-accessibility-community-group.github.io
 DTSTAMP:20260816T000000Z
 LAST-MODIFIED:20260816T000000Z
@@ -1064,6 +1435,26 @@ DESCRIPTION:An international conference about practical and research approa
  lence in Universal Design and University of Galway
 LOCATION:Galway\, Ireland and online
 URL:https://ud26.ie/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibleeu-26-nw-dk-02@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20261110T083000Z
+DTEND:20261110T143000Z
+SUMMARY:AccessibleEU Denmark: Accessible by Design: Communication\, UX and
+  Information
+DESCRIPTION:A networking event for professionals working with accessible co
+ mmunication\, user experience and information across sectors.\nAttendance:
+  Hybrid\nOrganizer: AccessibleEU\nLanguage: Danish
+LOCATION:IDA Conference\, Kalvebod Brygge 31\, Copenhagen\, Denmark and onl
+ ine
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-denmark-accessible-design-communication-ux-and-information-26-nw-dk-
+ 02-2026-11-10_en
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

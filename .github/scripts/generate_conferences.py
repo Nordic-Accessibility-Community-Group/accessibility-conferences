@@ -82,6 +82,7 @@ COUNTRY_FILTER_LABELS = {
     "LV": "Latvia",
     "LT": "Lithuania",
     "LU": "Luxembourg",
+    "MT": "Malta",
     "NL": "Netherlands",
     "NO": "Norway",
     "PL": "Poland",
