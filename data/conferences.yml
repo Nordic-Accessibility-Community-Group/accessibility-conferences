@@ -1555,3 +1555,478 @@ conferences:
     status: confirmed
     sequence: 0
     last_verified: "2026-09-07"
+
+  - id: accessibleeu-26-ws-ro-01
+    name: "AccessibleEU Romania: Accessible Communities: Mobility, Safety and Accessible Cultural Heritage"
+    start_date: "2026-09-07"
+    end_date: "2026-09-07"
+    start_time: "10:00"
+    end_time: "16:00"
+    time_zone: Europe/Bucharest
+    location: University of Bucharest Rectorate Building, 90 Panduri Avenue, Bucharest, Romania and online
+    country_code: "RO"
+    attendance:
+      onsite: true
+      online: true
+    language: Romanian
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-romania-accessible-communities-mobility-safety-and-accessible-cultural-heritage-26-ws-2026-09-07_en
+    description: A workshop about inclusive emergency preparedness, accessible mobility and accessible cultural heritage.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-at-01
+    name: "AccessibleEU Austria: Digital Euro and Financial Inclusion: Europe's Path Between Regulation, Innovation and Responsibility"
+    start_date: "2026-09-07"
+    end_date: "2026-09-07"
+    start_time: "10:00"
+    end_time: "16:30"
+    time_zone: Europe/Vienna
+    location: Oesterreichische Nationalbank, Otto-Wagner-Platz 3, Vienna, Austria and online
+    country_code: "AT"
+    attendance:
+      onsite: true
+      online: true
+    language: German
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-austria-digital-euro-and-financial-inclusion-europes-path-between-regulation-innovation-2026-09-07_en
+    description: A workshop about the European Accessibility Act, accessibility requirements for financial services and the digital euro.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-mt-01
+    name: "AccessibleEU Malta: From Vision to Reality: Implementing Accessible Transport in Malta"
+    start_date: "2026-09-09"
+    end_date: "2026-09-09"
+    start_time: "09:15"
+    end_time: "12:45"
+    time_zone: Europe/Malta
+    location: Aula Magna, University of Malta Campus, Valletta, Malta and online
+    country_code: "MT"
+    attendance:
+      onsite: true
+      online: true
+    language: English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-malta-vision-reality-implementing-accessible-transport-malta-26-ws-mt-01-2026-09-09_en
+    description: A workshop examining accessibility in Malta's transport infrastructure and land, sea and air travel services.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-si-01
+    name: "AccessibleEU Slovenia: Digital Inclusion in the Information Society: DIGIN"
+    start_date: "2026-09-10"
+    end_date: "2026-09-10"
+    start_time: "09:00"
+    end_time: "16:00"
+    time_zone: Europe/Ljubljana
+    location: University of Maribor Faculty of Electrical Engineering and Computer Science, Koroška cesta 46, Maribor, Slovenia and online
+    country_code: "SI"
+    attendance:
+      onsite: true
+      online: true
+    language: Slovene and English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovenia-digital-inclusion-information-society-digin-26-ws-si-01-2026-09-10_en
+    description: A workshop about digital inclusion and digital transformation as a socio-technological process.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ot-eu-01
+    name: "AccessibleEU Online Training: Accessible Technology Design: Advanced"
+    start_date: "2026-09-14"
+    end_date: "2026-12-10"
+    start_time: "00:00"
+    end_time: "23:59"
+    time_zone: Europe/Brussels
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    language: English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-online-training-accessible-technology-design-advanced-26-ot-eu-01-2026-09-14_en
+    description: An advanced online course about applying accessibility requirements when designing, developing and auditing digital products.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-at-01
+    name: "AccessibleEU Austria: Inclusive Museums 2030: Accessible Culture for a Diverse Society"
+    start_date: "2026-09-14"
+    end_date: "2026-09-14"
+    start_time: "10:00"
+    end_time: "16:30"
+    time_zone: Europe/Vienna
+    location: MuseumsQuartier Wien, Museumsplatz 1/5, Vienna, Austria and online
+    country_code: "AT"
+    attendance:
+      onsite: true
+      online: true
+    language: German
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-austria-inclusive-museums-2030-accessible-culture-diverse-society-26-nw-01-2026-09-14_en
+    description: A conference about moving museums from isolated accessibility measures toward structural inclusion.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-aw-fi-01
+    name: "AccessibleEU Finland: Inclusive and Accessible Nature and Culture Destinations: From Built Environment to Communication"
+    start_date: "2026-09-15"
+    end_date: "2026-09-15"
+    start_time: "09:00"
+    end_time: "15:00"
+    time_zone: Europe/Helsinki
+    location: Helsinki City Hall, Pohjoisesplanadi 11-13, Helsinki, Finland and online
+    country_code: "FI"
+    attendance:
+      onsite: true
+      online: true
+    language: Finnish
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-finland-inclusive-and-accessible-nature-and-culture-destinations-built-environment-2026-09-15_en
+    description: An event about accessible built environments, cultural and nature destinations, communication and access to destinations.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-si-01
+    name: "AccessibleEU Slovenia: Accessibility of the Built Environment for All"
+    start_date: "2026-09-15"
+    end_date: "2026-09-15"
+    start_time: "09:00"
+    end_time: "15:00"
+    time_zone: Europe/Ljubljana
+    location: Faculty of Design, Dunajska 129, Ljubljana, Slovenia and online
+    country_code: "SI"
+    attendance:
+      onsite: true
+      online: true
+    language: Slovenian
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovenia-accessibility-built-environment-all-26-nw-si-01-2026-09-15_en
+    description: A conference about contemporary challenges and opportunities in the accessibility of spaces.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-aw-pt-01
+    name: "AccessibleEU Portugal: Accessibility, Inclusion and Mobility in Urban Spaces"
+    start_date: "2026-09-16"
+    end_date: "2026-09-16"
+    start_time: "14:00"
+    end_time: "18:00"
+    time_zone: Europe/Lisbon
+    location: ISCTE Afonso de Barros Auditorium, Avenida das Forças Armadas, Lisbon, Portugal and online
+    country_code: "PT"
+    attendance:
+      onsite: true
+      online: true
+    language: Portuguese
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-portugal-accessibility-inclusion-and-mobility-urban-spaces-26-aw-pt-01-2026-09-16_en
+    description: An event about accessible public spaces and improving the quality and usability of urban environments for everyone.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-aw-ee-01
+    name: "AccessibleEU Estonia: Accessibility School Day for Estonian Local Authorities"
+    start_date: "2026-09-22"
+    end_date: "2026-09-22"
+    start_time: "10:00"
+    end_time: "14:00"
+    time_zone: Europe/Tallinn
+    location: Öpik Conference Centre, Supernoova, Valukoja 8, Tallinn, Estonia and online
+    country_code: "EE"
+    attendance:
+      onsite: true
+      online: true
+    language: Estonian
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-estonia-accessibility-school-day-estonian-local-authorities-26-aw-ee-01-2026-09-22_en
+    description: A practical accessibility school day covering communication, events, digital services and the built environment for local authorities.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-hu-01
+    name: "AccessibleEU Hungary: Digital Rebirth: Scaling Accessibility Beyond Compliance"
+    start_date: "2026-09-24"
+    end_date: "2026-09-24"
+    start_time: "09:00"
+    end_time: "14:00"
+    time_zone: Europe/Budapest
+    location: MVGYOSZ Head Office, Hermina út 47, Budapest, Hungary and online
+    country_code: "HU"
+    attendance:
+      onsite: true
+      online: true
+    language: Hungarian
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-hungary-digital-rebirth-scaling-accessibility-beyond-compliance-26-ws-hu-01-2026-09-24_en
+    description: A workshop about scaling digital accessibility beyond legal compliance.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-es-01
+    name: "AccessibleEU Spain: From the Stadium to the Playing Field: Accessibility, Innovation and Participation"
+    start_date: "2026-09-24"
+    end_date: "2026-09-25"
+    start_time: "09:30"
+    end_time: "14:00"
+    time_zone: Europe/Madrid
+    location: Estadio San Mamés, Calle de Rafael Moreno Pitxitxi, Bilbao, Spain and online
+    country_code: "ES"
+    attendance:
+      onsite: true
+      online: true
+    language: Spanish
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-spain-stadium-playing-field-accessibility-innovation-and-participation-26-nw-es-01-2026-09-24_en
+    description: A two-day event about accessibility in sports, assistive products, digital manufacturing and participation.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-sk-01
+    name: "AccessibleEU Slovakia: Workshop on Design for All 2026"
+    start_date: "2026-09-29"
+    end_date: "2026-09-29"
+    start_time: "09:45"
+    end_time: "12:00"
+    time_zone: Europe/Bratislava
+    location: Faculty of Architecture and Design, Slovak University of Technology, Námestie slobody 19, Bratislava, Slovakia
+    country_code: "SK"
+    attendance:
+      onsite: true
+      online: false
+    language: Slovak
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovakia-workshop-design-all-2026-26-ws-sk-01-2026-09-29_en
+    description: A workshop promoting Design for All and Universal Design in the built environment, products and services.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-eu-03
+    name: "AccessibleEU European Event: Building an Accessible Book Ecosystem: Publishers at the Heart of the EAA Transition"
+    start_date: "2026-09-30"
+    end_date: "2026-09-30"
+    start_time: "09:00"
+    end_time: "13:30"
+    time_zone: Europe/Brussels
+    location: Thon Hotel EU, Rue de la Loi 75, Brussels, Belgium and online
+    country_code: "BE"
+    attendance:
+      onsite: true
+      online: true
+    language: English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-building-accessible-book-ecosystem-publishers-heart-eaa-transition-26-ws-2026-09-30_en
+    description: A European workshop supporting publishers and related stakeholders in the transition toward accessible books under the European Accessibility Act.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-de-01
+    name: "AccessibleEU Germany: Just Make It Simple! Accessibility for People with Intellectual Disabilities"
+    start_date: "2026-09-30"
+    end_date: "2026-09-30"
+    start_time: "10:00"
+    end_time: "16:00"
+    time_zone: Europe/Berlin
+    location: Campus Lebenshilfe Berlin, Böttgerstraße 21, Berlin, Germany and online
+    country_code: "DE"
+    attendance:
+      onsite: true
+      online: true
+    language: German
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-just-make-it-simple-accessibility-people-intellectual-disabilities-26-nw-de-01-2026-09-30_en
+    description: A networking event about cognitive accessibility for people with intellectual disabilities.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-lu-01
+    name: "AccessibleEU Luxembourg: Good Design Starts with Accessibility"
+    start_date: "2026-10-01"
+    end_date: "2026-10-02"
+    location: Lycée Technique pour Professions Éducatives et Sociales, 45 Rue de la Gare, Beringen, Luxembourg
+    country_code: "LU"
+    attendance:
+      onsite: true
+      online: false
+    language: Luxembourgish
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-luxembourg-good-design-starts-accessibility-26-ws-lu-01-2026-10-01_en
+    description: A two-day workshop introducing accessibility and inclusive design to final-year students.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-se-01
+    name: "AccessibleEU Sweden: An Overview of Accessibility Standards"
+    start_date: "2026-10-12"
+    end_date: "2026-10-12"
+    start_time: "13:00"
+    end_time: "17:00"
+    time_zone: Europe/Stockholm
+    location: SIS Konferens, Torsplan, Stockholm, Sweden and online
+    country_code: "SE"
+    attendance:
+      onsite: true
+      online: true
+    language: Swedish
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-sweden-overview-accessibility-standards-26-ws-se-01-2026-10-12_en
+    description: A workshop presenting the accessibility standards that support the European Accessibility Act.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-sk-01
+    name: "AccessibleEU Slovakia: Independent Life 2026: Keys to Citizenship: Lived Stories"
+    start_date: "2026-10-13"
+    end_date: "2026-10-13"
+    start_time: "09:30"
+    end_time: "15:45"
+    time_zone: Europe/Bratislava
+    location: Faculty of Architecture and Design, Slovak University of Technology, Námestie slobody 19, Bratislava, Slovakia and online
+    country_code: "SK"
+    attendance:
+      onsite: true
+      online: true
+    language: Slovak and English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovakia-independent-life-2026-keys-citizenship-lived-stories-26-nw-sk-01-2026-10-13_en
+    description: A networking event about independent living, inclusive education and equal opportunities in employment.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-fr-02
+    name: "AccessibleEU France: Public Lighting and Inclusive Cities: Creating Shared Value through Design, Standards and Innovation"
+    start_date: "2026-10-15"
+    end_date: "2026-10-15"
+    start_time: "09:00"
+    end_time: "17:30"
+    time_zone: Europe/Paris
+    location: L'École de Design Nantes Atlantique, 61 Boulevard de la Prairie au Duc, Nantes, France
+    country_code: "FR"
+    attendance:
+      onsite: true
+      online: false
+    language: French
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-france-public-lighting-and-inclusive-cities-creating-shared-value-through-design-2026-10-15_en
+    description: A workshop about how inclusive design, standards and responsible lighting can create more accessible and sustainable urban environments.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-bg-01
+    name: "AccessibleEU Bulgaria: From Standards to Reality: Accessibility in Bulgaria"
+    start_date: "2026-10-16"
+    end_date: "2026-10-16"
+    start_time: "09:00"
+    end_time: "15:00"
+    time_zone: Europe/Sofia
+    location: Shtrak, 3 Hristo Belchev Street, Sofia, Bulgaria and online
+    country_code: "BG"
+    attendance:
+      onsite: true
+      online: true
+    language: Bulgarian
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-bulgaria-standards-reality-accessibility-bulgaria-26-nw-bg-01-2026-10-16_en
+    description: A networking event about achievements, challenges and good practices in accessibility across Bulgaria.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-it-02
+    name: "AccessibleEU Italy: European Accessibility Act: Legal Obligations, Technical Standards and Operational Strategies"
+    start_date: "2026-10-21"
+    end_date: "2026-10-21"
+    start_time: "15:00"
+    end_time: "17:00"
+    time_zone: Europe/Rome
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    language: Italian
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-italy-european-accessibility-act-legal-obligations-technical-standards-and-operational-2026-10-21_en
+    description: An online workshop about the European Accessibility Act's legal obligations, technical standards and implementation strategies.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-de-01
+    name: "AccessibleEU Germany: Accessible Documents Workshop"
+    start_date: "2026-10-23"
+    end_date: "2026-10-24"
+    start_time: "13:00"
+    end_time: "14:00"
+    time_zone: Europe/Berlin
+    location: Universität Hamburg, Alsterterrasse 1, Hamburg, Germany
+    country_code: "DE"
+    attendance:
+      onsite: true
+      online: false
+    language: German
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-accessible-documents-workshop-26-ws-de-01-2026-10-23_en
+    description: A two-day workshop about document accessibility for professionals, teachers and students in higher education.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-ws-dk-01
+    name: "AccessibleEU Denmark: Nordic Disability Tech Summit 2026: A Nordic Pathway to Inclusive, Fair and Accessible AI"
+    start_date: "2026-11-02"
+    end_date: "2026-11-02"
+    start_time: "11:00"
+    end_time: "16:30"
+    time_zone: Europe/Copenhagen
+    location: D15 Conference Centre, Drejervej 15, Copenhagen, Denmark and online
+    country_code: "DK"
+    attendance:
+      onsite: true
+      online: true
+    language: English
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-denmark-nordic-disability-tech-summit-2026-nordic-pathway-inclusive-fair-and-accessible-2026-11-02_en
+    description: A Nordic-Baltic workshop about inclusive, fair and accessible artificial intelligence.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"
+
+  - id: accessibleeu-26-nw-dk-02
+    name: "AccessibleEU Denmark: Accessible by Design: Communication, UX and Information"
+    start_date: "2026-11-10"
+    end_date: "2026-11-10"
+    start_time: "09:30"
+    end_time: "15:30"
+    time_zone: Europe/Copenhagen
+    location: IDA Conference, Kalvebod Brygge 31, Copenhagen, Denmark and online
+    country_code: "DK"
+    attendance:
+      onsite: true
+      online: true
+    language: Danish
+    organizer: AccessibleEU
+    url: https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-denmark-accessible-design-communication-ux-and-information-26-nw-dk-02-2026-11-10_en
+    description: A networking event for professionals working with accessible communication, user experience and information across sectors.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-08"

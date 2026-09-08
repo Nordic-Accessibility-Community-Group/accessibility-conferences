@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nordic Accessibility Community Group//Conference Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nordic accessibility conferences and events
+X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
+ clusive design events worth tracking.
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:accessibleeu-26-aw-fi-01@nordic-accessibility-community-group.github.io
+DTSTAMP:20260908T000000Z
+LAST-MODIFIED:20260908T000000Z
+SEQUENCE:0
+DTSTART:20260915T060000Z
+DTEND:20260915T120000Z
+SUMMARY:AccessibleEU Finland: Inclusive and Accessible Nature and Culture D
+ estinations: From Built Environment to Communication
+DESCRIPTION:An event about accessible built environments\, cultural and nat
+ ure destinations\, communication and access to destinations.\nAttendance:
+  Hybrid\nOrganizer: AccessibleEU\nLanguage: Finnish
+LOCATION:Helsinki City Hall\, Pohjoisesplanadi 11-13\, Helsinki\, Finland a
+ nd online
+URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
+ bleeu-finland-inclusive-and-accessible-nature-and-culture-destinations-bui
+ lt-environment-2026-09-15_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
