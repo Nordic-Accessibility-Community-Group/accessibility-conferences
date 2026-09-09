@@ -703,7 +703,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     for event in conferences:
         add_label = html.escape(f"Add event: {event.name} to calendar", quote=True)
         rows.append(
-            f"""          <tr data-format="{html.escape(event.format, quote=True)}" data-country="{html.escape(country_filter_value(event), quote=True)}">
+            f"""          <tr data-format="{html.escape(event.format, quote=True)}" data-country="{html.escape(country_filter_value(event), quote=True)}" data-end-date="{event.end_date.isoformat()}">
             <td><time datetime="{event.start_date.isoformat()}">{html.escape(format_event_date(event))}</time></td>
             <td>
               <a href="{html.escape(event.url, quote=True)}">{html_event_name(event)}</a>
@@ -882,6 +882,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     .filter-status {{ margin: 1rem 0 0; color: var(--muted); }}
 
     .table-wrap {{ overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
+    .past-events {{ margin-top: 1.5rem; }}
     table {{ width: 100%; border-collapse: collapse; }}
     th, td {{ padding: 1rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }}
     th {{ background: var(--surface-raised); }}
@@ -1054,7 +1055,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
               <th scope="col">Calendar</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="current-events">
 {chr(10).join(rows)}
           <tr id="no-filter-results" hidden>
             <td colspan="5">No events match the selected filters.</td>
@@ -1062,6 +1063,24 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
           </tbody>
         </table>
       </div>
+      <details class="past-events" id="past-events" hidden>
+        <summary id="past-events-summary">Past events</summary>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable past conference table">
+          <table>
+            <caption class="visually-hidden" id="past-events-caption">Past accessibility conferences and events</caption>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Event</th>
+                <th scope="col">Format</th>
+                <th scope="col">Location</th>
+                <th scope="col">Calendar</th>
+              </tr>
+            </thead>
+            <tbody id="past-events-body"></tbody>
+          </table>
+        </div>
+      </details>
     </section>
 
     <section class="panel" aria-labelledby="suggest-heading">
@@ -1080,16 +1099,42 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     const filters = document.querySelectorAll('input[data-filter]');
     const formatFilters = document.querySelectorAll('input[data-filter="format"]');
     const countryFilters = document.querySelectorAll('input[data-filter="country"]');
-    const rows = document.querySelectorAll('tbody tr[data-format]');
+    const rows = [...document.querySelectorAll('tbody tr[data-format]')];
+    const currentEvents = document.querySelector('#current-events');
+    const pastEvents = document.querySelector('#past-events');
+    const pastEventsBody = document.querySelector('#past-events-body');
+    const pastEventsSummary = document.querySelector('#past-events-summary');
+    const pastEventsCaption = document.querySelector('#past-events-caption');
     const status = document.querySelector('#filter-status');
     const caption = document.querySelector('#events-caption');
     const emptyState = document.querySelector('#no-filter-results');
+    const emptyStateMessage = emptyState.querySelector('td');
     const clear = document.querySelector('#clear-filters');
+
+    function localDate() {{
+      const now = new Date();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      return `${{now.getFullYear()}}-${{month}}-${{day}}`;
+    }}
+
+    function separatePastEvents() {{
+      const today = localDate();
+      rows.forEach((row) => {{
+        if (row.dataset.endDate < today) {{
+          pastEventsBody.append(row);
+        }} else {{
+          currentEvents.insertBefore(row, emptyState);
+        }}
+      }});
+    }}
 
     function updateFilters() {{
       const selectedFormats = [...formatFilters].filter((filter) => filter.checked).map((filter) => filter.value);
       const selectedCountries = [...countryFilters].filter((filter) => filter.checked).map((filter) => filter.value);
       let visibleCount = 0;
+      let currentVisibleCount = 0;
+      let pastVisibleCount = 0;
       rows.forEach((row) => {{
         const formatMatches = selectedFormats.length === 0
           || selectedFormats.includes(row.dataset.format);
@@ -1097,19 +1142,43 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
           || selectedCountries.includes(row.dataset.country);
         const visible = formatMatches && countryMatches;
         row.hidden = !visible;
-        if (visible) visibleCount += 1;
+        if (visible) {{
+          visibleCount += 1;
+          if (row.parentElement === pastEventsBody) {{
+            pastVisibleCount += 1;
+          }} else {{
+            currentVisibleCount += 1;
+          }}
+        }}
       }});
       const eventWord = visibleCount === 1 ? 'event' : 'events';
+      const currentEventWord = currentVisibleCount === 1 ? 'event' : 'events';
+      const pastEventWord = pastVisibleCount === 1 ? 'event' : 'events';
       const noFiltersSelected = selectedFormats.length === 0
         && selectedCountries.length === 0;
       clear.disabled = noFiltersSelected;
-      emptyState.hidden = visibleCount !== 0;
+      emptyState.hidden = rows.length === 0 || currentVisibleCount !== 0;
+      if (!emptyState.hidden) {{
+        emptyStateMessage.textContent = noFiltersSelected
+          ? 'No current or upcoming events are listed. Past events appear below.'
+          : pastVisibleCount > 0
+            ? 'No current or upcoming events match the selected filters. Matching past events appear below.'
+            : 'No events match the selected filters.';
+      }}
       caption.textContent = noFiltersSelected
-        ? `Accessibility conferences and events: ${{visibleCount}} ${{eventWord}}`
-        : `Accessibility conferences and events: ${{visibleCount}} of ${{rows.length}} ${{eventWord}} shown`;
+        ? `Current and upcoming accessibility conferences and events: ${{currentVisibleCount}} ${{currentEventWord}}`
+        : `Current and upcoming accessibility conferences and events: ${{currentVisibleCount}} ${{currentEventWord}} shown`;
       status.textContent = noFiltersSelected
         ? `Showing all ${{visibleCount}} ${{eventWord}}.`
         : `Showing ${{visibleCount}} of ${{rows.length}} ${{eventWord}}.`;
+      pastEvents.hidden = pastVisibleCount === 0;
+      pastEvents.open = !noFiltersSelected && pastVisibleCount > 0;
+      pastEventsSummary.textContent = noFiltersSelected
+        ? `Past events (${{pastVisibleCount}})`
+        : `Past events (${{pastVisibleCount}} matching)`;
+      pastEventsCaption.textContent = noFiltersSelected
+        ? `Past accessibility conferences and events: ${{pastVisibleCount}} ${{pastEventWord}}`
+        : `Past accessibility conferences and events: ${{pastVisibleCount}} matching ${{pastEventWord}}`;
     }}
 
     filters.forEach((filter) => filter.addEventListener('change', updateFilters));
@@ -1117,7 +1186,13 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       filters.forEach((filter) => {{ filter.checked = false; }});
       updateFilters();
     }});
-    window.addEventListener('pageshow', updateFilters);
+    function updateEventList() {{
+      separatePastEvents();
+      updateFilters();
+    }}
+
+    updateEventList();
+    window.addEventListener('pageshow', updateEventList);
   </script>
 </body>
 </html>
