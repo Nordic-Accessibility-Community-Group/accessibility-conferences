@@ -921,12 +921,12 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       header a {{ font-weight: 600; text-decoration-thickness: 0.09em; }}
       header a:first-child {{ color: var(--text); text-decoration-color: var(--link); }}
 
-      main {{ padding-block: clamp(3.5rem, 7vw, 6.5rem) clamp(3rem, 6vw, 5.5rem); }}
+      main {{ padding-block: clamp(2rem, 4vw, 3.5rem); }}
       h1 {{ max-width: 17ch; font-size: clamp(3rem, 7vw, 5.75rem); font-weight: 700; line-height: 0.98; letter-spacing: -0.045em; }}
       h2 {{ font-size: clamp(1.8rem, 4vw, 2.45rem); line-height: 1.08; letter-spacing: -0.025em; }}
       h3 {{ font-size: 1.35rem; line-height: 1.15; letter-spacing: -0.015em; }}
-      .intro {{ max-width: 42rem; margin-block: 1.75rem 4.5rem; font-size: 1.2rem; line-height: 1.55; }}
-      section {{ margin-block: clamp(3.75rem, 8vw, 6.5rem); }}
+      .intro {{ max-width: 42rem; margin-block: 1.25rem 2rem; font-size: 1.2rem; line-height: 1.55; }}
+      section {{ margin-block: clamp(2rem, 3vw, 3rem); }}
 
       .panel, .subscription-options[open], .event-filters, .table-wrap {{
         border-color: var(--border);
