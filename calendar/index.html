@@ -121,6 +121,7 @@
     .filter-status { margin: 1rem 0 0; color: var(--muted); }
 
     .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+    .past-events { margin-top: 1.5rem; }
     table { width: 100%; border-collapse: collapse; }
     th, td { padding: 1rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
     th { background: var(--surface-raised); }
@@ -363,8 +364,8 @@
               <th scope="col">Calendar</th>
             </tr>
           </thead>
-          <tbody>
-          <tr data-format="Hybrid" data-country="ES">
+          <tbody id="current-events">
+          <tr data-format="Hybrid" data-country="ES" data-end-date="2026-01-22">
             <td><time datetime="2026-01-22">22 January 2026, 11:30–14:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-spain-information-session-european-accessibility-act-and-accessibleeu-european-2026-01-22_en">AccessibleEU Spain: Information session on the European Accessibility Act and the AccessibleEU European Accessibility Resource Centre</a>
@@ -374,7 +375,7 @@
             <td>HUB of Por Talento Digital, Calle de Fray Luis de León 11, 28012 Madrid, Spain</td>
             <td><a href="events/accessibleeu-26-ws-es-01.ics" aria-label="Add event: AccessibleEU Spain: Information session on the European Accessibility Act and the AccessibleEU European Accessibility Resource Centre to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="US">
+          <tr data-format="Hybrid" data-country="US" data-end-date="2026-01-31">
             <td><time datetime="2026-01-29">29–31 January 2026</time></td>
             <td>
               <a href="https://www.atia.org/26conference/">ATIA 2026</a>
@@ -384,7 +385,7 @@
             <td>Orlando, Florida, United States and online</td>
             <td><a href="events/atia-2026.ics" aria-label="Add event: ATIA 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IE">
+          <tr data-format="Hybrid" data-country="IE" data-end-date="2026-02-05">
             <td><time datetime="2026-02-04">4–5 February 2026</time></td>
             <td>
               <a href="https://www.accessibilityassociation.org/iaap-eu-event-2026">IAAP EU and Vially Accessibility Hybrid Event</a>
@@ -394,7 +395,7 @@
             <td>Dublin, Ireland and online</td>
             <td><a href="events/iaap-eu-vially-2026.ics" aria-label="Add event: IAAP EU and Vially Accessibility Hybrid Event to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="AT">
+          <tr data-format="Hybrid" data-country="AT" data-end-date="2026-02-18">
             <td><time datetime="2026-02-18">18 February 2026, 16:30–19:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-accessible-future-evolving-world-technologies-shaping-emergency-2026-02-18_en">Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness</a>
@@ -404,7 +405,7 @@
             <td>United Nations Office at Vienna, Austria and online</td>
             <td><a href="events/accessible-emergency-preparedness-2026.ics" aria-label="Add event: Accessible Future in an Evolving World: Technologies Shaping Emergency Preparedness to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="AT">
+          <tr data-format="Hybrid" data-country="AT" data-end-date="2026-02-20">
             <td><time datetime="2026-02-18">18–20 February 2026</time></td>
             <td>
               <a href="https://zerocon26.zeroproject.org/">Zero Project Conference 2026</a>
@@ -414,7 +415,7 @@
             <td>United Nations Office at Vienna, Austria and online</td>
             <td><a href="events/zero-project-conference-2026.ics" aria-label="Add event: Zero Project Conference 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SK">
+          <tr data-format="Hybrid" data-country="SK" data-end-date="2026-02-19">
             <td><time datetime="2026-02-19">19 February 2026, 10:00–14:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovakia-design-equality-diversity-and-inclusion-edi-26-aw-sk-01-2026-02-19_en">AccessibleEU Slovakia: Design for Equality, Diversity, and Inclusion (EDI)</a>
@@ -424,7 +425,7 @@
             <td>Faculty of Architecture and Design, Slovak University of Technology, Námestie slobody 19, Bratislava, Slovakia</td>
             <td><a href="events/accessibleeu-26-aw-sk-01.ics" aria-label="Add event: AccessibleEU Slovakia: Design for Equality, Diversity, and Inclusion (EDI) to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-02-25">
             <td><time datetime="2026-02-24">24–25 February 2026</time></td>
             <td>
               <a href="https://www.deque.com/axe-con/">axe-con 2026</a>
@@ -434,7 +435,7 @@
             <td>Online</td>
             <td><a href="events/axe-con-2026.ics" aria-label="Add event: axe-con 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="AT">
+          <tr data-format="Hybrid" data-country="AT" data-end-date="2026-03-04">
             <td><time datetime="2026-03-04">4 March 2026, 11:00–17:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-austria-introducing-day-transport-culture-austria-learning-hungarian-experience-26-aw-2026-03-04_en">AccessibleEU Austria: Introducing the Day of Transport Culture in Austria. Learning from the Hungarian Experience</a>
@@ -444,7 +445,7 @@
             <td>Federal Ministry for Climate Action, Environment, Energy, Mobility, Innovation and Technology, Radetzkystraße 2, Vienna, Austria and online</td>
             <td><a href="events/accessibleeu-26-aw-at-01.ics" aria-label="Add event: AccessibleEU Austria: Introducing the Day of Transport Culture in Austria. Learning from the Hungarian Experience to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="LV">
+          <tr data-format="Hybrid" data-country="LV" data-end-date="2026-03-05">
             <td><time datetime="2026-03-05">5 March 2026, 10:00–15:30 EET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-latvia-people-living-dementia-accessibility-solutions-innovations-international-2026-03-05_en">AccessibleEU Latvia: People Living with Dementia. Accessibility, Solutions &amp; Innovations. International Experience</a>
@@ -454,7 +455,7 @@
             <td>RTU Institute of Architecture and Design, Ķīpsalas iela 6, Riga, Latvia and online</td>
             <td><a href="events/accessibleeu-26-aw-lv-01.ics" aria-label="Add event: AccessibleEU Latvia: People Living with Dementia. Accessibility, Solutions &amp; Innovations. International Experience to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="US">
+          <tr data-format="In person" data-country="US" data-end-date="2026-03-13">
             <td><time datetime="2026-03-09">9–13 March 2026</time></td>
             <td>
               <a href="https://w2.csun.edu/cod/conference">CSUN Assistive Technology Conference 2026</a>
@@ -464,7 +465,7 @@
             <td>Anaheim, California, United States</td>
             <td><a href="events/csun-assistive-technology-conference-2026.ics" aria-label="Add event: CSUN Assistive Technology Conference 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DK">
+          <tr data-format="Hybrid" data-country="DK" data-end-date="2026-03-11">
             <td><time datetime="2026-03-11">11 March 2026, 13:00–17:00 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-denmark-idea-real-inclusion-transforming-lives-through-tech-26-aw-dk-01-2026-03-11_en">AccessibleEU Denmark: From Idea to Real Inclusion: Transforming Lives through Tech</a>
@@ -474,7 +475,7 @@
             <td>Microsoft Denmark, Kanalvej 7, Kongens Lyngby, Denmark and online</td>
             <td><a href="events/accessibleeu-26-aw-dk-01.ics" aria-label="Add event: AccessibleEU Denmark: From Idea to Real Inclusion: Transforming Lives through Tech to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="FI">
+          <tr data-format="Hybrid" data-country="FI" data-end-date="2026-03-12">
             <td><time datetime="2026-03-12">12 March 2026, 09:00–16:00 EET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-finland-efekti-2026-accessiblity-digital-commerce-26-ws-fi-01-2026-03-12_en">AccessibleEU Finland: Efekti 2026: Accessibility in Digital Commerce</a>
@@ -484,7 +485,7 @@
             <td>Helsinki Expo and Convention Centre, Messuaukio 1, Helsinki, Finland and online</td>
             <td><a href="events/accessibleeu-26-ws-fi-01.ics" aria-label="Add event: AccessibleEU Finland: Efekti 2026: Accessibility in Digital Commerce to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IE">
+          <tr data-format="Hybrid" data-country="IE" data-end-date="2026-03-13">
             <td><time datetime="2026-03-13">13 March 2026, 09:30–14:00 GMT</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-ireland-accessibility-action-models-good-practice-26-aw-ie-01-2026-03-13_en">AccessibleEU Ireland: Accessibility in Action. Models of Good Practice</a>
@@ -494,7 +495,7 @@
             <td>National Disability Authority, 25 Clyde Road, Dublin, Ireland and online</td>
             <td><a href="events/accessibleeu-26-aw-ie-01.ics" aria-label="Add event: AccessibleEU Ireland: Accessibility in Action. Models of Good Practice to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DK">
+          <tr data-format="Hybrid" data-country="DK" data-end-date="2026-03-19">
             <td><time datetime="2026-03-19">19 March 2026, 09:30–15:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-denmark-accessible-tourism-opportunity-26-nw-dk-01-2026-03-19_en">AccessibleEU Denmark: Accessible Tourism as an Opportunity</a>
@@ -504,7 +505,7 @@
             <td>Siteimprove, Havneholmen 33, Copenhagen, Denmark and online</td>
             <td><a href="events/accessibleeu-26-nw-dk-01.ics" aria-label="Add event: AccessibleEU Denmark: Accessible Tourism as an Opportunity to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="IT">
+          <tr data-format="In person" data-country="IT" data-end-date="2026-03-20">
             <td><time datetime="2026-03-20">20 March 2026, 14:00–18:00 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-italy-inclusive-sport-tourism-and-culture-paths-26-ws-it-01-2026-03-20_en">AccessibleEU Italy: Inclusive Sport, Tourism, and Culture Paths</a>
@@ -514,7 +515,7 @@
             <td>Casa dello Sport and Museo Diocesano Adriano Bernareggi, Bergamo, Italy</td>
             <td><a href="events/accessibleeu-26-ws-it-01.ics" aria-label="Add event: AccessibleEU Italy: Inclusive Sport, Tourism, and Culture Paths to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="PL">
+          <tr data-format="In person" data-country="PL" data-end-date="2026-03-23">
             <td><time datetime="2026-03-23">23 March 2026, 09:00–15:00 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-poland-32nd-edition-engineering-job-and-entrepreneurship-fair-silesian-university-2026-03-23_en">AccessibleEU Poland: 32nd Edition of the Engineering Job and Entrepreneurship Fair at the Silesian University of Technology</a>
@@ -524,7 +525,7 @@
             <td>Nowa Hall, Silesian University of Technology, Kaszubska 28, Gliwice, Poland</td>
             <td><a href="events/accessibleeu-26-nw-pl-01.ics" aria-label="Add event: AccessibleEU Poland: 32nd Edition of the Engineering Job and Entrepreneurship Fair at the Silesian University of Technology to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="EE">
+          <tr data-format="In person" data-country="EE" data-end-date="2026-03-24">
             <td><time datetime="2026-03-24">24 March 2026, 09:30–15:30 EET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-estonia-how-create-accessible-architecture-commissioning-design-26-nw-ee-01-2026-03-24_en">AccessibleEU Estonia: How to Create Accessible Architecture. From Commissioning to Design</a>
@@ -534,7 +535,7 @@
             <td>Ülemiste Conference Centre, Valukoja 8, Tallinn, Estonia</td>
             <td><a href="events/accessibleeu-26-nw-ee-01.ics" aria-label="Add event: AccessibleEU Estonia: How to Create Accessible Architecture. From Commissioning to Design to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="BG">
+          <tr data-format="Hybrid" data-country="BG" data-end-date="2026-03-31">
             <td><time datetime="2026-03-31">31 March 2026, 09:00–13:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-bulgaria-accessibility-mission-possible-funding-and-support-accessible-built-2026-03-31_en">AccessibleEU Bulgaria: Accessibility – Mission Possible: Funding and Support for Accessible Built Environment and Personal Mobility</a>
@@ -544,7 +545,7 @@
             <td>Shtrak, 3 Hristo Belchev Street, Sofia, Bulgaria and online</td>
             <td><a href="events/accessibleeu-26-aw-bg-01.ics" aria-label="Add event: AccessibleEU Bulgaria: Accessibility – Mission Possible: Funding and Support for Accessible Built Environment and Personal Mobility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-04-08">
             <td><time datetime="2026-04-08">8 April 2026, 11:00–15:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-lithuania-school-360deg-seeing-hearing-and-including-everyone-26-aw-lt-01-2026-04-08_en">AccessibleEU Lithuania: School 360°: Seeing, Hearing and Including Everyone</a>
@@ -554,7 +555,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-aw-lt-01.ics" aria-label="Add event: AccessibleEU Lithuania: School 360°: Seeing, Hearing and Including Everyone to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="BE">
+          <tr data-format="In person" data-country="BE" data-end-date="2026-04-20">
             <td><time datetime="2026-04-20">20 April 2026, 09:00–13:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-belgium-challenges-accessible-housing-standards-uses-and-innovations-adapted-and-2026-04-20_en">AccessibleEU Belgium: Adaptable Housing for Home Care and Independent Living</a>
@@ -564,7 +565,7 @@
             <td>W:Hall Congress Centre, Avenue Charles Thielemans 93A, Brussels, Belgium</td>
             <td><a href="events/accessibleeu-26-aw-be-01-2026-04-20.ics" aria-label="Add event: AccessibleEU Belgium: Adaptable Housing for Home Care and Independent Living to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="BE">
+          <tr data-format="In person" data-country="BE" data-end-date="2026-04-21">
             <td><time datetime="2026-04-21">21 April 2026, 09:00–13:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-belgium-challenges-accessible-housing-standards-uses-and-innovations-adapted-and-2026-04-20_en">AccessibleEU Belgium: Adapting Ordinary Housing for Wheelchair Users</a>
@@ -574,7 +575,7 @@
             <td>W:Hall Congress Centre, Avenue Charles Thielemans 93A, Brussels, Belgium</td>
             <td><a href="events/accessibleeu-26-aw-be-01-2026-04-21.ics" aria-label="Add event: AccessibleEU Belgium: Adapting Ordinary Housing for Wheelchair Users to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="BE">
+          <tr data-format="In person" data-country="BE" data-end-date="2026-04-22">
             <td><time datetime="2026-04-22">22 April 2026, 09:00–13:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-belgium-challenges-accessible-housing-standards-uses-and-innovations-adapted-and-2026-04-20_en">AccessibleEU Belgium: Choosing the Location of Adapted or Adaptable Housing</a>
@@ -584,7 +585,7 @@
             <td>W:Hall Congress Centre, Avenue Charles Thielemans 93A, Brussels, Belgium</td>
             <td><a href="events/accessibleeu-26-aw-be-01-2026-04-22.ics" aria-label="Add event: AccessibleEU Belgium: Choosing the Location of Adapted or Adaptable Housing to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-04-22">
             <td><time datetime="2026-04-22">22 April 2026, 17:00–19:30 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-cyprus-accessibility-matters-making-inclusive-learning-and-inclusive-thinking-learners-2026-04-22_en">AccessibleEU Cyprus: Accessibility Matters: Making Inclusive Learning and Inclusive-Thinking Learners</a>
@@ -594,7 +595,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-cy-01.ics" aria-label="Add event: AccessibleEU Cyprus: Accessibility Matters: Making Inclusive Learning and Inclusive-Thinking Learners to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DE">
+          <tr data-format="Hybrid" data-country="DE" data-end-date="2026-04-24">
             <td><time datetime="2026-04-24">24 April 2026, 11:00–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-artificial-intelligence-accessibility-26-aw-de-01-2026-04-24_en">AccessibleEU Germany: Artificial Intelligence for Accessibility</a>
@@ -604,7 +605,7 @@
             <td>Hochschule der Medien, Nobelstraße 8, Stuttgart, Germany and online</td>
             <td><a href="events/accessibleeu-26-aw-de-01.ics" aria-label="Add event: AccessibleEU Germany: Artificial Intelligence for Accessibility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="GR">
+          <tr data-format="Hybrid" data-country="GR" data-end-date="2026-04-28">
             <td><time datetime="2026-04-28">28 April 2026, 10:00–14:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-greece-making-vocational-education-and-training-vet-more-accessible-and-inclusive-2026-04-28_en">AccessibleEU Greece: Making Vocational Education and Training More Accessible and Inclusive for Persons with Disabilities</a>
@@ -614,7 +615,7 @@
             <td>Hotel Titania, 52 Panepistimiou Avenue, Athens, Greece and online</td>
             <td><a href="events/accessibleeu-26-ws-gr-01.ics" aria-label="Add event: AccessibleEU Greece: Making Vocational Education and Training More Accessible and Inclusive for Persons with Disabilities to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="HR">
+          <tr data-format="Hybrid" data-country="HR" data-end-date="2026-04-29">
             <td><time datetime="2026-04-29">29 April 2026, 11:00–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-croatia-hekup-26-persons-disabilities-transport-2026-26-nw-hr-01-2026-04-29_en">AccessibleEU Croatia: HEKUP 26 – Persons with Disabilities in Transport 2026</a>
@@ -624,7 +625,7 @@
             <td>Hotel Diplomat, Horvatova 35B, Zagreb, Croatia and online</td>
             <td><a href="events/accessibleeu-26-nw-hr-01.ics" aria-label="Add event: AccessibleEU Croatia: HEKUP 26 – Persons with Disabilities in Transport 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SE">
+          <tr data-format="Hybrid" data-country="SE" data-end-date="2026-04-29">
             <td><time datetime="2026-04-29">29 April 2026, 13:00–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-sweden-accessibility-work-26-aw-se-01-2026-04-29_en">AccessibleEU Sweden: Accessibility at Work</a>
@@ -634,7 +635,7 @@
             <td>Internetstiftelsen, Hammarby Kaj 10D, Stockholm, Sweden and online</td>
             <td><a href="events/accessibleeu-26-aw-se-01.ics" aria-label="Add event: AccessibleEU Sweden: Accessibility at Work to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="FR">
+          <tr data-format="Hybrid" data-country="FR" data-end-date="2026-05-05">
             <td><time datetime="2026-05-05">5 May 2026, 09:00–16:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-france-accessibility-compliance-constraint-strategic-advantage-26-ws-fr-01-2026-05-05_en">AccessibleEU France: Accessibility: From Compliance Constraint to Strategic Advantage</a>
@@ -644,7 +645,7 @@
             <td>AFNOR, 11 Rue Francis de Pressensé, Saint-Denis, France and online</td>
             <td><a href="events/accessibleeu-26-ws-fr-01.ics" aria-label="Add event: AccessibleEU France: Accessibility: From Compliance Constraint to Strategic Advantage to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="NL">
+          <tr data-format="In person" data-country="NL" data-end-date="2026-05-06">
             <td><time datetime="2026-05-06">6 May 2026, 12:30–18:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-netherlands-accessibility-celebrates-its-25th-anniversary-26-nw-nl-01-2026-05-06_en">AccessibleEU Netherlands: Accessibility Celebrates Its 25th Anniversary!</a>
@@ -654,7 +655,7 @@
             <td>DUS Utrecht, Sophialaan 1, Utrecht, Netherlands</td>
             <td><a href="events/accessibleeu-26-nw-nl-01.ics" aria-label="Add event: AccessibleEU Netherlands: Accessibility Celebrates Its 25th Anniversary! to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="HU">
+          <tr data-format="Hybrid" data-country="HU" data-end-date="2026-05-07">
             <td><time datetime="2026-05-07">7 May 2026, 08:15–14:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-hungary-professional-pre-conference-day-traffic-culture26-nw-hu-01-2026-05-07_en">AccessibleEU Hungary: Professional Pre-Conference of The Day of Traffic Culture</a>
@@ -664,7 +665,7 @@
             <td>Lion&#x27;s Garden Hotel, Cházár András utca 4, Budapest, Hungary and online</td>
             <td><a href="events/accessibleeu-26-nw-hu-01.ics" aria-label="Add event: AccessibleEU Hungary: Professional Pre-Conference of The Day of Traffic Culture to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DE">
+          <tr data-format="Hybrid" data-country="DE" data-end-date="2026-05-10">
             <td><time datetime="2026-05-09">9–10 May 2026</time></td>
             <td>
               <a href="https://accessibility.club/event/accessibility-club-summit-2026">Accessibility Club Summit 2026</a>
@@ -674,7 +675,7 @@
             <td>Würzburg, Germany and online</td>
             <td><a href="events/accessibility-club-summit-2026.ics" aria-label="Add event: Accessibility Club Summit 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="US">
+          <tr data-format="Hybrid" data-country="US" data-end-date="2026-05-14">
             <td><time datetime="2026-05-11">11–14 May 2026</time></td>
             <td>
               <a href="https://knowbility.org/programs/john-slatin-accessu-2026">John Slatin AccessU 2026</a>
@@ -684,7 +685,7 @@
             <td>Austin, Texas, United States and online</td>
             <td><a href="events/john-slatin-accessu-2026.ics" aria-label="Add event: John Slatin AccessU 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="PL">
+          <tr data-format="In person" data-country="PL" data-end-date="2026-05-14">
             <td><time datetime="2026-05-14">14 May 2026, 10:00–14:20 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-poland-accessibility-geographic-space-26-aw-pl-01-2026-05-14_en">AccessibleEU Poland: Accessibility in Geographic Space</a>
@@ -694,7 +695,7 @@
             <td>Collegium Geographicum, Adam Mickiewicz University, Krygowskiego 10, Poznań, Poland</td>
             <td><a href="events/accessibleeu-26-aw-pl-01.ics" aria-label="Add event: AccessibleEU Poland: Accessibility in Geographic Space to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="CZ">
+          <tr data-format="Hybrid" data-country="CZ" data-end-date="2026-05-17">
             <td><time datetime="2026-05-16">16–17 May 2026, 09:30–14:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-czechia-agora-2026-26-ws-cz-01-2026-05-16_en">AccessibleEU Czechia: Agora 2026</a>
@@ -704,7 +705,7 @@
             <td>Masaryk University, Komenského náměstí 2, Brno, Czechia and online</td>
             <td><a href="events/accessibleeu-26-ws-cz-01.ics" aria-label="Add event: AccessibleEU Czechia: Agora 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SE">
+          <tr data-format="Hybrid" data-country="SE" data-end-date="2026-05-18">
             <td><time datetime="2026-05-18">18 May 2026, 09:30–16:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-sweden-visible-and-invisible-disabilities-networking-event-about-meeting-accessibility-2026-05-18_en">AccessibleEU Sweden: Visible and Invisible Disabilities</a>
@@ -714,7 +715,7 @@
             <td>Föreningshuset Fontänen, Västra vägen 32, Linköping, Sweden and online</td>
             <td><a href="events/accessibleeu-26-nw-se-01.ics" aria-label="Add event: AccessibleEU Sweden: Visible and Invisible Disabilities to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="BE">
+          <tr data-format="Hybrid" data-country="BE" data-end-date="2026-05-19">
             <td><time datetime="2026-05-19">19 May 2026, 10:00–16:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-belgium-inspiration-day-spaces-care-and-wellbeing-public-buildings-26-nw-be-01-2026-05-19_en">AccessibleEU Belgium: Inspiration Day: Spaces for Care and Wellbeing in Public Buildings</a>
@@ -724,7 +725,7 @@
             <td>Faculty of Rehabilitation Sciences, Wetenschapspark 7, Diepenbeek, Belgium and online</td>
             <td><a href="events/accessibleeu-26-nw-be-01.ics" aria-label="Add event: AccessibleEU Belgium: Inspiration Day: Spaces for Care and Wellbeing in Public Buildings to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="RO">
+          <tr data-format="Hybrid" data-country="RO" data-end-date="2026-05-19">
             <td><time datetime="2026-05-19">19 May 2026, 09:30–16:30 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-romania-enterprising-tomorrow-2026-26-nw-ro-01-2026-05-19_en">AccessibleEU Romania: Enterprising for Tomorrow 2026</a>
@@ -734,7 +735,7 @@
             <td>Agora Events Centre, 115 Nicolina Avenue, Iași, Romania and online</td>
             <td><a href="events/accessibleeu-26-nw-ro-01.ics" aria-label="Add event: AccessibleEU Romania: Enterprising for Tomorrow 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-05-21">
             <td><time datetime="2026-05-19">19–21 May 2026</time></td>
             <td>
               <a href="https://www.ahead.ie/event/gather-2026/index">Gather 2026</a>
@@ -744,7 +745,7 @@
             <td>Online</td>
             <td><a href="events/gather-2026.ics" aria-label="Add event: Gather 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SI">
+          <tr data-format="Hybrid" data-country="SI" data-end-date="2026-05-20">
             <td><time datetime="2026-05-20">20 May 2026, 08:30–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovenia-global-accessibility-awareness-day-slovenia-gaad-slovenia-26-aw-si-01-2026-05-20_en">AccessibleEU Slovenia: Global Accessibility Awareness Day Slovenia</a>
@@ -754,7 +755,7 @@
             <td>University Rehabilitation Institute of the Republic of Slovenia Soča, Linhartova 51, Ljubljana, Slovenia and online</td>
             <td><a href="events/accessibleeu-26-aw-si-01.ics" aria-label="Add event: AccessibleEU Slovenia: Global Accessibility Awareness Day Slovenia to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="AT">
+          <tr data-format="In person" data-country="AT" data-end-date="2026-05-21">
             <td><time datetime="2026-05-21">21 May 2026</time></td>
             <td>
               <a href="https://atag.accessible-media.at/">A-Tag 2026</a>
@@ -764,7 +765,7 @@
             <td>Vienna, Austria</td>
             <td><a href="events/a-tag-2026.ics" aria-label="Add event: A-Tag 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IT">
+          <tr data-format="Hybrid" data-country="IT" data-end-date="2026-05-22">
             <td><time datetime="2026-05-21">21–22 May 2026, 09:30–19:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-italy-accessibility-days-2026-26-aw-it-01-2026-05-21_en">AccessibleEU Italy: Accessibility Days 2026</a>
@@ -774,7 +775,7 @@
             <td>Sapienza University of Rome, Viale dello Scalo San Lorenzo 82, Rome, Italy and online</td>
             <td><a href="events/accessibleeu-26-aw-it-01.ics" aria-label="Add event: AccessibleEU Italy: Accessibility Days 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="CY">
+          <tr data-format="In person" data-country="CY" data-end-date="2026-05-23">
             <td><time datetime="2026-05-23">23 May 2026, 09:00–15:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-cyprus-wise-and-accessible-cities-transport-information-culture-and-beyond-26-nw-cy-01-2026-05-23_en">AccessibleEU Cyprus: Wise and Accessible Cities: From Transport, to Information, to Culture and Beyond</a>
@@ -784,7 +785,7 @@
             <td>Nicosia Municipal Arts Centre, 19 Palias Ilektrikis, Nicosia, Cyprus</td>
             <td><a href="events/accessibleeu-26-nw-cy-01.ics" aria-label="Add event: AccessibleEU Cyprus: Wise and Accessible Cities: From Transport, to Information, to Culture and Beyond to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="FR">
+          <tr data-format="Hybrid" data-country="FR" data-end-date="2026-05-28">
             <td><time datetime="2026-05-28">28 May 2026, 09:00–13:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-france-all-different-all-learners-26-aw-fr-01-2026-05-28_en">AccessibleEU France: All Different, All Learners!</a>
@@ -794,7 +795,7 @@
             <td>Les Papeteries, Annecy, France and online</td>
             <td><a href="events/accessibleeu-26-aw-fr-01.ics" aria-label="Add event: AccessibleEU France: All Different, All Learners! to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="LV">
+          <tr data-format="Hybrid" data-country="LV" data-end-date="2026-05-28">
             <td><time datetime="2026-05-28">28 May 2026, 10:00–18:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-latvia-historic-environment-modern-accessibility-26-nw-lv-01-2026-05-28_en">AccessibleEU Latvia: Historic Environment, Modern Accessibility</a>
@@ -804,7 +805,7 @@
             <td>Embassy of Latgale GORS, Pils iela 4, Rēzekne, Latvia and online</td>
             <td><a href="events/accessibleeu-26-nw-lv-01.ics" aria-label="Add event: AccessibleEU Latvia: Historic Environment, Modern Accessibility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="LT">
+          <tr data-format="Hybrid" data-country="LT" data-end-date="2026-05-28">
             <td><time datetime="2026-05-28">28 May 2026, 10:00–16:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-lithuania-cultural-heritage-and-universal-design-mission-possible-26-nw-lt-01-2026-05-28_en">AccessibleEU Lithuania: Cultural Heritage and Universal Design: Mission Possible?</a>
@@ -814,7 +815,7 @@
             <td>Memorial Complex of Tuskulėnai Peace Park, Žirmūnų 1F, Vilnius, Lithuania and online</td>
             <td><a href="events/accessibleeu-26-nw-lt-01.ics" aria-label="Add event: AccessibleEU Lithuania: Cultural Heritage and Universal Design: Mission Possible? to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-06-03">
             <td><time datetime="2026-06-03">3 June 2026, 14:00–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-accessible-public-spaces-accessible-and-tangible-all-26-ws-de-02-2026-06-03_en">AccessibleEU Germany: Accessible Public Spaces – Inclusive Design for Public Institutions</a>
@@ -824,7 +825,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-de-02-2026-06-03.ics" aria-label="Add event: AccessibleEU Germany: Accessible Public Spaces – Inclusive Design for Public Institutions to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="RO">
+          <tr data-format="Hybrid" data-country="RO" data-end-date="2026-06-03">
             <td><time datetime="2026-06-03">3 June 2026, 10:00–16:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-romania-accessibility-shared-responsibility-26-aw-ro-01-2026-06-03_en">AccessibleEU Romania: Accessibility as a Shared Responsibility</a>
@@ -834,7 +835,7 @@
             <td>Babeș-Bolyai University, Mihail Kogălniceanu 1, Cluj-Napoca, Romania and online</td>
             <td><a href="events/accessibleeu-26-aw-ro-01.ics" aria-label="Add event: AccessibleEU Romania: Accessibility as a Shared Responsibility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IE">
+          <tr data-format="Hybrid" data-country="IE" data-end-date="2026-06-09">
             <td><time datetime="2026-06-09">9 June 2026</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-advancing-accessibility-transport-26-aw-eu-01-2026-06-09_en">AccessibleEU European Event: Advancing Accessibility in Transport</a>
@@ -844,7 +845,7 @@
             <td>Dublin, Ireland and online</td>
             <td><a href="events/accessible-transport-2026.ics" aria-label="Add event: AccessibleEU European Event: Advancing Accessibility in Transport to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-06-10">
             <td><time datetime="2026-06-10">10 June 2026, 14:00–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-accessible-public-spaces-accessible-and-tangible-all-26-ws-de-02-2026-06-03_en">AccessibleEU Germany: Accessible Public Spaces – Tourism</a>
@@ -854,7 +855,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-de-02-2026-06-10.ics" aria-label="Add event: AccessibleEU Germany: Accessible Public Spaces – Tourism to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="PL">
+          <tr data-format="In person" data-country="PL" data-end-date="2026-06-10">
             <td><time datetime="2026-06-10">10 June 2026, 10:00–15:15 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-poland-empathy-motion-26-ws-pl-01-2026-06-10_en">AccessibleEU Poland: Empathy in Motion</a>
@@ -864,7 +865,7 @@
             <td>Fire University, Juliusza Słowackiego 52/54, Warsaw, Poland</td>
             <td><a href="events/accessibleeu-26-ws-pl-01.ics" aria-label="Add event: AccessibleEU Poland: Empathy in Motion to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-06-16">
             <td><time datetime="2026-06-16">16 June 2026, 09:15–11:15 CEST</time></td>
             <td>
               <a href="https://digst.dk/tilsyn/webtilgaengelighed/nyheder-og-netvaerk/tilmeld-dig-netvaerket/netvaerksmoede-om-webtilgaengelighed-juni-2026/">Netværksmøde om webtilgængelighed juni 2026</a>
@@ -874,7 +875,7 @@
             <td>Online</td>
             <td><a href="events/digst-web-accessibility-network-june-2026.ics" aria-label="Add event: Netværksmøde om webtilgængelighed juni 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-06-17">
             <td><time datetime="2026-06-17">17 June 2026, 14:00–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-accessible-public-spaces-accessible-and-tangible-all-26-ws-de-02-2026-06-03_en">AccessibleEU Germany: Accessible Public Spaces – Self-Service Terminals and Ticket Machines</a>
@@ -884,7 +885,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-de-02-2026-06-17.ics" aria-label="Add event: AccessibleEU Germany: Accessible Public Spaces – Self-Service Terminals and Ticket Machines to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IT">
+          <tr data-format="Hybrid" data-country="IT" data-end-date="2026-06-18">
             <td><time datetime="2026-06-18">18 June 2026, 09:30–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-italy-inclusive-and-smart-tourism-destinations-strategies-innovation-26-nw-it-01-2026-06-18_en">AccessibleEU Italy: Inclusive and Smart Tourism Destinations: Strategies for Innovation</a>
@@ -894,7 +895,7 @@
             <td>Aquarium of Genoa, Ponte Spinola 16, Genoa, Italy and online</td>
             <td><a href="events/accessibleeu-26-nw-it-01.ics" aria-label="Add event: AccessibleEU Italy: Inclusive and Smart Tourism Destinations: Strategies for Innovation to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="NL">
+          <tr data-format="In person" data-country="NL" data-end-date="2026-06-18">
             <td><time datetime="2026-06-18">18 June 2026, 11:00–14:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-netherlands-open-26-ws-nl-01-2026-06-18_en">AccessibleEU Netherlands: Open Up</a>
@@ -904,7 +905,7 @@
             <td>HAN University of Applied Sciences, Ruitenberglaan 26, Arnhem, Netherlands</td>
             <td><a href="events/accessibleeu-26-ws-nl-01.ics" aria-label="Add event: AccessibleEU Netherlands: Open Up to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="ES">
+          <tr data-format="Hybrid" data-country="ES" data-end-date="2026-06-22">
             <td><time datetime="2026-06-22">22 June 2026, 09:00–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-spain-if-it-not-accessible-it-not-justice-keys-digital-physical-and-documentary-justice-2026-06-22_en">AccessibleEU Spain: If It Is Not Accessible, It Is Not Justice</a>
@@ -914,7 +915,7 @@
             <td>HUB Por Talento Digital, Calle de Fray Luis de León 11, Madrid, Spain and online</td>
             <td><a href="events/accessibleeu-26-aw-es-01.ics" aria-label="Add event: AccessibleEU Spain: If It Is Not Accessible, It Is Not Justice to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-06-23">
             <td><time datetime="2026-06-23">23 June 2026, 12:30–13:45 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-belgium-diversity-and-inclusion-tourism-smes-across-europe-26-ws-be-01-2026-06-23_en">AccessibleEU Belgium: Diversity and Inclusion in Tourism SMEs across Europe</a>
@@ -924,7 +925,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-be-01.ics" aria-label="Add event: AccessibleEU Belgium: Diversity and Inclusion in Tourism SMEs across Europe to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-06-24">
             <td><time datetime="2026-06-24">24 June 2026, 14:00–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-accessible-public-spaces-accessible-and-tangible-all-26-ws-de-02-2026-06-03_en">AccessibleEU Germany: Accessible Public Spaces – Public Libraries</a>
@@ -934,7 +935,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-de-02-2026-06-24.ics" aria-label="Add event: AccessibleEU Germany: Accessible Public Spaces – Public Libraries to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="NL">
+          <tr data-format="In person" data-country="NL" data-end-date="2026-06-25">
             <td><time datetime="2026-06-25">25 June 2026, 09:30–14:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-netherlands-digital-accessibility-day-26-aw-nl-01-2026-06-25_en">AccessibleEU Netherlands: Digital Accessibility Day</a>
@@ -944,7 +945,7 @@
             <td>Blue Billywig, Catharina van Renneslaan 20, Hilversum, Netherlands</td>
             <td><a href="events/accessibleeu-26-aw-nl-01.ics" aria-label="Add event: AccessibleEU Netherlands: Digital Accessibility Day to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="BG">
+          <tr data-format="Hybrid" data-country="BG" data-end-date="2026-06-26">
             <td><time datetime="2026-06-26">26 June 2026, 09:00–13:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-bulgaria-accessible-transport-and-tourism-advantages-and-needs-26-ws-bg-01-2026-06-26_en">AccessibleEU Bulgaria: Accessible Transport and Tourism – Advantages and Needs</a>
@@ -954,7 +955,7 @@
             <td>Shtrak, 3 Hristo Belchev Street, Sofia, Bulgaria and online</td>
             <td><a href="events/accessibleeu-26-ws-bg-01.ics" aria-label="Add event: AccessibleEU Bulgaria: Accessible Transport and Tourism – Advantages and Needs to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="ES">
+          <tr data-format="Hybrid" data-country="ES" data-end-date="2026-06-29">
             <td><time datetime="2026-06-29">29 June 2026, 14:00–16:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-accessibilitys-achievements-and-challenges-contemporary-architecture-and-2026-06-29_en">AccessibleEU European Event: Accessibility&#x27;s Achievements and Challenges in Contemporary Architecture and Urban Planning</a>
@@ -964,7 +965,7 @@
             <td>Barcelona International Convention Centre, Plaça de Willy Brandt 11-14, Barcelona, Spain and online</td>
             <td><a href="events/accessibleeu-26-ws-eu-02.ics" aria-label="Add event: AccessibleEU European Event: Accessibility&#x27;s Achievements and Challenges in Contemporary Architecture and Urban Planning to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="HR">
+          <tr data-format="Hybrid" data-country="HR" data-end-date="2026-06-30">
             <td><time datetime="2026-06-30">30 June 2026, 11:00–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-croatia-built-environment-affordability-accessibility-3rd-national-central-annual-2026-06-30_en">AccessibleEU Croatia: Built Environment: Affordability of Accessibility – 3rd National Central Annual Conference</a>
@@ -974,7 +975,7 @@
             <td>Regional Competence Center Ruđer Bošković, Getaldićeva 4, Zagreb, Croatia and online</td>
             <td><a href="events/accessibleeu-26-ws-hr-01.ics" aria-label="Add event: AccessibleEU Croatia: Built Environment: Affordability of Accessibility – 3rd National Central Annual Conference to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="ES">
+          <tr data-format="Hybrid" data-country="ES" data-end-date="2026-07-01">
             <td><time datetime="2026-07-01">1 July 2026, 12:00–14:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-spain-break-frame-designing-and-living-culture-without-limits-26-ws-es-02-2026-07-01_en">AccessibleEU Spain: Break the Frame: Designing and Living a Culture without Limits</a>
@@ -984,7 +985,7 @@
             <td>Auditorio CentroCentro, Plaza de Cibeles 1, Madrid, Spain and online</td>
             <td><a href="events/accessibleeu-26-ws-es-02.ics" aria-label="Add event: AccessibleEU Spain: Break the Frame: Designing and Living a Culture without Limits to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="LV">
+          <tr data-format="Hybrid" data-country="LV" data-end-date="2026-07-02">
             <td><time datetime="2026-07-02">2 July 2026, 09:30–16:30 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-latvia-riga-move-accessible-city-everyone-26-ws-lv-01-2026-07-02_en">AccessibleEU Latvia: Riga on the Move: An Accessible City for Everyone</a>
@@ -994,7 +995,7 @@
             <td>Kokaru Hall, Lucijas Garūtas aleja 8, Riga, Latvia and online</td>
             <td><a href="events/accessibleeu-26-ws-lv-01.ics" aria-label="Add event: AccessibleEU Latvia: Riga on the Move: An Accessible City for Everyone to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="FR">
+          <tr data-format="In person" data-country="FR" data-end-date="2026-07-08">
             <td><time datetime="2026-07-08">8 July 2026, 09:00–14:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-france-design-all-accessibility-practice-26-nw-fr-01-2026-07-08_en">AccessibleEU France: Design for All: Accessibility in Practice!</a>
@@ -1004,7 +1005,7 @@
             <td>Orange Gardens, 46 Avenue de la République, Châtillon, France</td>
             <td><a href="events/accessibleeu-26-nw-fr-01.ics" aria-label="Add event: AccessibleEU France: Design for All: Accessibility in Practice! to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="GR">
+          <tr data-format="Hybrid" data-country="GR" data-end-date="2026-07-10">
             <td><time datetime="2026-07-10">10 July 2026, 10:00–14:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-greece-municipal-initiatives-ensuring-equal-access-persons-disabilities-infrastructure-2026-07-10_en">AccessibleEU Greece: Municipal Initiatives for Ensuring Equal Access to Infrastructure and Services</a>
@@ -1014,7 +1015,7 @@
             <td>Hotel Titania, 52 Panepistimiou Avenue, Athens, Greece and online</td>
             <td><a href="events/accessibleeu-26-aw-gr-01.ics" aria-label="Add event: AccessibleEU Greece: Municipal Initiatives for Ensuring Equal Access to Infrastructure and Services to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="CZ">
+          <tr data-format="In person" data-country="CZ" data-end-date="2026-07-17">
             <td><time datetime="2026-07-13">13–17 July 2026</time></td>
             <td>
               <a href="https://icchp.org/">International Conference on Computers Helping People with Special Needs 2026</a>
@@ -1024,7 +1025,7 @@
             <td>Brno, Czech Republic</td>
             <td><a href="events/icchp-2026.ics" aria-label="Add event: International Conference on Computers Helping People with Special Needs 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="CZ">
+          <tr data-format="In person" data-country="CZ" data-end-date="2026-07-14">
             <td><time datetime="2026-07-14">14 July 2026, 09:30–16:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-czechia-theseus-over-obstacles-2026-26-nw-cz-01-2026-07-14_en">AccessibleEU Czechia: With Théseus over the Obstacles 2026</a>
@@ -1034,7 +1035,7 @@
             <td>Masaryk University Faculty of Arts, Arne Nováka 1, Brno, Czechia</td>
             <td><a href="events/accessibleeu-26-nw-cz-01.ics" aria-label="Add event: AccessibleEU Czechia: With Théseus over the Obstacles 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="PT">
+          <tr data-format="Hybrid" data-country="PT" data-end-date="2026-07-31">
             <td><time datetime="2026-07-31">31 July 2026, 10:00–17:00 WEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-portugal-portugal-data-disability-and-living-conditions-26-nw-pt-01-2026-07-31_en">AccessibleEU Portugal: Portugal in Data: Disability and Living Conditions</a>
@@ -1044,7 +1045,7 @@
             <td>Biblioteca de Marvila, Rua António Gedeão, Lisbon, Portugal and online</td>
             <td><a href="events/accessibleeu-26-nw-pt-01.ics" aria-label="Add event: AccessibleEU Portugal: Portugal in Data: Disability and Living Conditions to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="LU">
+          <tr data-format="In person" data-country="LU" data-end-date="2026-08-05">
             <td><time datetime="2026-08-05">5 August 2026, 10:00–16:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-luxembourg-fun-factor-accessibility-26-nw-lu-01-2026-08-05_en">AccessibleEU Luxembourg: Fun Factor Accessibility</a>
@@ -1054,7 +1055,7 @@
             <td>Baggerweier, Breicherwee, Remerschen, Luxembourg</td>
             <td><a href="events/accessibleeu-26-nw-lu-01.ics" aria-label="Add event: AccessibleEU Luxembourg: Fun Factor Accessibility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="HU">
+          <tr data-format="In person" data-country="HU" data-end-date="2026-09-05">
             <td><time datetime="2026-09-05">5 September 2026, 08:30–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-hungary-10th-barrier-free-tourism-day-26-aw-hu-01-2026-09-05_en">AccessibleEU Hungary: 10th Barrier-Free Tourism Day</a>
@@ -1064,7 +1065,7 @@
             <td>Lake Orfű and Medvehagyma Ház, Orfű, Hungary</td>
             <td><a href="events/accessibleeu-26-aw-hu-01.ics" aria-label="Add event: AccessibleEU Hungary: 10th Barrier-Free Tourism Day to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="AT">
+          <tr data-format="Hybrid" data-country="AT" data-end-date="2026-09-07">
             <td><time datetime="2026-09-07">7 September 2026, 10:00–16:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-austria-digital-euro-and-financial-inclusion-europes-path-between-regulation-innovation-2026-09-07_en">AccessibleEU Austria: Digital Euro and Financial Inclusion: Europe&#x27;s Path Between Regulation, Innovation and Responsibility</a>
@@ -1074,7 +1075,7 @@
             <td>Oesterreichische Nationalbank, Otto-Wagner-Platz 3, Vienna, Austria and online</td>
             <td><a href="events/accessibleeu-26-ws-at-01.ics" aria-label="Add event: AccessibleEU Austria: Digital Euro and Financial Inclusion: Europe&#x27;s Path Between Regulation, Innovation and Responsibility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="RO">
+          <tr data-format="Hybrid" data-country="RO" data-end-date="2026-09-07">
             <td><time datetime="2026-09-07">7 September 2026, 10:00–16:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-romania-accessible-communities-mobility-safety-and-accessible-cultural-heritage-26-ws-2026-09-07_en">AccessibleEU Romania: Accessible Communities: Mobility, Safety and Accessible Cultural Heritage</a>
@@ -1084,7 +1085,7 @@
             <td>University of Bucharest Rectorate Building, 90 Panduri Avenue, Bucharest, Romania and online</td>
             <td><a href="events/accessibleeu-26-ws-ro-01.ics" aria-label="Add event: AccessibleEU Romania: Accessible Communities: Mobility, Safety and Accessible Cultural Heritage to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="MT">
+          <tr data-format="Hybrid" data-country="MT" data-end-date="2026-09-09">
             <td><time datetime="2026-09-09">9 September 2026, 09:15–12:45 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-malta-vision-reality-implementing-accessible-transport-malta-26-ws-mt-01-2026-09-09_en">AccessibleEU Malta: From Vision to Reality: Implementing Accessible Transport in Malta</a>
@@ -1094,7 +1095,7 @@
             <td>Aula Magna, University of Malta Campus, Valletta, Malta and online</td>
             <td><a href="events/accessibleeu-26-ws-mt-01.ics" aria-label="Add event: AccessibleEU Malta: From Vision to Reality: Implementing Accessible Transport in Malta to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SI">
+          <tr data-format="Hybrid" data-country="SI" data-end-date="2026-09-10">
             <td><time datetime="2026-09-10">10 September 2026, 09:00–16:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovenia-digital-inclusion-information-society-digin-26-ws-si-01-2026-09-10_en">AccessibleEU Slovenia: Digital Inclusion in the Information Society: DIGIN</a>
@@ -1104,7 +1105,7 @@
             <td>University of Maribor Faculty of Electrical Engineering and Computer Science, Koroška cesta 46, Maribor, Slovenia and online</td>
             <td><a href="events/accessibleeu-26-ws-si-01.ics" aria-label="Add event: AccessibleEU Slovenia: Digital Inclusion in the Information Society: DIGIN to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="AT">
+          <tr data-format="Hybrid" data-country="AT" data-end-date="2026-09-14">
             <td><time datetime="2026-09-14">14 September 2026, 10:00–16:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-austria-inclusive-museums-2030-accessible-culture-diverse-society-26-nw-01-2026-09-14_en">AccessibleEU Austria: Inclusive Museums 2030: Accessible Culture for a Diverse Society</a>
@@ -1114,7 +1115,7 @@
             <td>MuseumsQuartier Wien, Museumsplatz 1/5, Vienna, Austria and online</td>
             <td><a href="events/accessibleeu-26-nw-at-01.ics" aria-label="Add event: AccessibleEU Austria: Inclusive Museums 2030: Accessible Culture for a Diverse Society to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="FI">
+          <tr data-format="Hybrid" data-country="FI" data-end-date="2026-09-15">
             <td><time datetime="2026-09-15">15 September 2026, 09:00–15:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-finland-inclusive-and-accessible-nature-and-culture-destinations-built-environment-2026-09-15_en">AccessibleEU Finland: Inclusive and Accessible Nature and Culture Destinations: From Built Environment to Communication</a>
@@ -1124,7 +1125,7 @@
             <td>Helsinki City Hall, Pohjoisesplanadi 11-13, Helsinki, Finland and online</td>
             <td><a href="events/accessibleeu-26-aw-fi-01.ics" aria-label="Add event: AccessibleEU Finland: Inclusive and Accessible Nature and Culture Destinations: From Built Environment to Communication to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SI">
+          <tr data-format="Hybrid" data-country="SI" data-end-date="2026-09-15">
             <td><time datetime="2026-09-15">15 September 2026, 09:00–15:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovenia-accessibility-built-environment-all-26-nw-si-01-2026-09-15_en">AccessibleEU Slovenia: Accessibility of the Built Environment for All</a>
@@ -1134,7 +1135,7 @@
             <td>Faculty of Design, Dunajska 129, Ljubljana, Slovenia and online</td>
             <td><a href="events/accessibleeu-26-nw-si-01.ics" aria-label="Add event: AccessibleEU Slovenia: Accessibility of the Built Environment for All to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="DK">
+          <tr data-format="In person" data-country="DK" data-end-date="2026-09-18">
             <td><time datetime="2026-09-15">15–18 September 2026</time></td>
             <td>
               <a href="https://www.icdvrat2026.aau.dk/">International Conference on Disability, Virtual Reality and Associated Technologies 2026</a>
@@ -1144,7 +1145,7 @@
             <td>Copenhagen, Denmark</td>
             <td><a href="events/icdvrat-2026.ics" aria-label="Add event: International Conference on Disability, Virtual Reality and Associated Technologies 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="PT">
+          <tr data-format="Hybrid" data-country="PT" data-end-date="2026-09-16">
             <td><time datetime="2026-09-16">16 September 2026, 14:00–18:00 WEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-portugal-accessibility-inclusion-and-mobility-urban-spaces-26-aw-pt-01-2026-09-16_en">AccessibleEU Portugal: Accessibility, Inclusion and Mobility in Urban Spaces</a>
@@ -1154,7 +1155,7 @@
             <td>ISCTE Afonso de Barros Auditorium, Avenida das Forças Armadas, Lisbon, Portugal and online</td>
             <td><a href="events/accessibleeu-26-aw-pt-01.ics" aria-label="Add event: AccessibleEU Portugal: Accessibility, Inclusion and Mobility in Urban Spaces to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="EE">
+          <tr data-format="Hybrid" data-country="EE" data-end-date="2026-09-22">
             <td><time datetime="2026-09-22">22 September 2026, 10:00–14:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-estonia-accessibility-school-day-estonian-local-authorities-26-aw-ee-01-2026-09-22_en">AccessibleEU Estonia: Accessibility School Day for Estonian Local Authorities</a>
@@ -1164,7 +1165,7 @@
             <td>Öpik Conference Centre, Supernoova, Valukoja 8, Tallinn, Estonia and online</td>
             <td><a href="events/accessibleeu-26-aw-ee-01.ics" aria-label="Add event: AccessibleEU Estonia: Accessibility School Day for Estonian Local Authorities to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="HU">
+          <tr data-format="Hybrid" data-country="HU" data-end-date="2026-09-24">
             <td><time datetime="2026-09-24">24 September 2026, 09:00–14:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-hungary-digital-rebirth-scaling-accessibility-beyond-compliance-26-ws-hu-01-2026-09-24_en">AccessibleEU Hungary: Digital Rebirth: Scaling Accessibility Beyond Compliance</a>
@@ -1174,7 +1175,7 @@
             <td>MVGYOSZ Head Office, Hermina út 47, Budapest, Hungary and online</td>
             <td><a href="events/accessibleeu-26-ws-hu-01.ics" aria-label="Add event: AccessibleEU Hungary: Digital Rebirth: Scaling Accessibility Beyond Compliance to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="ES">
+          <tr data-format="Hybrid" data-country="ES" data-end-date="2026-09-25">
             <td><time datetime="2026-09-24">24–25 September 2026, 09:30–14:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-spain-stadium-playing-field-accessibility-innovation-and-participation-26-nw-es-01-2026-09-24_en">AccessibleEU Spain: From the Stadium to the Playing Field: Accessibility, Innovation and Participation</a>
@@ -1184,7 +1185,7 @@
             <td>Estadio San Mamés, Calle de Rafael Moreno Pitxitxi, Bilbao, Spain and online</td>
             <td><a href="events/accessibleeu-26-nw-es-01.ics" aria-label="Add event: AccessibleEU Spain: From the Stadium to the Playing Field: Accessibility, Innovation and Participation to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-09-24">
             <td><time datetime="2026-09-24">24 September 2026, 00:00–23:59 UTC</time></td>
             <td>
               <a href="https://inclusivedesign24.org/2026/">Inclusive Design 24</a>
@@ -1194,7 +1195,7 @@
             <td>Online</td>
             <td><a href="events/inclusive-design-24-2026.ics" aria-label="Add event: Inclusive Design 24 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="SK">
+          <tr data-format="In person" data-country="SK" data-end-date="2026-09-29">
             <td><time datetime="2026-09-29">29 September 2026, 09:45–12:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovakia-workshop-design-all-2026-26-ws-sk-01-2026-09-29_en">AccessibleEU Slovakia: Workshop on Design for All 2026</a>
@@ -1204,7 +1205,7 @@
             <td>Faculty of Architecture and Design, Slovak University of Technology, Námestie slobody 19, Bratislava, Slovakia</td>
             <td><a href="events/accessibleeu-26-ws-sk-01.ics" aria-label="Add event: AccessibleEU Slovakia: Workshop on Design for All 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="BE">
+          <tr data-format="Hybrid" data-country="BE" data-end-date="2026-09-30">
             <td><time datetime="2026-09-30">30 September 2026, 09:00–13:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-european-event-building-accessible-book-ecosystem-publishers-heart-eaa-transition-26-ws-2026-09-30_en">AccessibleEU European Event: Building an Accessible Book Ecosystem: Publishers at the Heart of the EAA Transition</a>
@@ -1214,7 +1215,7 @@
             <td>Thon Hotel EU, Rue de la Loi 75, Brussels, Belgium and online</td>
             <td><a href="events/accessibleeu-26-ws-eu-03.ics" aria-label="Add event: AccessibleEU European Event: Building an Accessible Book Ecosystem: Publishers at the Heart of the EAA Transition to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DE">
+          <tr data-format="Hybrid" data-country="DE" data-end-date="2026-09-30">
             <td><time datetime="2026-09-30">30 September 2026, 10:00–16:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-just-make-it-simple-accessibility-people-intellectual-disabilities-26-nw-de-01-2026-09-30_en">AccessibleEU Germany: Just Make It Simple! Accessibility for People with Intellectual Disabilities</a>
@@ -1224,7 +1225,7 @@
             <td>Campus Lebenshilfe Berlin, Böttgerstraße 21, Berlin, Germany and online</td>
             <td><a href="events/accessibleeu-26-nw-de-01.ics" aria-label="Add event: AccessibleEU Germany: Just Make It Simple! Accessibility for People with Intellectual Disabilities to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="LU">
+          <tr data-format="In person" data-country="LU" data-end-date="2026-10-02">
             <td><time datetime="2026-10-01">1–2 October 2026</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-luxembourg-good-design-starts-accessibility-26-ws-lu-01-2026-10-01_en">AccessibleEU Luxembourg: Good Design Starts with Accessibility</a>
@@ -1234,7 +1235,7 @@
             <td>Lycée Technique pour Professions Éducatives et Sociales, 45 Rue de la Gare, Beringen, Luxembourg</td>
             <td><a href="events/accessibleeu-26-ws-lu-01.ics" aria-label="Add event: AccessibleEU Luxembourg: Good Design Starts with Accessibility to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IS">
+          <tr data-format="Hybrid" data-country="IS" data-end-date="2026-10-01">
             <td><time datetime="2026-10-01">1 October 2026</time></td>
             <td>
               <a href="https://iaap-nordic.org/en/whats-up/">WAD: Iceland onboard, from requirements to reality</a>
@@ -1244,7 +1245,7 @@
             <td>Reykjavik, Iceland and online</td>
             <td><a href="events/wad-iceland-onboard-2026.ics" aria-label="Add event: WAD: Iceland onboard, from requirements to reality to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="US">
+          <tr data-format="In person" data-country="US" data-end-date="2026-10-07">
             <td><time datetime="2026-10-05">5–7 October 2026</time></td>
             <td>
               <a href="https://g3ict.org/what-we-do/m-enabling-summit">M-Enabling Summit 2026</a>
@@ -1254,7 +1255,7 @@
             <td>Arlington, Virginia, United States</td>
             <td><a href="events/m-enabling-summit-2026.ics" aria-label="Add event: M-Enabling Summit 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SE">
+          <tr data-format="Hybrid" data-country="SE" data-end-date="2026-10-12">
             <td><time datetime="2026-10-12">12 October 2026, 13:00–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-sweden-overview-accessibility-standards-26-ws-se-01-2026-10-12_en">AccessibleEU Sweden: An Overview of Accessibility Standards</a>
@@ -1264,7 +1265,7 @@
             <td>SIS Konferens, Torsplan, Stockholm, Sweden and online</td>
             <td><a href="events/accessibleeu-26-ws-se-01.ics" aria-label="Add event: AccessibleEU Sweden: An Overview of Accessibility Standards to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="SK">
+          <tr data-format="Hybrid" data-country="SK" data-end-date="2026-10-13">
             <td><time datetime="2026-10-13">13 October 2026, 09:30–15:45 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-slovakia-independent-life-2026-keys-citizenship-lived-stories-26-nw-sk-01-2026-10-13_en">AccessibleEU Slovakia: Independent Life 2026: Keys to Citizenship: Lived Stories</a>
@@ -1274,7 +1275,7 @@
             <td>Faculty of Architecture and Design, Slovak University of Technology, Námestie slobody 19, Bratislava, Slovakia and online</td>
             <td><a href="events/accessibleeu-26-nw-sk-01.ics" aria-label="Add event: AccessibleEU Slovakia: Independent Life 2026: Keys to Citizenship: Lived Stories to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="FR">
+          <tr data-format="In person" data-country="FR" data-end-date="2026-10-15">
             <td><time datetime="2026-10-15">15 October 2026, 09:00–17:30 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-france-public-lighting-and-inclusive-cities-creating-shared-value-through-design-2026-10-15_en">AccessibleEU France: Public Lighting and Inclusive Cities: Creating Shared Value through Design, Standards and Innovation</a>
@@ -1284,7 +1285,7 @@
             <td>L&#x27;École de Design Nantes Atlantique, 61 Boulevard de la Prairie au Duc, Nantes, France</td>
             <td><a href="events/accessibleeu-26-ws-fr-02.ics" aria-label="Add event: AccessibleEU France: Public Lighting and Inclusive Cities: Creating Shared Value through Design, Standards and Innovation to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="BG">
+          <tr data-format="Hybrid" data-country="BG" data-end-date="2026-10-16">
             <td><time datetime="2026-10-16">16 October 2026, 09:00–15:00 EEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-bulgaria-standards-reality-accessibility-bulgaria-26-nw-bg-01-2026-10-16_en">AccessibleEU Bulgaria: From Standards to Reality: Accessibility in Bulgaria</a>
@@ -1294,7 +1295,7 @@
             <td>Shtrak, 3 Hristo Belchev Street, Sofia, Bulgaria and online</td>
             <td><a href="events/accessibleeu-26-nw-bg-01.ics" aria-label="Add event: AccessibleEU Bulgaria: From Standards to Reality: Accessibility in Bulgaria to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Online" data-country="online-only">
+          <tr data-format="Online" data-country="online-only" data-end-date="2026-10-21">
             <td><time datetime="2026-10-21">21 October 2026, 15:00–17:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-italy-european-accessibility-act-legal-obligations-technical-standards-and-operational-2026-10-21_en">AccessibleEU Italy: European Accessibility Act: Legal Obligations, Technical Standards and Operational Strategies</a>
@@ -1304,7 +1305,7 @@
             <td>Online</td>
             <td><a href="events/accessibleeu-26-ws-it-02.ics" aria-label="Add event: AccessibleEU Italy: European Accessibility Act: Legal Obligations, Technical Standards and Operational Strategies to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="DE">
+          <tr data-format="In person" data-country="DE" data-end-date="2026-10-24">
             <td><time datetime="2026-10-23">23–24 October 2026, 13:00–14:00 CEST</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-germany-accessible-documents-workshop-26-ws-de-01-2026-10-23_en">AccessibleEU Germany: Accessible Documents Workshop</a>
@@ -1314,7 +1315,7 @@
             <td>Universität Hamburg, Alsterterrasse 1, Hamburg, Germany</td>
             <td><a href="events/accessibleeu-26-ws-de-01.ics" aria-label="Add event: AccessibleEU Germany: Accessible Documents Workshop to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="PT">
+          <tr data-format="In person" data-country="PT" data-end-date="2026-10-28">
             <td><time datetime="2026-10-25">25–28 October 2026</time></td>
             <td>
               <a href="https://assets26.sigaccess.org">ASSETS 2026</a>
@@ -1324,7 +1325,7 @@
             <td>Porto, Portugal</td>
             <td><a href="events/assets-2026.ics" aria-label="Add event: ASSETS 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="NO">
+          <tr data-format="In person" data-country="NO" data-end-date="2026-10-28">
             <td><time datetime="2026-10-28">28 October 2026</time></td>
             <td>
               <a href="https://iaap-nordic.org/en/whats-up/">IAAP Nordic at UnIKT</a>
@@ -1334,7 +1335,7 @@
             <td>Oslo, Norway</td>
             <td><a href="events/unikt-forum-oslo-2026.ics" aria-label="Add event: IAAP Nordic at UnIKT to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DK">
+          <tr data-format="Hybrid" data-country="DK" data-end-date="2026-11-02">
             <td><time datetime="2026-11-02">2 November 2026, 11:00–16:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-denmark-nordic-disability-tech-summit-2026-nordic-pathway-inclusive-fair-and-accessible-2026-11-02_en">AccessibleEU Denmark: Nordic Disability Tech Summit 2026: A Nordic Pathway to Inclusive, Fair and Accessible AI</a>
@@ -1344,7 +1345,7 @@
             <td>D15 Conference Centre, Drejervej 15, Copenhagen, Denmark and online</td>
             <td><a href="events/accessibleeu-26-ws-dk-01.ics" aria-label="Add event: AccessibleEU Denmark: Nordic Disability Tech Summit 2026: A Nordic Pathway to Inclusive, Fair and Accessible AI to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="IE">
+          <tr data-format="Hybrid" data-country="IE" data-end-date="2026-11-06">
             <td><time datetime="2026-11-04">4–6 November 2026</time></td>
             <td>
               <a href="https://ud26.ie/">Universal Design 2026</a>
@@ -1354,7 +1355,7 @@
             <td>Galway, Ireland and online</td>
             <td><a href="events/universal-design-2026.ics" aria-label="Add event: Universal Design 2026 to calendar">Add event</a></td>
           </tr>
-          <tr data-format="Hybrid" data-country="DK">
+          <tr data-format="Hybrid" data-country="DK" data-end-date="2026-11-10">
             <td><time datetime="2026-11-10">10 November 2026, 09:30–15:30 CET</time></td>
             <td>
               <a href="https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessibleeu-denmark-accessible-design-communication-ux-and-information-26-nw-dk-02-2026-11-10_en">AccessibleEU Denmark: Accessible by Design: Communication, UX and Information</a>
@@ -1364,7 +1365,7 @@
             <td>IDA Conference, Kalvebod Brygge 31, Copenhagen, Denmark and online</td>
             <td><a href="events/accessibleeu-26-nw-dk-02.ics" aria-label="Add event: AccessibleEU Denmark: Accessible by Design: Communication, UX and Information to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="FI">
+          <tr data-format="In person" data-country="FI" data-end-date="2026-11-11">
             <td><time datetime="2026-11-11">11 November 2026</time></td>
             <td>
               <a href="https://iaap-nordic.org/en/whats-up/">IAAP Nordic workshop at Saavuta</a>
@@ -1374,7 +1375,7 @@
             <td>Helsinki, Finland</td>
             <td><a href="events/saavuta-helsinki-2026.ics" aria-label="Add event: IAAP Nordic workshop at Saavuta to calendar">Add event</a></td>
           </tr>
-          <tr data-format="In person" data-country="GB">
+          <tr data-format="In person" data-country="GB" data-end-date="2026-11-19">
             <td><time datetime="2026-11-18">18–19 November 2026</time></td>
             <td>
               <a href="https://abilitynet.org.uk/techshare-pro-livestream">TechShare Pro 2026 <span class="status">Tentative</span></a>
@@ -1390,6 +1391,24 @@
           </tbody>
         </table>
       </div>
+      <details class="past-events" id="past-events" hidden>
+        <summary id="past-events-summary">Past events</summary>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable past conference table">
+          <table>
+            <caption class="visually-hidden" id="past-events-caption">Past accessibility conferences and events</caption>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Event</th>
+                <th scope="col">Format</th>
+                <th scope="col">Location</th>
+                <th scope="col">Calendar</th>
+              </tr>
+            </thead>
+            <tbody id="past-events-body"></tbody>
+          </table>
+        </div>
+      </details>
     </section>
 
     <section class="panel" aria-labelledby="suggest-heading">
@@ -1408,16 +1427,42 @@
     const filters = document.querySelectorAll('input[data-filter]');
     const formatFilters = document.querySelectorAll('input[data-filter="format"]');
     const countryFilters = document.querySelectorAll('input[data-filter="country"]');
-    const rows = document.querySelectorAll('tbody tr[data-format]');
+    const rows = [...document.querySelectorAll('tbody tr[data-format]')];
+    const currentEvents = document.querySelector('#current-events');
+    const pastEvents = document.querySelector('#past-events');
+    const pastEventsBody = document.querySelector('#past-events-body');
+    const pastEventsSummary = document.querySelector('#past-events-summary');
+    const pastEventsCaption = document.querySelector('#past-events-caption');
     const status = document.querySelector('#filter-status');
     const caption = document.querySelector('#events-caption');
     const emptyState = document.querySelector('#no-filter-results');
+    const emptyStateMessage = emptyState.querySelector('td');
     const clear = document.querySelector('#clear-filters');
+
+    function localDate() {
+      const now = new Date();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      return `${now.getFullYear()}-${month}-${day}`;
+    }
+
+    function separatePastEvents() {
+      const today = localDate();
+      rows.forEach((row) => {
+        if (row.dataset.endDate < today) {
+          pastEventsBody.append(row);
+        } else {
+          currentEvents.insertBefore(row, emptyState);
+        }
+      });
+    }
 
     function updateFilters() {
       const selectedFormats = [...formatFilters].filter((filter) => filter.checked).map((filter) => filter.value);
       const selectedCountries = [...countryFilters].filter((filter) => filter.checked).map((filter) => filter.value);
       let visibleCount = 0;
+      let currentVisibleCount = 0;
+      let pastVisibleCount = 0;
       rows.forEach((row) => {
         const formatMatches = selectedFormats.length === 0
           || selectedFormats.includes(row.dataset.format);
@@ -1425,19 +1470,43 @@
           || selectedCountries.includes(row.dataset.country);
         const visible = formatMatches && countryMatches;
         row.hidden = !visible;
-        if (visible) visibleCount += 1;
+        if (visible) {
+          visibleCount += 1;
+          if (row.parentElement === pastEventsBody) {
+            pastVisibleCount += 1;
+          } else {
+            currentVisibleCount += 1;
+          }
+        }
       });
       const eventWord = visibleCount === 1 ? 'event' : 'events';
+      const currentEventWord = currentVisibleCount === 1 ? 'event' : 'events';
+      const pastEventWord = pastVisibleCount === 1 ? 'event' : 'events';
       const noFiltersSelected = selectedFormats.length === 0
         && selectedCountries.length === 0;
       clear.disabled = noFiltersSelected;
-      emptyState.hidden = visibleCount !== 0;
+      emptyState.hidden = rows.length === 0 || currentVisibleCount !== 0;
+      if (!emptyState.hidden) {
+        emptyStateMessage.textContent = noFiltersSelected
+          ? 'No current or upcoming events are listed. Past events appear below.'
+          : pastVisibleCount > 0
+            ? 'No current or upcoming events match the selected filters. Matching past events appear below.'
+            : 'No events match the selected filters.';
+      }
       caption.textContent = noFiltersSelected
-        ? `Accessibility conferences and events: ${visibleCount} ${eventWord}`
-        : `Accessibility conferences and events: ${visibleCount} of ${rows.length} ${eventWord} shown`;
+        ? `Current and upcoming accessibility conferences and events: ${currentVisibleCount} ${currentEventWord}`
+        : `Current and upcoming accessibility conferences and events: ${currentVisibleCount} ${currentEventWord} shown`;
       status.textContent = noFiltersSelected
         ? `Showing all ${visibleCount} ${eventWord}.`
         : `Showing ${visibleCount} of ${rows.length} ${eventWord}.`;
+      pastEvents.hidden = pastVisibleCount === 0;
+      pastEvents.open = !noFiltersSelected && pastVisibleCount > 0;
+      pastEventsSummary.textContent = noFiltersSelected
+        ? `Past events (${pastVisibleCount})`
+        : `Past events (${pastVisibleCount} matching)`;
+      pastEventsCaption.textContent = noFiltersSelected
+        ? `Past accessibility conferences and events: ${pastVisibleCount} ${pastEventWord}`
+        : `Past accessibility conferences and events: ${pastVisibleCount} matching ${pastEventWord}`;
     }
 
     filters.forEach((filter) => filter.addEventListener('change', updateFilters));
@@ -1445,7 +1514,13 @@
       filters.forEach((filter) => { filter.checked = false; });
       updateFilters();
     });
-    window.addEventListener('pageshow', updateFilters);
+    function updateEventList() {
+      separatePastEvents();
+      updateFilters();
+    }
+
+    updateEventList();
+    window.addEventListener('pageshow', updateEventList);
   </script>
 </body>
 </html>
