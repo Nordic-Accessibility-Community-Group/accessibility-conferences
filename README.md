@@ -6,9 +6,10 @@ A simple list of accessibility, assistive technology, universal design, and incl
 
 - [Open the calendar page](https://nordic-accessibility-community-group.github.io/accessibility-conferences/calendar/) to subscribe to all events, European Union events, United States events, or events offering online access.
 
-## Current year
+## Current and upcoming years
 
 - [2026 events](events/2026.md)
+- [2027 events](events/2027.md)
 
 ## Archive
 

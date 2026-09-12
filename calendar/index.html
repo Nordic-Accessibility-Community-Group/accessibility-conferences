@@ -119,6 +119,12 @@
     button:not(:disabled):hover { background: color-mix(in srgb, var(--surface), var(--action) 10%); color: var(--action-hover); }
     button:disabled { cursor: not-allowed; opacity: 0.55; }
     .filter-status { margin: 1rem 0 0; color: var(--muted); }
+    .undated-events > p { color: var(--muted); }
+    .undated-list { display: grid; gap: 0.75rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
+    .undated-list li { padding: 1rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }
+    .undated-list li > a { font-weight: 700; }
+    .undated-list p { margin: 0.5rem 0 0; color: var(--muted); }
+    .undated-list .undated-meta { font-size: 0.95rem; }
 
     .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
     .past-events { margin-top: 1.5rem; }
@@ -207,6 +213,7 @@
       .filter-actions { gap: 0.6rem; }
       button { min-height: 2.5rem; padding-inline: 0.85rem; border-color: var(--link); border-radius: 0.4rem; color: var(--link); font-weight: 600; }
       button:not(:disabled):hover { background: color-mix(in srgb, var(--surface-raised), var(--link) 12%); color: var(--link-hover); }
+      .undated-list li { border-color: var(--border); border-radius: 0.45rem; background: var(--surface-raised); }
 
       .table-wrap { background: var(--surface); }
       th, td { padding: clamp(0.95rem, 2.5vw, 1.25rem); border-color: var(--border); }
@@ -238,7 +245,7 @@
 <body>
   <header>
     <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences">Nordic Accessibility Community Group</a>
-    <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences/blob/main/events/2026.md">View on GitHub</a>
+    <a href="https://github.com/Nordic-Accessibility-Community-Group/accessibility-conferences">View on GitHub</a>
   </header>
   <main>
     <h1>Accessibility conferences and events</h1>
@@ -350,11 +357,11 @@
         <div class="filter-actions">
           <button type="button" id="clear-filters" disabled>Clear filters</button>
         </div>
-        <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all 103 events.</p>
+        <p class="filter-status" id="filter-status" role="status" aria-live="polite" aria-atomic="true">Showing all 113 events.</p>
       </details>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable conference table">
         <table>
-          <caption class="visually-hidden" id="events-caption">Accessibility conferences and events: 103 events</caption>
+          <caption class="visually-hidden" id="events-caption">Accessibility conferences and events: 113 events</caption>
           <thead>
             <tr>
               <th scope="col">Date</th>
@@ -1395,6 +1402,106 @@
             <td>London, United Kingdom</td>
             <td><a href="events/techshare-pro-2026.ics" aria-label="Add event: TechShare Pro 2026 to calendar">Add event</a></td>
           </tr>
+          <tr data-format="In person" data-country="US" data-end-date="2027-01-14">
+            <td><time datetime="2027-01-13">13–14 January 2027</time></td>
+            <td>
+              <a href="https://www.abilities.com/los-angeles">Abilities International Accessibility Conference Los Angeles 2027</a>
+              <p>A professional conference about complex rehabilitation technology, assistive technology and adaptive living, co-located with Abilities Expo.</p>
+            </td>
+            <td>In person</td>
+            <td>Long Beach, California, United States</td>
+            <td><a href="events/abilities-international-accessibility-conference-los-angeles-2027.ics" aria-label="Add event: Abilities International Accessibility Conference Los Angeles 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="US" data-end-date="2027-01-22">
+            <td><time datetime="2027-01-20">20–22 January 2027</time></td>
+            <td>
+              <a href="https://www.apaaccess.org/apa-national-conference/">APA National Conference 2027</a>
+              <p>A national conference about accessibility in the built environment, technical practice and professional development.</p>
+            </td>
+            <td>In person</td>
+            <td>San Antonio, Texas, United States</td>
+            <td><a href="events/apa-national-conference-2027.ics" aria-label="Add event: APA National Conference 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="Hybrid" data-country="US" data-end-date="2027-01-24">
+            <td><time datetime="2027-01-22">22–24 January 2027</time></td>
+            <td>
+              <a href="https://www.atia.org/call-for-presentations/">ATIA 2027</a>
+              <p>The Assistive Technology Industry Association conference for assistive technology practitioners, users and suppliers.</p>
+            </td>
+            <td>Hybrid</td>
+            <td>Orlando World Center Marriott, Orlando, Florida, United States and online</td>
+            <td><a href="events/atia-2027.ics" aria-label="Add event: ATIA 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="AT" data-end-date="2027-02-12">
+            <td><time datetime="2027-02-10">10–12 February 2027</time></td>
+            <td>
+              <a href="https://zeroproject.org/conferences/zero-project-conferences">Zero Project Conference 2027</a>
+              <p>A global disability inclusion conference focused on independent living, political participation and assistive technology.</p>
+            </td>
+            <td>In person</td>
+            <td>United Nations Office at Vienna, Austria</td>
+            <td><a href="events/zero-project-conference-2027.ics" aria-label="Add event: Zero Project Conference 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="Online" data-country="online-only" data-end-date="2027-02-24">
+            <td><time datetime="2027-02-23">23–24 February 2027</time></td>
+            <td>
+              <a href="https://www.deque.com/axe-con/about/">axe-con 2027</a>
+              <p>A free online conference about digital accessibility and accessibility testing.</p>
+            </td>
+            <td>Online</td>
+            <td>Online</td>
+            <td><a href="events/axe-con-2027.ics" aria-label="Add event: axe-con 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="US" data-end-date="2027-03-12">
+            <td><time datetime="2027-03-08">8–12 March 2027</time></td>
+            <td>
+              <a href="https://conference.csun.at/event/2027/summary">CSUN Assistive Technology Conference 2027</a>
+              <p>A conference about assistive technology, accessibility research and practical solutions.</p>
+            </td>
+            <td>In person</td>
+            <td>Anaheim Marriott, Anaheim, California, United States</td>
+            <td><a href="events/csun-assistive-technology-conference-2027.ics" aria-label="Add event: CSUN Assistive Technology Conference 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="PT" data-end-date="2027-04-22">
+            <td><time datetime="2027-04-18">18–22 April 2027</time></td>
+            <td>
+              <a href="https://www.iaria.org/conferences2027/SMARTACCESSIBILITY27.html">SMART ACCESSIBILITY 2027</a>
+              <p>An international academic conference about universal accessibility in the Internet of Things and smart environments.</p>
+            </td>
+            <td>In person</td>
+            <td>Lisbon, Portugal</td>
+            <td><a href="events/smart-accessibility-2027.ics" aria-label="Add event: SMART ACCESSIBILITY 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="US" data-end-date="2027-04-30">
+            <td><time datetime="2027-04-29">29–30 April 2027</time></td>
+            <td>
+              <a href="https://www.resna.org/Events/RESNA-2027-Conference">RESNA 2027 at Abilities International</a>
+              <p>A conference about assistive technology, mobility, rehabilitation engineering, research and clinical practice.</p>
+            </td>
+            <td>In person</td>
+            <td>New Jersey Convention Center, Edison, New Jersey, United States</td>
+            <td><a href="events/resna-at-abilities-international-2027.ics" aria-label="Add event: RESNA 2027 at Abilities International to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="GR" data-end-date="2027-06-12">
+            <td><time datetime="2027-06-09">9–12 June 2027</time></td>
+            <td>
+              <a href="https://eacd2027.com/">EACD 2027</a>
+              <p>A European disability conference covering accessibility, inclusion, education and multidisciplinary practice.</p>
+            </td>
+            <td>In person</td>
+            <td>Megaron Athens Concert Hall, Athens, Greece</td>
+            <td><a href="events/eacd-2027.ics" aria-label="Add event: EACD 2027 to calendar">Add event</a></td>
+          </tr>
+          <tr data-format="In person" data-country="BE" data-end-date="2027-09-10">
+            <td><time datetime="2027-09-06">6–10 September 2027</time></td>
+            <td>
+              <a href="https://aaate2027.eu/">AAATE 2027</a>
+              <p>A European assistive technology conference connecting people, research, practice and policy, including two pre-conference days.</p>
+            </td>
+            <td>In person</td>
+            <td>Thomas More University of Applied Sciences, Mechelen, Belgium</td>
+            <td><a href="events/aaate-2027.ics" aria-label="Add event: AAATE 2027 to calendar">Add event</a></td>
+          </tr>
           <tr id="no-filter-results" hidden>
             <td colspan="5">No events match the selected filters.</td>
           </tr>
@@ -1419,6 +1526,23 @@
           </table>
         </div>
       </details>
+    </section>
+
+
+    <section class="panel undated-events" aria-labelledby="undated-events-heading">
+      <h2 id="undated-events-heading">Dates to be announced</h2>
+      <p>These established annual events do not yet have official dates. They are not included in calendar subscriptions.</p>
+      <ul class="undated-list">
+          <li><a href="https://atag.accessible-media.at/">A-Tag 2027 <span class="status">Tentative</span></a><p>An established annual event about accessibility and accessible media. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in May</p><p class="undated-meta"><strong>Organizer:</strong> Accessible Media</p></li>
+          <li><a href="https://accessibility.club/event/accessibility-club-summit-2026">Accessibility Club Summit 2027 <span class="status">Tentative</span></a><p>An established annual community summit with accessibility presentations, a BarCamp and practical workshops. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in May</p><p class="undated-meta"><strong>Organizer:</strong> Accessibility Club</p></li>
+          <li><a href="https://accessibilitydays.it/">Accessibility Days 2027 <span class="status">Tentative</span></a><p>An established annual Italian conference about digital accessibility and inclusion. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in May</p><p class="undated-meta"><strong>Organizer:</strong> Accessibility Days</p></li>
+          <li><a href="https://www.sigaccess.org/assets/">ACM SIGACCESS ASSETS 2027 <span class="status">Tentative</span></a><p>The annual ACM SIGACCESS conference on computers and accessibility. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in October</p><p class="undated-meta"><strong>Organizer:</strong> ACM SIGACCESS</p></li>
+          <li><a href="https://www.ahead.ie/event/gather-2026/index">Gather 2027 <span class="status">Tentative</span></a><p>An established annual conference about discovering and using assistive technology. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in May</p><p class="undated-meta"><strong>Organizer:</strong> AHEAD Ireland</p></li>
+          <li><a href="https://inclusivedesign24.org/2026/">Inclusive Design 24 2027 <span class="status">Tentative</span></a><p>An established annual online conference about inclusive design and digital accessibility. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in September</p><p class="undated-meta"><strong>Organizer:</strong> The Paciello Group</p></li>
+          <li><a href="https://knowbility.org/programs/john-slatin-accessu-2026">John Slatin AccessU 2027 <span class="status">Tentative</span></a><p>An established annual training conference about accessible digital design. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in May</p><p class="undated-meta"><strong>Organizer:</strong> Knowbility</p></li>
+          <li><a href="https://g3ict.org/what-we-do/m-enabling-summit">M-Enabling Summit 2027 <span class="status">Tentative</span></a><p>An established annual conference and showcase about accessible and assistive technologies. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in October</p><p class="undated-meta"><strong>Organizer:</strong> G3ict</p></li>
+          <li><a href="https://abilitynet.org.uk/techshare-pro-livestream">TechShare Pro 2027 <span class="status">Tentative</span></a><p>An established annual conference about digital accessibility, technology and inclusion. Official 2027 dates have not yet been announced.</p><p class="undated-meta"><strong>Expected timing:</strong> Usually held in November</p><p class="undated-meta"><strong>Organizer:</strong> AbilityNet</p></li>
+      </ul>
     </section>
 
     <section class="panel" aria-labelledby="suggest-heading">

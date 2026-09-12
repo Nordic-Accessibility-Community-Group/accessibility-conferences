@@ -1974,3 +1974,261 @@ conferences:
     status: confirmed
     sequence: 0
     last_verified: "2026-09-08"
+
+  - id: abilities-international-accessibility-conference-los-angeles-2027
+    name: Abilities International Accessibility Conference Los Angeles 2027
+    start_date: "2027-01-13"
+    end_date: "2027-01-14"
+    location: Long Beach, California, United States
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Abilities Expo
+    url: https://www.abilities.com/los-angeles
+    description: A professional conference about complex rehabilitation technology, assistive technology and adaptive living, co-located with Abilities Expo.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: apa-national-conference-2027
+    name: APA National Conference 2027
+    start_date: "2027-01-20"
+    end_date: "2027-01-22"
+    location: San Antonio, Texas, United States
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Accessibility Professionals Association
+    url: https://www.apaaccess.org/apa-national-conference/
+    description: A national conference about accessibility in the built environment, technical practice and professional development.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: atia-2027
+    name: ATIA 2027
+    start_date: "2027-01-22"
+    end_date: "2027-01-24"
+    location: Orlando World Center Marriott, Orlando, Florida, United States and online
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Assistive Technology Industry Association
+    url: https://www.atia.org/call-for-presentations/
+    description: The Assistive Technology Industry Association conference for assistive technology practitioners, users and suppliers.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: zero-project-conference-2027
+    name: Zero Project Conference 2027
+    start_date: "2027-02-10"
+    end_date: "2027-02-12"
+    location: United Nations Office at Vienna, Austria
+    country_code: "AT"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Zero Project
+    url: https://zeroproject.org/conferences/zero-project-conferences
+    description: A global disability inclusion conference focused on independent living, political participation and assistive technology.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: axe-con-2027
+    name: axe-con 2027
+    start_date: "2027-02-23"
+    end_date: "2027-02-24"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    organizer: Deque Systems
+    url: https://www.deque.com/axe-con/about/
+    description: A free online conference about digital accessibility and accessibility testing.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: csun-assistive-technology-conference-2027
+    name: CSUN Assistive Technology Conference 2027
+    start_date: "2027-03-08"
+    end_date: "2027-03-12"
+    location: Anaheim Marriott, Anaheim, California, United States
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: false
+    organizer: CSUN Center on Disabilities
+    url: https://conference.csun.at/event/2027/summary
+    description: A conference about assistive technology, accessibility research and practical solutions.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: smart-accessibility-2027
+    name: SMART ACCESSIBILITY 2027
+    start_date: "2027-04-18"
+    end_date: "2027-04-22"
+    location: Lisbon, Portugal
+    country_code: "PT"
+    attendance:
+      onsite: true
+      online: false
+    organizer: IARIA
+    url: https://www.iaria.org/conferences2027/SMARTACCESSIBILITY27.html
+    description: An international academic conference about universal accessibility in the Internet of Things and smart environments.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: resna-at-abilities-international-2027
+    name: RESNA 2027 at Abilities International
+    start_date: "2027-04-29"
+    end_date: "2027-04-30"
+    location: New Jersey Convention Center, Edison, New Jersey, United States
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: false
+    organizer: RESNA and Abilities International
+    url: https://www.resna.org/Events/RESNA-2027-Conference
+    description: A conference about assistive technology, mobility, rehabilitation engineering, research and clinical practice.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: eacd-2027
+    name: EACD 2027
+    start_date: "2027-06-09"
+    end_date: "2027-06-12"
+    location: Megaron Athens Concert Hall, Athens, Greece
+    country_code: "GR"
+    attendance:
+      onsite: true
+      online: false
+    organizer: European Academy of Childhood Disability
+    url: https://eacd2027.com/
+    description: A European disability conference covering accessibility, inclusion, education and multidisciplinary practice.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: aaate-2027
+    name: AAATE 2027
+    start_date: "2027-09-06"
+    end_date: "2027-09-10"
+    location: Thomas More University of Applied Sciences, Mechelen, Belgium
+    country_code: "BE"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Association for the Advancement of Assistive Technology in Europe
+    url: https://aaate2027.eu/
+    description: A European assistive technology conference connecting people, research, practice and policy, including two pre-conference days.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: a-tag-2027
+    name: A-Tag 2027
+    year: 2027
+    expected_timing: Usually held in May
+    organizer: Accessible Media
+    url: https://atag.accessible-media.at/
+    description: An established annual event about accessibility and accessible media. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: accessibility-club-summit-2027
+    name: Accessibility Club Summit 2027
+    year: 2027
+    expected_timing: Usually held in May
+    organizer: Accessibility Club
+    url: https://accessibility.club/event/accessibility-club-summit-2026
+    description: An established annual community summit with accessibility presentations, a BarCamp and practical workshops. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: accessibility-days-2027
+    name: Accessibility Days 2027
+    year: 2027
+    expected_timing: Usually held in May
+    organizer: Accessibility Days
+    url: https://accessibilitydays.it/
+    description: An established annual Italian conference about digital accessibility and inclusion. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: assets-2027
+    name: ACM SIGACCESS ASSETS 2027
+    year: 2027
+    expected_timing: Usually held in October
+    organizer: ACM SIGACCESS
+    url: https://www.sigaccess.org/assets/
+    description: The annual ACM SIGACCESS conference on computers and accessibility. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: gather-2027
+    name: Gather 2027
+    year: 2027
+    expected_timing: Usually held in May
+    organizer: AHEAD Ireland
+    url: https://www.ahead.ie/event/gather-2026/index
+    description: An established annual conference about discovering and using assistive technology. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: inclusive-design-24-2027
+    name: Inclusive Design 24 2027
+    year: 2027
+    expected_timing: Usually held in September
+    organizer: The Paciello Group
+    url: https://inclusivedesign24.org/2026/
+    description: An established annual online conference about inclusive design and digital accessibility. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: john-slatin-accessu-2027
+    name: John Slatin AccessU 2027
+    year: 2027
+    expected_timing: Usually held in May
+    organizer: Knowbility
+    url: https://knowbility.org/programs/john-slatin-accessu-2026
+    description: An established annual training conference about accessible digital design. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: m-enabling-summit-2027
+    name: M-Enabling Summit 2027
+    year: 2027
+    expected_timing: Usually held in October
+    organizer: G3ict
+    url: https://g3ict.org/what-we-do/m-enabling-summit
+    description: An established annual conference and showcase about accessible and assistive technologies. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
+
+  - id: techshare-pro-2027
+    name: TechShare Pro 2027
+    year: 2027
+    expected_timing: Usually held in November
+    organizer: AbilityNet
+    url: https://abilitynet.org.uk/techshare-pro-livestream
+    description: An established annual conference about digital accessibility, technology and inclusion. Official 2027 dates have not yet been announced.
+    status: tentative
+    sequence: 0
+    last_verified: "2026-09-12"
