@@ -350,6 +350,26 @@ conferences:
     sequence: 0
     last_verified: "2026-08-16"
 
+  - id: european-accessibility-summit-2026
+    name: European Accessibility Summit 2026
+    start_date: "2026-11-17"
+    end_date: "2026-11-17"
+    start_time: "09:00"
+    end_time: "18:00"
+    time_zone: Europe/Brussels
+    location: Brussels, Belgium and online (in person by invitation only)
+    country_code: "BE"
+    attendance:
+      onsite: true
+      online: true
+    language: English
+    organizer: European Disability Forum
+    url: https://www.edf-feph.org/events-slug/european-accessibility-summit-2026/
+    description: A hybrid summit about accessibility in the European Union, including the European Accessibility Act, media and communications accessibility, artificial intelligence and accessible technology.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-09-09"
+
   - id: techshare-pro-2026
     name: TechShare Pro 2026
     start_date: "2026-11-18"

@@ -1383,6 +1383,25 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:european-accessibility-summit-2026@nordic-accessibility-community-group
+ .github.io
+DTSTAMP:20260909T000000Z
+LAST-MODIFIED:20260909T000000Z
+SEQUENCE:0
+DTSTART:20261117T080000Z
+DTEND:20261117T170000Z
+SUMMARY:European Accessibility Summit 2026
+DESCRIPTION:A hybrid summit about accessibility in the European Union\, inc
+ luding the European Accessibility Act\, media and communications accessibi
+ lity\, artificial intelligence and accessible technology.\nAttendance: Hyb
+ rid\nOrganizer: European Disability Forum\nLanguage: English
+LOCATION:Brussels\, Belgium and online (in person by invitation only)
+URL:https://www.edf-feph.org/events-slug/european-accessibility-summit-2026
+ /
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:atia-2027@nordic-accessibility-community-group.github.io
 DTSTAMP:20260912T000000Z
 LAST-MODIFIED:20260912T000000Z
