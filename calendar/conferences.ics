@@ -1901,4 +1901,170 @@ URL:https://abilitynet.org.uk/techshare-pro-livestream
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
+BEGIN:VEVENT
+UID:abilities-international-accessibility-conference-los-angeles-2027@nordi
+ c-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270115
+SUMMARY:Abilities International Accessibility Conference Los Angeles 2027
+DESCRIPTION:A professional conference about complex rehabilitation technolo
+ gy\, assistive technology and adaptive living\, co-located with Abilities
+  Expo.\nAttendance: In person\nOrganizer: Abilities Expo
+LOCATION:Long Beach\, California\, United States
+URL:https://www.abilities.com/los-angeles
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:apa-national-conference-2027@nordic-accessibility-community-group.githu
+ b.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270123
+SUMMARY:APA National Conference 2027
+DESCRIPTION:A national conference about accessibility in the built environm
+ ent\, technical practice and professional development.\nAttendance: In per
+ son\nOrganizer: Accessibility Professionals Association
+LOCATION:San Antonio\, Texas\, United States
+URL:https://www.apaaccess.org/apa-national-conference/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:atia-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270125
+SUMMARY:ATIA 2027
+DESCRIPTION:The Assistive Technology Industry Association conference for as
+ sistive technology practitioners\, users and suppliers.\nAttendance: Hybri
+ d\nOrganizer: Assistive Technology Industry Association
+LOCATION:Orlando World Center Marriott\, Orlando\, Florida\, United States
+  and online
+URL:https://www.atia.org/call-for-presentations/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:zero-project-conference-2027@nordic-accessibility-community-group.githu
+ b.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270213
+SUMMARY:Zero Project Conference 2027
+DESCRIPTION:A global disability inclusion conference focused on independent
+  living\, political participation and assistive technology.\nAttendance: I
+ n person\nOrganizer: Zero Project
+LOCATION:United Nations Office at Vienna\, Austria
+URL:https://zeroproject.org/conferences/zero-project-conferences
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:axe-con-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270225
+SUMMARY:axe-con 2027
+DESCRIPTION:A free online conference about digital accessibility and access
+ ibility testing.\nAttendance: Online\nOrganizer: Deque Systems
+LOCATION:Online
+URL:https://www.deque.com/axe-con/about/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:csun-assistive-technology-conference-2027@nordic-accessibility-communit
+ y-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270308
+DTEND;VALUE=DATE:20270313
+SUMMARY:CSUN Assistive Technology Conference 2027
+DESCRIPTION:A conference about assistive technology\, accessibility researc
+ h and practical solutions.\nAttendance: In person\nOrganizer: CSUN Center
+  on Disabilities
+LOCATION:Anaheim Marriott\, Anaheim\, California\, United States
+URL:https://conference.csun.at/event/2027/summary
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:smart-accessibility-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270418
+DTEND;VALUE=DATE:20270423
+SUMMARY:SMART ACCESSIBILITY 2027
+DESCRIPTION:An international academic conference about universal accessibil
+ ity in the Internet of Things and smart environments.\nAttendance: In pers
+ on\nOrganizer: IARIA
+LOCATION:Lisbon\, Portugal
+URL:https://www.iaria.org/conferences2027/SMARTACCESSIBILITY27.html
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:resna-at-abilities-international-2027@nordic-accessibility-community-gr
+ oup.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270429
+DTEND;VALUE=DATE:20270501
+SUMMARY:RESNA 2027 at Abilities International
+DESCRIPTION:A conference about assistive technology\, mobility\, rehabilita
+ tion engineering\, research and clinical practice.\nAttendance: In person\
+ nOrganizer: RESNA and Abilities International
+LOCATION:New Jersey Convention Center\, Edison\, New Jersey\, United States
+URL:https://www.resna.org/Events/RESNA-2027-Conference
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:eacd-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270613
+SUMMARY:EACD 2027
+DESCRIPTION:A European disability conference covering accessibility\, inclu
+ sion\, education and multidisciplinary practice.\nAttendance: In person\nO
+ rganizer: European Academy of Childhood Disability
+LOCATION:Megaron Athens Concert Hall\, Athens\, Greece
+URL:https://eacd2027.com/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:aaate-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270906
+DTEND;VALUE=DATE:20270911
+SUMMARY:AAATE 2027
+DESCRIPTION:A European assistive technology conference connecting people\,
+  research\, practice and policy\, including two pre-conference days.\nAtte
+ ndance: In person\nOrganizer: Association for the Advancement of Assistive
+  Technology in Europe
+LOCATION:Thomas More University of Applied Sciences\, Mechelen\, Belgium
+URL:https://aaate2027.eu/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
 END:VCALENDAR

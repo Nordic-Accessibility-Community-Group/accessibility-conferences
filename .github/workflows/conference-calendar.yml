@@ -52,6 +52,9 @@ jobs:
       - name: Install calendar generator dependency
         run: python -m pip install -r .github/scripts/requirements-conferences.txt
 
+      - name: Run calendar generator tests
+        run: python -m unittest discover -s .github/scripts -p 'test_*.py'
+
       - name: Validate conference data and generated files
         run: python .github/scripts/generate_conferences.py --check
 

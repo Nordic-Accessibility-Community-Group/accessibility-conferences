@@ -1382,4 +1382,36 @@ URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
+BEGIN:VEVENT
+UID:atia-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270125
+SUMMARY:ATIA 2027
+DESCRIPTION:The Assistive Technology Industry Association conference for as
+ sistive technology practitioners\, users and suppliers.\nAttendance: Hybri
+ d\nOrganizer: Assistive Technology Industry Association
+LOCATION:Orlando World Center Marriott\, Orlando\, Florida\, United States
+  and online
+URL:https://www.atia.org/call-for-presentations/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:axe-con-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20260912T000000Z
+LAST-MODIFIED:20260912T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270225
+SUMMARY:axe-con 2027
+DESCRIPTION:A free online conference about digital accessibility and access
+ ibility testing.\nAttendance: Online\nOrganizer: Deque Systems
+LOCATION:Online
+URL:https://www.deque.com/axe-con/about/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
 END:VCALENDAR

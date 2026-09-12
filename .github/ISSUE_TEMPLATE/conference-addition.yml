@@ -25,28 +25,33 @@ body:
       required: true
 
   - type: input
+    id: year
+    attributes:
+      label: Event year
+      description: The year in which the event is expected to take place.
+      placeholder: "2027"
+    validations:
+      required: true
+
+  - type: input
     id: start-date
     attributes:
       label: Start date
-      description: Use YYYY-MM-DD if possible.
+      description: Use YYYY-MM-DD. Leave blank when the organiser has not announced dates.
       placeholder: "2027-04-15"
-    validations:
-      required: true
 
   - type: input
     id: end-date
     attributes:
       label: End date
-      description: For a one-day event, repeat the start date.
+      description: For a one-day event, repeat the start date. Leave blank when dates are not announced.
       placeholder: "2027-04-16"
-    validations:
-      required: true
 
   - type: input
     id: time
     attributes:
       label: Time and time zone
-      description: Leave this blank for an all-day event.
+      description: Leave this blank for an all-day event or when dates are not announced.
       placeholder: 09:00-17:00 CEST
 
   - type: dropdown
@@ -65,16 +70,14 @@ body:
     id: location
     attributes:
       label: Location
-      description: Add the city and country, or write Online.
+      description: Add the city and country, or write Online. Leave blank when it has not been announced.
       placeholder: Copenhagen, Denmark
-    validations:
-      required: true
 
   - type: input
     id: country
     attributes:
       label: Country for onsite attendance
-      description: Leave this blank for an online-only event.
+      description: Leave this blank for an online-only event or when the location is not announced.
       placeholder: Denmark
 
   - type: input
@@ -82,6 +85,13 @@ body:
     attributes:
       label: Event language or languages
       placeholder: Danish and English
+
+  - type: input
+    id: expected-timing
+    attributes:
+      label: Typical timing
+      description: Optional. For undated recurring events, for example “Usually held in November”. Do not guess a date.
+      placeholder: Usually held in November
 
   - type: textarea
     id: relevance

@@ -33,6 +33,7 @@ ALLOWED_HEADERS = {
     ("Dates", "Event", "Focus"),
     ("Dates", "List", "Focus"),
     ("Dates", "Event", "Location"),
+    ("Expected timing", "Event", "Details"),
 }
 IGNORED_HEADERS = {
     ("Calendar", "Includes", "Download", "Subscription URL"),
@@ -114,6 +115,7 @@ def validate_file(path: Path) -> tuple[int, int]:
             print(f"{path}:{index + 2}: table separator column count is wrong.")
             errors += 1
 
+        is_undated_table = tuple(header) == ("Expected timing", "Event", "Details")
         previous_date: date | None = None
         index += 2
 
@@ -134,21 +136,22 @@ def validate_file(path: Path) -> tuple[int, int]:
                 print(f"{path}:{line_number}: table cells must not be empty.")
                 errors += 1
 
-            event_date = first_event_date(row[0], year)
-            if event_date is None:
-                print(
-                    f"{path}:{line_number}: could not read a valid event date "
-                    f"from {row[0]!r}."
-                )
-                errors += 1
-            elif previous_date and event_date < previous_date:
-                print(
-                    f"{path}:{line_number}: event dates are not chronological "
-                    f"within this table."
-                )
-                errors += 1
-            else:
-                previous_date = event_date
+            if not is_undated_table:
+                event_date = first_event_date(row[0], year)
+                if event_date is None:
+                    print(
+                        f"{path}:{line_number}: could not read a valid event date "
+                        f"from {row[0]!r}."
+                    )
+                    errors += 1
+                elif previous_date and event_date < previous_date:
+                    print(
+                        f"{path}:{line_number}: event dates are not chronological "
+                        f"within this table."
+                    )
+                    errors += 1
+                else:
+                    previous_date = event_date
 
             if path.parts[0] == "events" and not MARKDOWN_LINK.search(row[1]):
                 print(

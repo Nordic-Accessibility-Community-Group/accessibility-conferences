@@ -17,7 +17,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA_FILE = ROOT / "data" / "conferences.yml"
-MARKDOWN_FILE = ROOT / "events" / "2026.md"
+EVENTS_DIRECTORY = ROOT / "events"
 CALENDAR_DIRECTORY = ROOT / "calendar"
 PAGE_FILE = CALENDAR_DIRECTORY / "index.html"
 EVENT_DIRECTORY = CALENDAR_DIRECTORY / "events"
@@ -96,27 +96,38 @@ COUNTRY_FILTER_LABELS = {
     "US": "United States",
     "online-only": "Online only",
 }
-REQUIRED_EVENT_FIELDS = {
-    "attendance",
+COMMON_REQUIRED_EVENT_FIELDS = {
     "description",
-    "end_date",
     "id",
     "last_verified",
-    "location",
     "name",
     "sequence",
-    "start_date",
     "status",
     "url",
 }
-OPTIONAL_EVENT_FIELDS = {
+SCHEDULED_REQUIRED_EVENT_FIELDS = {
+    "attendance",
+    "end_date",
+    "location",
+    "start_date",
+}
+SCHEDULED_OPTIONAL_EVENT_FIELDS = {
     "country_code",
     "end_time",
-    "language",
-    "organizer",
     "start_time",
     "time_zone",
 }
+UNDATED_REQUIRED_EVENT_FIELDS = {"year"}
+UNDATED_OPTIONAL_EVENT_FIELDS = {"expected_timing"}
+COMMON_OPTIONAL_EVENT_FIELDS = {"language", "organizer"}
+ALL_EVENT_FIELDS = (
+    COMMON_REQUIRED_EVENT_FIELDS
+    | SCHEDULED_REQUIRED_EVENT_FIELDS
+    | SCHEDULED_OPTIONAL_EVENT_FIELDS
+    | UNDATED_REQUIRED_EVENT_FIELDS
+    | UNDATED_OPTIONAL_EVENT_FIELDS
+    | COMMON_OPTIONAL_EVENT_FIELDS
+)
 
 
 class DataError(ValueError):
@@ -176,17 +187,19 @@ FEED_DEFINITIONS = (
 class Conference:
     id: str
     name: str
-    start_date: date
-    end_date: date
-    location: str
+    year: int
+    start_date: date | None
+    end_date: date | None
+    location: str | None
     country_code: str | None
-    attendance_onsite: bool
-    attendance_online: bool
+    attendance_onsite: bool | None
+    attendance_online: bool | None
     url: str
     description: str
     status: str
     sequence: int
     last_verified: date
+    expected_timing: str | None = None
     language: str | None = None
     organizer: str | None = None
     start_time: clock_time | None = None
@@ -198,7 +211,13 @@ class Conference:
         return f"events/{self.id}.ics"
 
     @property
+    def is_undated(self) -> bool:
+        return self.start_date is None
+
+    @property
     def format(self) -> str:
+        if self.is_undated:
+            raise DataError(f"conference {self.id!r}: undated conferences have no format")
         if self.attendance_onsite and self.attendance_online:
             return "Hybrid"
         if self.attendance_onsite:
@@ -279,10 +298,7 @@ def load_data(path: Path = DATA_FILE) -> tuple[CalendarDetails, list[Conference]
             raise DataError(f"{context} must be a mapping")
 
         fields = set(event_raw)
-        missing = REQUIRED_EVENT_FIELDS - fields
-        unknown = fields - REQUIRED_EVENT_FIELDS - OPTIONAL_EVENT_FIELDS
-        if missing:
-            raise DataError(f"{context} is missing: {', '.join(sorted(missing))}")
+        unknown = fields - ALL_EVENT_FIELDS
         if unknown:
             raise DataError(
                 f"{context} has unknown fields: {', '.join(sorted(unknown))}"
@@ -298,68 +314,38 @@ def load_data(path: Path = DATA_FILE) -> tuple[CalendarDetails, list[Conference]
             raise DataError(f"{context}: duplicate id")
         seen_ids.add(event_id)
 
-        start_date = parse_iso_date(event_raw["start_date"], "start_date", context)
-        end_date = parse_iso_date(event_raw["end_date"], "end_date", context)
-        if end_date < start_date:
-            raise DataError(f"{context}: end_date cannot be before start_date")
-
-        timed_fields = ("start_time", "end_time", "time_zone")
-        timed_values = [event_raw.get(field) for field in timed_fields]
-        if any(value is not None for value in timed_values) and not all(
-            value is not None for value in timed_values
-        ):
+        has_start_date = "start_date" in fields
+        has_end_date = "end_date" in fields
+        if has_start_date != has_end_date:
             raise DataError(
-                f"{context}: start_time, end_time and time_zone must be used together"
+                f"{context}: conferences must include both start_date and end_date"
             )
+        is_undated = not has_start_date
 
-        start_time = None
-        end_time = None
-        time_zone = None
-        if all(value is not None for value in timed_values):
-            start_time = parse_clock_time(event_raw["start_time"], "start_time", context)
-            end_time = parse_clock_time(event_raw["end_time"], "end_time", context)
-            time_zone = require_non_empty_string(
-                event_raw["time_zone"], "time_zone", context
+        required_fields = (
+            COMMON_REQUIRED_EVENT_FIELDS
+            | (UNDATED_REQUIRED_EVENT_FIELDS if is_undated else SCHEDULED_REQUIRED_EVENT_FIELDS)
+        )
+        missing = required_fields - fields
+        if missing:
+            raise DataError(f"{context} is missing: {', '.join(sorted(missing))}")
+
+        if is_undated:
+            forbidden = fields & (
+                SCHEDULED_REQUIRED_EVENT_FIELDS | SCHEDULED_OPTIONAL_EVENT_FIELDS
             )
-            try:
-                ZoneInfo(time_zone)
-            except ZoneInfoNotFoundError as error:
+            if forbidden:
                 raise DataError(
-                    f"{context}: time_zone must be a valid IANA time zone"
-                ) from error
-            if start_date == end_date and end_time <= start_time:
-                raise DataError(f"{context}: end_time must be after start_time")
-
-        attendance_raw = event_raw["attendance"]
-        if not isinstance(attendance_raw, dict):
-            raise DataError(f"{context}: attendance must be a mapping")
-        if set(attendance_raw) != {"onsite", "online"}:
-            raise DataError(
-                f"{context}: attendance must contain only onsite and online"
-            )
-        attendance_onsite = attendance_raw["onsite"]
-        attendance_online = attendance_raw["online"]
-        if not isinstance(attendance_onsite, bool) or not isinstance(
-            attendance_online, bool
-        ):
-            raise DataError(f"{context}: attendance values must be true or false")
-        if not attendance_onsite and not attendance_online:
-            raise DataError(
-                f"{context}: at least one attendance option must be available"
-            )
-
-        country_code_raw = event_raw.get("country_code")
-        country_code = None
-        if country_code_raw is not None:
-            country_code = require_non_empty_string(
-                country_code_raw, "country_code", context
-            ).upper()
-            if not COUNTRY_CODE_PATTERN.fullmatch(country_code):
-                raise DataError(
-                    f"{context}: country_code must be a two-letter ISO country code"
+                    f"{context}: undated conferences cannot include {', '.join(sorted(forbidden))}"
                 )
-        if attendance_onsite and country_code is None:
-            raise DataError(f"{context}: onsite events require country_code")
+        else:
+            forbidden = fields & (
+                UNDATED_REQUIRED_EVENT_FIELDS | UNDATED_OPTIONAL_EVENT_FIELDS
+            )
+            if forbidden:
+                raise DataError(
+                    f"{context}: dated conferences cannot include {', '.join(sorted(forbidden))}"
+                )
 
         status = require_non_empty_string(
             event_raw["status"], "status", context
@@ -367,13 +353,15 @@ def load_data(path: Path = DATA_FILE) -> tuple[CalendarDetails, list[Conference]
         if status not in ALLOWED_STATUSES:
             allowed = ", ".join(sorted(ALLOWED_STATUSES))
             raise DataError(f"{context}: status must be one of {allowed}")
+        if is_undated and status != "tentative":
+            raise DataError(f"{context}: undated conferences must use tentative status")
 
         sequence = event_raw["sequence"]
         if not isinstance(sequence, int) or isinstance(sequence, bool) or sequence < 0:
             raise DataError(f"{context}: sequence must be a non-negative integer")
 
         optional_values: dict[str, str | None] = {}
-        for field in ("language", "organizer"):
+        for field in COMMON_OPTIONAL_EVENT_FIELDS:
             value = event_raw.get(field)
             optional_values[field] = (
                 require_non_empty_string(value, field, context)
@@ -381,15 +369,103 @@ def load_data(path: Path = DATA_FILE) -> tuple[CalendarDetails, list[Conference]
                 else None
             )
 
+        start_date: date | None = None
+        end_date: date | None = None
+        location: str | None = None
+        country_code: str | None = None
+        attendance_onsite: bool | None = None
+        attendance_online: bool | None = None
+        start_time: clock_time | None = None
+        end_time: clock_time | None = None
+        time_zone: str | None = None
+        expected_timing: str | None = None
+
+        if is_undated:
+            year = event_raw["year"]
+            if not isinstance(year, int) or isinstance(year, bool) or not 1000 <= year <= 9999:
+                raise DataError(f"{context}: year must be a four-digit number")
+            expected_timing_raw = event_raw.get("expected_timing")
+            expected_timing = (
+                require_non_empty_string(
+                    expected_timing_raw, "expected_timing", context
+                )
+                if expected_timing_raw is not None
+                else None
+            )
+        else:
+            start_date = parse_iso_date(event_raw["start_date"], "start_date", context)
+            end_date = parse_iso_date(event_raw["end_date"], "end_date", context)
+            if end_date < start_date:
+                raise DataError(f"{context}: end_date cannot be before start_date")
+            year = start_date.year
+
+            timed_fields = ("start_time", "end_time", "time_zone")
+            timed_values = [event_raw.get(field) for field in timed_fields]
+            if any(value is not None for value in timed_values) and not all(
+                value is not None for value in timed_values
+            ):
+                raise DataError(
+                    f"{context}: start_time, end_time and time_zone must be used together"
+                )
+            if all(value is not None for value in timed_values):
+                start_time = parse_clock_time(
+                    event_raw["start_time"], "start_time", context
+                )
+                end_time = parse_clock_time(event_raw["end_time"], "end_time", context)
+                time_zone = require_non_empty_string(
+                    event_raw["time_zone"], "time_zone", context
+                )
+                try:
+                    ZoneInfo(time_zone)
+                except ZoneInfoNotFoundError as error:
+                    raise DataError(
+                        f"{context}: time_zone must be a valid IANA time zone"
+                    ) from error
+                if start_date == end_date and end_time <= start_time:
+                    raise DataError(f"{context}: end_time must be after start_time")
+
+            attendance_raw = event_raw["attendance"]
+            if not isinstance(attendance_raw, dict):
+                raise DataError(f"{context}: attendance must be a mapping")
+            if set(attendance_raw) != {"onsite", "online"}:
+                raise DataError(
+                    f"{context}: attendance must contain only onsite and online"
+                )
+            attendance_onsite = attendance_raw["onsite"]
+            attendance_online = attendance_raw["online"]
+            if not isinstance(attendance_onsite, bool) or not isinstance(
+                attendance_online, bool
+            ):
+                raise DataError(f"{context}: attendance values must be true or false")
+            if not attendance_onsite and not attendance_online:
+                raise DataError(
+                    f"{context}: at least one attendance option must be available"
+                )
+
+            country_code_raw = event_raw.get("country_code")
+            if country_code_raw is not None:
+                country_code = require_non_empty_string(
+                    country_code_raw, "country_code", context
+                ).upper()
+                if not COUNTRY_CODE_PATTERN.fullmatch(country_code):
+                    raise DataError(
+                        f"{context}: country_code must be a two-letter ISO country code"
+                    )
+            if attendance_onsite and country_code is None:
+                raise DataError(f"{context}: onsite events require country_code")
+
+            location = require_non_empty_string(
+                event_raw["location"], "location", context
+            )
+
         conferences.append(
             Conference(
                 id=event_id,
                 name=require_non_empty_string(event_raw["name"], "name", context),
+                year=year,
                 start_date=start_date,
                 end_date=end_date,
-                location=require_non_empty_string(
-                    event_raw["location"], "location", context
-                ),
+                location=location,
                 country_code=country_code,
                 attendance_onsite=attendance_onsite,
                 attendance_online=attendance_online,
@@ -402,6 +478,7 @@ def load_data(path: Path = DATA_FILE) -> tuple[CalendarDetails, list[Conference]
                 last_verified=parse_iso_date(
                     event_raw["last_verified"], "last_verified", context
                 ),
+                expected_timing=expected_timing,
                 language=optional_values["language"],
                 organizer=optional_values["organizer"],
                 start_time=start_time,
@@ -411,30 +488,52 @@ def load_data(path: Path = DATA_FILE) -> tuple[CalendarDetails, list[Conference]
         )
 
     return calendar, sorted(
-        conferences, key=lambda event: (event.start_date, event.name.casefold())
+        conferences,
+        key=lambda event: (
+            event.year,
+            event.is_undated,
+            event.start_date or date.max,
+            event.name.casefold(),
+        ),
     )
 
 
 def conferences_for_feed(
     feed: FeedDefinition, conferences: list[Conference]
 ) -> list[Conference]:
+    scheduled_conferences = [event for event in conferences if not event.is_undated]
     if feed.key == "all":
-        return conferences
+        return scheduled_conferences
     if feed.key == "eu":
         return [
             event
-            for event in conferences
+            for event in scheduled_conferences
             if event.attendance_onsite and event.country_code in EU_COUNTRY_CODES
         ]
     if feed.key == "us":
         return [
             event
-            for event in conferences
+            for event in scheduled_conferences
             if event.attendance_onsite and event.country_code == "US"
         ]
     if feed.key == "online":
-        return [event for event in conferences if event.attendance_online]
+        return [event for event in scheduled_conferences if event.attendance_online]
     raise DataError(f"Unknown feed definition: {feed.key}")
+
+
+def conferences_for_year(
+    conferences: list[Conference], year: int
+) -> tuple[list[Conference], list[Conference]]:
+    year_conferences = [event for event in conferences if event.year == year]
+    dated = sorted(
+        (event for event in year_conferences if not event.is_undated),
+        key=lambda event: (event.start_date or date.max, event.name.casefold()),
+    )
+    undated = sorted(
+        (event for event in year_conferences if event.is_undated),
+        key=lambda event: event.name.casefold(),
+    )
+    return dated, undated
 
 
 def format_date_range(start: date, end: date) -> str:
@@ -454,6 +553,8 @@ def format_date_range(start: date, end: date) -> str:
 
 
 def format_event_date(event: Conference) -> str:
+    if event.start_date is None or event.end_date is None:
+        raise DataError(f"conference {event.id!r}: undated conferences have no date")
     date_text = format_date_range(event.start_date, event.end_date)
     if event.start_time is None or event.end_time is None or event.time_zone is None:
         return date_text
@@ -485,7 +586,12 @@ def event_display_name(event: Conference) -> str:
     return linked_name
 
 
-def render_markdown(calendar: CalendarDetails, conferences: list[Conference]) -> str:
+def render_markdown(
+    calendar: CalendarDetails,
+    year: int,
+    conferences: list[Conference],
+    undated_conferences: list[Conference],
+) -> str:
     rows = []
     for event in conferences:
         rows.append(
@@ -505,8 +611,32 @@ def render_markdown(calendar: CalendarDetails, conferences: list[Conference]) ->
             + " |"
         )
 
-    if not rows:
-        rows.append("| No events listed |  |  |  |  |")
+    scheduled_section = (
+        [
+            "| Date | Event | Format | Location | Calendar |",
+            "| --- | --- | --- | --- | --- |",
+            *rows,
+        ]
+        if rows
+        else ["No events with confirmed dates are currently listed."]
+    )
+
+    undated_rows = []
+    for event in undated_conferences:
+        details = event.description
+        if event.organizer:
+            details = f"{details} Organizer: {event.organizer}."
+        undated_rows.append(
+            "| "
+            + " | ".join(
+                [
+                    markdown_escape(event.expected_timing or "Dates to be announced"),
+                    event_display_name(event),
+                    markdown_escape(details),
+                ]
+            )
+            + " |"
+        )
 
     subscription_rows = [
         "| "
@@ -526,7 +656,7 @@ def render_markdown(calendar: CalendarDetails, conferences: list[Conference]) ->
         [
             "<!-- Generated by .github/scripts/generate_conferences.py. Edit data/conferences.yml instead. -->",
             "",
-            "# 2026 events",
+            f"# {year} events",
             "",
             (
                 "This table and its calendar files are generated from "
@@ -549,10 +679,25 @@ def render_markdown(calendar: CalendarDetails, conferences: list[Conference]) ->
             "",
             "## Events",
             "",
-            "| Date | Event | Format | Location | Calendar |",
-            "| --- | --- | --- | --- | --- |",
-            *rows,
+            *scheduled_section,
             "",
+            *(
+                [
+                    "## Dates to be announced",
+                    "",
+                    (
+                        "These established annual events do not yet have official dates. "
+                        "They are not included in calendar subscriptions."
+                    ),
+                    "",
+                    "| Expected timing | Event | Details |",
+                    "| --- | --- | --- |",
+                    *undated_rows,
+                    "",
+                ]
+                if undated_rows
+                else []
+            ),
             "## Suggest an event or correction",
             "",
             (
@@ -609,6 +754,8 @@ def ics_timestamp(value: date) -> str:
 
 
 def event_ics_lines(event: Conference) -> list[str]:
+    if event.start_date is None or event.end_date is None or event.location is None:
+        raise DataError(f"conference {event.id!r}: undated conferences cannot be exported to ICS")
     description_parts = [event.description, f"Attendance: {event.format}"]
     if event.organizer:
         description_parts.append(f"Organizer: {event.organizer}")
@@ -696,11 +843,13 @@ def country_filter_label(country_code: str) -> str:
 
 
 def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str:
-    event_count = len(conferences)
+    scheduled_conferences = [event for event in conferences if not event.is_undated]
+    undated_conferences = [event for event in conferences if event.is_undated]
+    event_count = len(scheduled_conferences)
     event_word = "event" if event_count == 1 else "events"
     table_caption = f"Accessibility conferences and events: {event_count} {event_word}"
     rows = []
-    for event in conferences:
+    for event in scheduled_conferences:
         add_label = html.escape(f"Add event: {event.name} to calendar", quote=True)
         rows.append(
             f"""          <tr data-format="{html.escape(event.format, quote=True)}" data-country="{html.escape(country_filter_value(event), quote=True)}" data-end-date="{event.end_date.isoformat()}">
@@ -722,7 +871,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 
     country_filter_options = []
     country_values = sorted(
-        {country_filter_value(event) for event in conferences},
+        {country_filter_value(event) for event in scheduled_conferences},
         key=country_filter_label,
     )
     for country_code in country_values:
@@ -731,6 +880,36 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
             f'value="{html.escape(country_code, quote=True)}"> '
             f'{html.escape(country_filter_label(country_code))}</label>'
         )
+
+    undated_items = []
+    for event in undated_conferences:
+        details = [
+            f'<a href="{html.escape(event.url, quote=True)}">{html_event_name(event)}</a>',
+            f"<p>{html.escape(event.description)}</p>",
+        ]
+        if event.expected_timing:
+            details.append(
+                "<p class=\"undated-meta\"><strong>Expected timing:</strong> "
+                f"{html.escape(event.expected_timing)}</p>"
+            )
+        if event.organizer:
+            details.append(
+                "<p class=\"undated-meta\"><strong>Organizer:</strong> "
+                f"{html.escape(event.organizer)}</p>"
+            )
+        undated_items.append("          <li>" + "".join(details) + "</li>")
+
+    undated_section = ""
+    if undated_items:
+        undated_section = f"""
+
+    <section class="panel undated-events" aria-labelledby="undated-events-heading">
+      <h2 id="undated-events-heading">Dates to be announced</h2>
+      <p>These established annual events do not yet have official dates. They are not included in calendar subscriptions.</p>
+      <ul class="undated-list">
+{chr(10).join(undated_items)}
+      </ul>
+    </section>"""
 
     subscription_cards = []
     for feed in FEED_DEFINITIONS:
@@ -880,6 +1059,12 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
     button:not(:disabled):hover {{ background: color-mix(in srgb, var(--surface), var(--action) 10%); color: var(--action-hover); }}
     button:disabled {{ cursor: not-allowed; opacity: 0.55; }}
     .filter-status {{ margin: 1rem 0 0; color: var(--muted); }}
+    .undated-events > p {{ color: var(--muted); }}
+    .undated-list {{ display: grid; gap: 0.75rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }}
+    .undated-list li {{ padding: 1rem; border: 1px solid var(--border); border-radius: calc(var(--radius) * 0.75); background: var(--background); }}
+    .undated-list li > a {{ font-weight: 700; }}
+    .undated-list p {{ margin: 0.5rem 0 0; color: var(--muted); }}
+    .undated-list .undated-meta {{ font-size: 0.95rem; }}
 
     .table-wrap {{ overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }}
     .past-events {{ margin-top: 1.5rem; }}
@@ -968,6 +1153,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
       .filter-actions {{ gap: 0.6rem; }}
       button {{ min-height: 2.5rem; padding-inline: 0.85rem; border-color: var(--link); border-radius: 0.4rem; color: var(--link); font-weight: 600; }}
       button:not(:disabled):hover {{ background: color-mix(in srgb, var(--surface-raised), var(--link) 12%); color: var(--link-hover); }}
+      .undated-list li {{ border-color: var(--border); border-radius: 0.45rem; background: var(--surface-raised); }}
 
       .table-wrap {{ background: var(--surface); }}
       th, td {{ padding: clamp(0.95rem, 2.5vw, 1.25rem); border-color: var(--border); }}
@@ -999,7 +1185,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 <body>
   <header>
     <a href="{REPOSITORY_URL}">Nordic Accessibility Community Group</a>
-    <a href="{REPOSITORY_URL}/blob/main/events/2026.md">View on GitHub</a>
+    <a href="{REPOSITORY_URL}">View on GitHub</a>
   </header>
   <main>
     <h1>Accessibility conferences and events</h1>
@@ -1082,6 +1268,7 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
         </div>
       </details>
     </section>
+{undated_section}
 
     <section class="panel" aria-labelledby="suggest-heading">
       <h2 id="suggest-heading">Suggest an event or correction</h2>
@@ -1202,15 +1389,19 @@ def render_html(calendar: CalendarDetails, conferences: list[Conference]) -> str
 def expected_outputs(
     calendar: CalendarDetails, conferences: list[Conference]
 ) -> dict[Path, str]:
-    outputs = {
-        MARKDOWN_FILE: render_markdown(calendar, conferences),
-        PAGE_FILE: render_html(calendar, conferences),
-    }
+    outputs = {PAGE_FILE: render_html(calendar, conferences)}
+    for year in sorted({event.year for event in conferences}):
+        dated, undated = conferences_for_year(conferences, year)
+        outputs[EVENTS_DIRECTORY / f"{year}.md"] = render_markdown(
+            calendar, year, dated, undated
+        )
     for feed in FEED_DEFINITIONS:
         outputs[CALENDAR_DIRECTORY / feed.filename] = render_ics(
             calendar, conferences_for_feed(feed, conferences), feed
         )
     for event in conferences:
+        if event.is_undated:
+            continue
         outputs[EVENT_DIRECTORY / f"{event.id}.ics"] = render_ics(calendar, [event])
     return outputs
 
