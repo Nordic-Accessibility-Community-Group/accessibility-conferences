@@ -2178,17 +2178,6 @@ conferences:
     sequence: 0
     last_verified: "2026-09-12"
 
-  - id: gather-2027
-    name: Gather 2027
-    year: 2027
-    expected_timing: Usually held in May
-    organizer: AHEAD Ireland
-    url: https://www.ahead.ie/event/gather-2026/index
-    description: An established annual conference about discovering and using assistive technology. Official 2027 dates have not yet been announced.
-    status: tentative
-    sequence: 0
-    last_verified: "2026-09-12"
-
   - id: inclusive-design-24-2027
     name: Inclusive Design 24 2027
     year: 2027
