@@ -9,17 +9,18 @@ X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:assets-2026@nordic-accessibility-community-group.github.io
+UID:a11yto-conf-2026@nordic-accessibility-community-group.github.io
 DTSTAMP:20261008T000000Z
 LAST-MODIFIED:20261008T000000Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261029
-SUMMARY:ASSETS 2026
-DESCRIPTION:An academic conference about computing and accessibility.\nAtte
- ndance: Hybrid\nOrganizer: ACM SIGACCESS
-LOCATION:Porto\, Portugal and online
-URL:https://assets26.sigaccess.org
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261024
+SUMMARY:a11yTO Conf 2026
+DESCRIPTION:A digital accessibility conference featuring technical talks wi
+ th practical takeaways\, demonstrations and community networking.\nAttenda
+ nce: Hybrid\nOrganizer: a11yTO
+LOCATION:CBC Barbara Frum Atrium\, Toronto\, Ontario\, Canada and online
+URL:https://conf.a11yto.com/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

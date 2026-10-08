@@ -1252,6 +1252,23 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:wordpress-accessibility-day-2026@nordic-accessibility-community-group.g
+ ithub.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261009
+SUMMARY:WordPress Accessibility Day 2026
+DESCRIPTION:A free 24-hour online conference about website accessibility be
+ st practices for WordPress developers\, designers and content creators.\nA
+ ttendance: Online\nOrganizer: WP Accessibility Day
+LOCATION:Online
+URL:https://wpaccessibility.day/2026/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:accessibleeu-26-ws-se-01@nordic-accessibility-community-group.github.io
 DTSTAMP:20260908T000000Z
 LAST-MODIFIED:20260908T000000Z
@@ -1308,6 +1325,23 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:gaconf-usa-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261021
+SUMMARY:GAConf USA 2026
+DESCRIPTION:A free online conference about game accessibility\, with talks\
+ , case studies\, panels and networking for developers\, publishers and dis
+ abled players.\nAttendance: Online\nOrganizer: IGDA Game Accessibility Spe
+ cial Interest Group
+LOCATION:Online
+URL:https://www.gaconf.com/conference/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:accessibleeu-26-ws-it-02@nordic-accessibility-community-group.github.io
 DTSTAMP:20260908T000000Z
 LAST-MODIFIED:20260908T000000Z
@@ -1323,6 +1357,54 @@ LOCATION:Online
 URL:https://accessible-eu-centre.ec.europa.eu/content-corner/events/accessi
  bleeu-italy-european-accessibility-act-legal-obligations-technical-standar
  ds-and-operational-2026-10-21_en
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ataac-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261023
+SUMMARY:ATAAC 2026
+DESCRIPTION:A conference about assistive technology and augmentative and al
+ ternative communication\, combining professional and scientific programmes
+ . The professional programme offers live online streaming in English.\nAtt
+ endance: Hybrid
+LOCATION:Mozaik Event Center\, Zagreb\, Croatia and online
+URL:https://www.ataac.eu/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a11yto-conf-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261024
+SUMMARY:a11yTO Conf 2026
+DESCRIPTION:A digital accessibility conference featuring technical talks wi
+ th practical takeaways\, demonstrations and community networking.\nAttenda
+ nce: Hybrid\nOrganizer: a11yTO
+LOCATION:CBC Barbara Frum Atrium\, Toronto\, Ontario\, Canada and online
+URL:https://conf.a11yto.com/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:assets-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261029
+SUMMARY:ASSETS 2026
+DESCRIPTION:An academic conference about computing and accessibility.\nAtte
+ ndance: Hybrid\nOrganizer: ACM SIGACCESS
+LOCATION:Porto\, Portugal and online
+URL:https://assets26.sigaccess.org
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -1383,6 +1465,25 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:accessing-higher-ground-2026@nordic-accessibility-community-group.githu
+ b.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261121
+SUMMARY:Accessing Higher Ground 2026
+DESCRIPTION:An accessible media\, web and technology conference\, with pre-
+ conference workshops on 16-17 November and the main conference on 18-20 No
+ vember. Live online attendance is available for selected sessions and work
+ shops.\nAttendance: Hybrid\nOrganizer: AHEAD\, in collaboration with ATHEN
+LOCATION:Hilton Denver City Center\, Denver\, Colorado\, United States and
+  online
+URL:https://accessinghigherground.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:european-accessibility-summit-2026@nordic-accessibility-community-group
  .github.io
 DTSTAMP:20260909T000000Z
@@ -1402,6 +1503,77 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:techshare-pro-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261120
+SUMMARY:TechShare Pro 2026
+DESCRIPTION:An accessibility and disability inclusion conference covering a
+ rtificial intelligence\, financial inclusion and organisational change\, w
+ ith free live online attendance.\nAttendance: Hybrid\nOrganizer: AbilityNe
+ t
+LOCATION:The Drum Wembley\, London\, United Kingdom and online
+URL:https://abilitynet.org.uk/TechSharePro
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:a11y-camp-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261126
+SUMMARY:A11y Camp 2026
+DESCRIPTION:A digital accessibility and inclusion conference covering desig
+ n\, development\, content\, policy and strategy. The hybrid conference run
+ s on 23-24 November\, followed by workshops on 25 November.\nAttendance: H
+ ybrid\nOrganizer: A11y Bytes
+LOCATION:ICC Sydney\, Sydney\, Australia and online
+URL:https://a11ycamp.com.au/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:era-rights-persons-disabilities-2026@nordic-accessibility-community-gro
+ up.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261128
+SUMMARY:Annual Conference on the Rights of Persons with Disabilities in the
+  EU 2026
+DESCRIPTION:An online conference about disability rights\, including enforc
+ ement of the European Accessibility Act\, equality and automated decision-
+ making in welfare.\nAttendance: Online\nOrganizer: Academy of European Law
+ \nLanguage: English
+LOCATION:Online
+URL:https://www.era.int/event/annual-conference-on-the-rights-of-persons-wi
+ th-disabilities-in-the-eu-2026/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sight-tech-global-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261210
+SUMMARY:Sight Tech Global 2026
+DESCRIPTION:A free online conference about emerging technologies\, artifici
+ al intelligence and assistive technology for people who are blind or have
+  low vision.\nAttendance: Online\nOrganizer: Vista Center for the Blind an
+ d Visually Impaired
+LOCATION:Online
+URL:https://sighttechglobal.com/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:atia-2027@nordic-accessibility-community-group.github.io
 DTSTAMP:20260912T000000Z
 LAST-MODIFIED:20260912T000000Z
@@ -1415,6 +1587,25 @@ DESCRIPTION:The Assistive Technology Industry Association conference for as
 LOCATION:Orlando World Center Marriott\, Orlando\, Florida\, United States
   and online
 URL:https://www.atia.org/call-for-presentations/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:perth-digital-accessibility-conference-2027@nordic-accessibility-commun
+ ity-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART:20270211T003000Z
+DTEND:20270211T083000Z
+SUMMARY:Perth Digital Accessibility Conference 2027
+DESCRIPTION:A digital accessibility conference about breaking generational
+  barriers\, including accessible design\, inclusive content\, assistive te
+ chnology and accessibility testing.\nAttendance: Hybrid\nOrganizer: Perth
+  Digital A11y Group
+LOCATION:Edith Cowan University City Campus\, Perth\, Australia and online
+URL:https://events.humanitix.com/perth-digital-accessibility-conference-202
+ 7
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

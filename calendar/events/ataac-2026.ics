@@ -9,17 +9,19 @@ X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:assets-2026@nordic-accessibility-community-group.github.io
+UID:ataac-2026@nordic-accessibility-community-group.github.io
 DTSTAMP:20261008T000000Z
 LAST-MODIFIED:20261008T000000Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261029
-SUMMARY:ASSETS 2026
-DESCRIPTION:An academic conference about computing and accessibility.\nAtte
- ndance: Hybrid\nOrganizer: ACM SIGACCESS
-LOCATION:Porto\, Portugal and online
-URL:https://assets26.sigaccess.org
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261023
+SUMMARY:ATAAC 2026
+DESCRIPTION:A conference about assistive technology and augmentative and al
+ ternative communication\, combining professional and scientific programmes
+ . The professional programme offers live online streaming in English.\nAtt
+ endance: Hybrid
+LOCATION:Mozaik Event Center\, Zagreb\, Croatia and online
+URL:https://www.ataac.eu/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

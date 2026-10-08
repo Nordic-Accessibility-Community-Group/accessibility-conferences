@@ -9,17 +9,18 @@ X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:assets-2026@nordic-accessibility-community-group.github.io
+UID:web4all-2027@nordic-accessibility-community-group.github.io
 DTSTAMP:20261008T000000Z
 LAST-MODIFIED:20261008T000000Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261029
-SUMMARY:ASSETS 2026
-DESCRIPTION:An academic conference about computing and accessibility.\nAtte
- ndance: Hybrid\nOrganizer: ACM SIGACCESS
-LOCATION:Porto\, Portugal and online
-URL:https://assets26.sigaccess.org
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270512
+SUMMARY:Web4All 2027
+DESCRIPTION:The 24th International Web for All Conference\, focused on web
+  accessibility research and co-located with The ACM Web Conference.\nAtten
+ dance: In person
+LOCATION:Dublin\, Ireland
+URL:https://www.w4a.info/2027/call-for-papers/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
