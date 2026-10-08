@@ -11,17 +11,17 @@ X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:abilities-international-accessibility-conference-los-angeles-2027@nordi
  c-accessibility-community-group.github.io
-DTSTAMP:20260912T000000Z
-LAST-MODIFIED:20260912T000000Z
-SEQUENCE:0
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270115
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270116
 SUMMARY:Abilities International Accessibility Conference Los Angeles 2027
 DESCRIPTION:A professional conference about complex rehabilitation technolo
  gy\, assistive technology and adaptive living\, co-located with Abilities
   Expo.\nAttendance: In person\nOrganizer: Abilities Expo
 LOCATION:Long Beach\, California\, United States
-URL:https://www.abilities.com/los-angeles
+URL:https://www.abilitiesconference.com/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

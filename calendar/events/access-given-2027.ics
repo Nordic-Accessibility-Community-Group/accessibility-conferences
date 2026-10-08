@@ -9,17 +9,17 @@ X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:assets-2026@nordic-accessibility-community-group.github.io
+UID:access-given-2027@nordic-accessibility-community-group.github.io
 DTSTAMP:20261008T000000Z
 LAST-MODIFIED:20261008T000000Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261029
-SUMMARY:ASSETS 2026
-DESCRIPTION:An academic conference about computing and accessibility.\nAtte
- ndance: Hybrid\nOrganizer: ACM SIGACCESS
-LOCATION:Porto\, Portugal and online
-URL:https://assets26.sigaccess.org
+SEQUENCE:0
+DTSTART:20270428T083000Z
+DTEND:20270428T153000Z
+SUMMARY:Access:Given 2027
+DESCRIPTION:A one-day digital accessibility conference for people designing
+ \, building and creating digital experiences.\nAttendance: In person
+LOCATION:Catalyst Building\, Helix\, Newcastle upon Tyne\, United Kingdom
+URL:https://accessgiven.co.uk/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

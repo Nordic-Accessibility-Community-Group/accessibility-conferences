@@ -10,18 +10,19 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:techshare-pro-2026@nordic-accessibility-community-group.github.io
-DTSTAMP:20260816T000000Z
-LAST-MODIFIED:20260816T000000Z
-SEQUENCE:0
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261120
 SUMMARY:TechShare Pro 2026
-DESCRIPTION:An accessibility and disability inclusion conference. The linke
- d page has not yet been updated with the 2026 details.\nAttendance: In per
- son\nOrganizer: AbilityNet
-LOCATION:London\, United Kingdom
-URL:https://abilitynet.org.uk/techshare-pro-livestream
-STATUS:TENTATIVE
+DESCRIPTION:An accessibility and disability inclusion conference covering a
+ rtificial intelligence\, financial inclusion and organisational change\, w
+ ith free live online attendance.\nAttendance: Hybrid\nOrganizer: AbilityNe
+ t
+LOCATION:The Drum Wembley\, London\, United Kingdom and online
+URL:https://abilitynet.org.uk/TechSharePro
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR

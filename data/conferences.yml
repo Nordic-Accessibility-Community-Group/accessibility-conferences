@@ -288,17 +288,17 @@ conferences:
     name: ASSETS 2026
     start_date: "2026-10-25"
     end_date: "2026-10-28"
-    location: Porto, Portugal
+    location: Porto, Portugal and online
     country_code: "PT"
     attendance:
       onsite: true
-      online: false
+      online: true
     organizer: ACM SIGACCESS
     url: https://assets26.sigaccess.org
     description: An academic conference about computing and accessibility.
     status: confirmed
-    sequence: 0
-    last_verified: "2026-08-16"
+    sequence: 1
+    last_verified: "2026-10-08"
 
   - id: unikt-forum-oslo-2026
     name: IAAP Nordic at UnIKT
@@ -374,17 +374,17 @@ conferences:
     name: TechShare Pro 2026
     start_date: "2026-11-18"
     end_date: "2026-11-19"
-    location: London, United Kingdom
+    location: The Drum Wembley, London, United Kingdom and online
     country_code: "GB"
     attendance:
       onsite: true
-      online: false
+      online: true
     organizer: AbilityNet
-    url: https://abilitynet.org.uk/techshare-pro-livestream
-    description: An accessibility and disability inclusion conference. The linked page has not yet been updated with the 2026 details.
-    status: tentative
-    sequence: 0
-    last_verified: "2026-08-16"
+    url: https://abilitynet.org.uk/TechSharePro
+    description: An accessibility and disability inclusion conference covering artificial intelligence, financial inclusion and organisational change, with free live online attendance.
+    status: confirmed
+    sequence: 1
+    last_verified: "2026-10-08"
 
   - id: accessibleeu-26-ws-es-01
     name: "AccessibleEU Spain: Information session on the European Accessibility Act and the AccessibleEU European Accessibility Resource Centre"
@@ -1975,21 +1975,192 @@ conferences:
     sequence: 0
     last_verified: "2026-09-08"
 
+  - id: wordpress-accessibility-day-2026
+    name: WordPress Accessibility Day 2026
+    start_date: "2026-10-07"
+    end_date: "2026-10-08"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    organizer: WP Accessibility Day
+    url: https://wpaccessibility.day/2026/
+    description: A free 24-hour online conference about website accessibility best practices for WordPress developers, designers and content creators.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: gaconf-usa-2026
+    name: GAConf USA 2026
+    start_date: "2026-10-19"
+    end_date: "2026-10-20"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    organizer: IGDA Game Accessibility Special Interest Group
+    url: https://www.gaconf.com/conference/
+    description: A free online conference about game accessibility, with talks, case studies, panels and networking for developers, publishers and disabled players.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: ataac-2026
+    name: ATAAC 2026
+    start_date: "2026-10-21"
+    end_date: "2026-10-22"
+    location: Mozaik Event Center, Zagreb, Croatia and online
+    country_code: "HR"
+    attendance:
+      onsite: true
+      online: true
+    url: https://www.ataac.eu/
+    description: A conference about assistive technology and augmentative and alternative communication, combining professional and scientific programmes. The professional programme offers live online streaming in English.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: a11yto-conf-2026
+    name: a11yTO Conf 2026
+    start_date: "2026-10-22"
+    end_date: "2026-10-23"
+    location: CBC Barbara Frum Atrium, Toronto, Ontario, Canada and online
+    country_code: "CA"
+    attendance:
+      onsite: true
+      online: true
+    organizer: a11yTO
+    url: https://conf.a11yto.com/
+    description: A digital accessibility conference featuring technical talks with practical takeaways, demonstrations and community networking.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: accessibility-dial-2026
+    name: The Accessibility Dial 2026
+    start_date: "2026-11-12"
+    end_date: "2026-11-12"
+    location: Workday, Kings Building, 152-155 Church Street, Dublin, Ireland
+    country_code: "IE"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Irish Accessibility Networking Group and Accessibility Ireland
+    url: https://www.accessibilityireland.com/conference
+    description: A conference about digital inclusion, accessible design, development and testing, bringing together accessibility leaders, practitioners and advocates.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: breaking-barriers-congress-2026
+    name: Breaking Barriers Congress 2026
+    start_date: "2026-11-12"
+    end_date: "2026-11-13"
+    location: Campus Ciutadella, Pompeu Fabra University, Barcelona, Spain
+    country_code: "ES"
+    attendance:
+      onsite: true
+      online: false
+    url: https://bbcbarcelona.com/en/
+    description: A congress about assistive technology and augmentative and alternative communication, including cognitive accessibility, inclusive leisure and independent living.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: accessing-higher-ground-2026
+    name: Accessing Higher Ground 2026
+    start_date: "2026-11-16"
+    end_date: "2026-11-20"
+    location: Hilton Denver City Center, Denver, Colorado, United States and online
+    country_code: "US"
+    attendance:
+      onsite: true
+      online: true
+    organizer: AHEAD, in collaboration with ATHEN
+    url: https://accessinghigherground.org/
+    description: An accessible media, web and technology conference, with pre-conference workshops on 16-17 November and the main conference on 18-20 November. Live online attendance is available for selected sessions and workshops.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: canadian-disability-tech-summit-2026
+    name: Canadian Disability Tech Summit 2026
+    start_date: "2026-11-18"
+    end_date: "2026-11-18"
+    location: Automotive Building, Exhibition Place, Toronto, Ontario, Canada
+    country_code: "CA"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Access to Success
+    url: https://accesstosuccess.ca/summit/
+    description: A conference about assistive technology and disability innovation, bringing together accessibility startups, researchers, practitioners, policymakers and people with disabilities.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: a11y-camp-2026
+    name: A11y Camp 2026
+    start_date: "2026-11-23"
+    end_date: "2026-11-25"
+    location: ICC Sydney, Sydney, Australia and online
+    country_code: "AU"
+    attendance:
+      onsite: true
+      online: true
+    organizer: A11y Bytes
+    url: https://a11ycamp.com.au/
+    description: A digital accessibility and inclusion conference covering design, development, content, policy and strategy. The hybrid conference runs on 23-24 November, followed by workshops on 25 November.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: era-rights-persons-disabilities-2026
+    name: Annual Conference on the Rights of Persons with Disabilities in the EU 2026
+    start_date: "2026-11-25"
+    end_date: "2026-11-27"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    language: English
+    organizer: Academy of European Law
+    url: https://www.era.int/event/annual-conference-on-the-rights-of-persons-with-disabilities-in-the-eu-2026/
+    description: An online conference about disability rights, including enforcement of the European Accessibility Act, equality and automated decision-making in welfare.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: sight-tech-global-2026
+    name: Sight Tech Global 2026
+    start_date: "2026-12-08"
+    end_date: "2026-12-09"
+    location: Online
+    attendance:
+      onsite: false
+      online: true
+    organizer: Vista Center for the Blind and Visually Impaired
+    url: https://sighttechglobal.com/
+    description: A free online conference about emerging technologies, artificial intelligence and assistive technology for people who are blind or have low vision.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
   - id: abilities-international-accessibility-conference-los-angeles-2027
     name: Abilities International Accessibility Conference Los Angeles 2027
-    start_date: "2027-01-13"
-    end_date: "2027-01-14"
+    start_date: "2027-01-14"
+    end_date: "2027-01-15"
     location: Long Beach, California, United States
     country_code: "US"
     attendance:
       onsite: true
       online: false
     organizer: Abilities Expo
-    url: https://www.abilities.com/los-angeles
+    url: https://www.abilitiesconference.com/
     description: A professional conference about complex rehabilitation technology, assistive technology and adaptive living, co-located with Abilities Expo.
     status: confirmed
-    sequence: 0
-    last_verified: "2026-09-12"
+    sequence: 1
+    last_verified: "2026-10-08"
 
   - id: apa-national-conference-2027
     name: APA National Conference 2027
@@ -2133,6 +2304,74 @@ conferences:
     status: confirmed
     sequence: 0
     last_verified: "2026-09-12"
+
+  - id: perth-digital-accessibility-conference-2027
+    name: Perth Digital Accessibility Conference 2027
+    start_date: "2027-02-11"
+    end_date: "2027-02-11"
+    start_time: "08:30"
+    end_time: "16:30"
+    time_zone: Australia/Perth
+    location: Edith Cowan University City Campus, Perth, Australia and online
+    country_code: "AU"
+    attendance:
+      onsite: true
+      online: true
+    organizer: Perth Digital A11y Group
+    url: https://events.humanitix.com/perth-digital-accessibility-conference-2027
+    description: A digital accessibility conference about breaking generational barriers, including accessible design, inclusive content, assistive technology and accessibility testing.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: access-given-2027
+    name: Access:Given 2027
+    start_date: "2027-04-28"
+    end_date: "2027-04-28"
+    start_time: "09:30"
+    end_time: "16:30"
+    time_zone: Europe/London
+    location: Catalyst Building, Helix, Newcastle upon Tyne, United Kingdom
+    country_code: "GB"
+    attendance:
+      onsite: true
+      online: false
+    url: https://accessgiven.co.uk/
+    description: A one-day digital accessibility conference for people designing, building and creating digital experiences.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: web4all-2027
+    name: Web4All 2027
+    start_date: "2027-05-10"
+    end_date: "2027-05-11"
+    location: Dublin, Ireland
+    country_code: "IE"
+    attendance:
+      onsite: true
+      online: false
+    url: https://www.w4a.info/2027/call-for-papers/
+    description: The 24th International Web for All Conference, focused on web accessibility research and co-located with The ACM Web Conference.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
+
+  - id: round-table-conference-2027
+    name: Round Table Conference 2027
+    start_date: "2027-05-22"
+    end_date: "2027-05-25"
+    location: Sydney, Australia
+    country_code: "AU"
+    attendance:
+      onsite: true
+      online: false
+    organizer: Round Table on Information Access for People with Print Disabilities
+    url: https://printdisability.org/conference/
+    description: A conference about accessible information for people with print disabilities, with the theme Access in Action and a focus on digital and tactile access.
+    status: confirmed
+    sequence: 0
+    last_verified: "2026-10-08"
 
   - id: a-tag-2027
     name: A-Tag 2027

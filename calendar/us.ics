@@ -74,19 +74,38 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:accessing-higher-ground-2026@nordic-accessibility-community-group.githu
+ b.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261121
+SUMMARY:Accessing Higher Ground 2026
+DESCRIPTION:An accessible media\, web and technology conference\, with pre-
+ conference workshops on 16-17 November and the main conference on 18-20 No
+ vember. Live online attendance is available for selected sessions and work
+ shops.\nAttendance: Hybrid\nOrganizer: AHEAD\, in collaboration with ATHEN
+LOCATION:Hilton Denver City Center\, Denver\, Colorado\, United States and
+  online
+URL:https://accessinghigherground.org/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:abilities-international-accessibility-conference-los-angeles-2027@nordi
  c-accessibility-community-group.github.io
-DTSTAMP:20260912T000000Z
-LAST-MODIFIED:20260912T000000Z
-SEQUENCE:0
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270115
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270116
 SUMMARY:Abilities International Accessibility Conference Los Angeles 2027
 DESCRIPTION:A professional conference about complex rehabilitation technolo
  gy\, assistive technology and adaptive living\, co-located with Abilities
   Expo.\nAttendance: In person\nOrganizer: Abilities Expo
 LOCATION:Long Beach\, California\, United States
-URL:https://www.abilities.com/los-angeles
+URL:https://www.abilitiesconference.com/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

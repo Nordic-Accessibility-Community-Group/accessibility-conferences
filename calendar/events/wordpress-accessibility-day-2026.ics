@@ -9,17 +9,19 @@ X-WR-CALDESC:Accessibility\, assistive technology\, universal design and in
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:assets-2026@nordic-accessibility-community-group.github.io
+UID:wordpress-accessibility-day-2026@nordic-accessibility-community-group.g
+ ithub.io
 DTSTAMP:20261008T000000Z
 LAST-MODIFIED:20261008T000000Z
-SEQUENCE:1
-DTSTART;VALUE=DATE:20261025
-DTEND;VALUE=DATE:20261029
-SUMMARY:ASSETS 2026
-DESCRIPTION:An academic conference about computing and accessibility.\nAtte
- ndance: Hybrid\nOrganizer: ACM SIGACCESS
-LOCATION:Porto\, Portugal and online
-URL:https://assets26.sigaccess.org
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261009
+SUMMARY:WordPress Accessibility Day 2026
+DESCRIPTION:A free 24-hour online conference about website accessibility be
+ st practices for WordPress developers\, designers and content creators.\nA
+ ttendance: Online\nOrganizer: WP Accessibility Day
+LOCATION:Online
+URL:https://wpaccessibility.day/2026/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

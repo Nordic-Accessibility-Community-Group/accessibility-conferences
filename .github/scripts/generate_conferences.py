@@ -63,9 +63,11 @@ EU_COUNTRY_CODES = {
     "SE",
 }
 COUNTRY_FILTER_LABELS = {
+    "AU": "Australia",
     "AT": "Austria",
     "BE": "Belgium",
     "BG": "Bulgaria",
+    "CA": "Canada",
     "HR": "Croatia",
     "CY": "Cyprus",
     "CZ": "Czech Republic",

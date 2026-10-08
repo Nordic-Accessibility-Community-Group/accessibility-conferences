@@ -1470,6 +1470,23 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ataac-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261023
+SUMMARY:ATAAC 2026
+DESCRIPTION:A conference about assistive technology and augmentative and al
+ ternative communication\, combining professional and scientific programmes
+ . The professional programme offers live online streaming in English.\nAtt
+ endance: Hybrid
+LOCATION:Mozaik Event Center\, Zagreb\, Croatia and online
+URL:https://www.ataac.eu/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:accessibleeu-26-ws-de-01@nordic-accessibility-community-group.github.io
 DTSTAMP:20260908T000000Z
 LAST-MODIFIED:20260908T000000Z
@@ -1488,15 +1505,15 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:assets-2026@nordic-accessibility-community-group.github.io
-DTSTAMP:20260816T000000Z
-LAST-MODIFIED:20260816T000000Z
-SEQUENCE:0
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261025
 DTEND;VALUE=DATE:20261029
 SUMMARY:ASSETS 2026
 DESCRIPTION:An academic conference about computing and accessibility.\nAtte
- ndance: In person\nOrganizer: ACM SIGACCESS
-LOCATION:Porto\, Portugal
+ ndance: Hybrid\nOrganizer: ACM SIGACCESS
+LOCATION:Porto\, Portugal and online
 URL:https://assets26.sigaccess.org
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
@@ -1574,6 +1591,41 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:breaking-barriers-congress-2026@nordic-accessibility-community-group.gi
+ thub.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261114
+SUMMARY:Breaking Barriers Congress 2026
+DESCRIPTION:A congress about assistive technology and augmentative and alte
+ rnative communication\, including cognitive accessibility\, inclusive leis
+ ure and independent living.\nAttendance: In person
+LOCATION:Campus Ciutadella\, Pompeu Fabra University\, Barcelona\, Spain
+URL:https://bbcbarcelona.com/en/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:accessibility-dial-2026@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:The Accessibility Dial 2026
+DESCRIPTION:A conference about digital inclusion\, accessible design\, deve
+ lopment and testing\, bringing together accessibility leaders\, practition
+ ers and advocates.\nAttendance: In person\nOrganizer: Irish Accessibility
+  Networking Group and Accessibility Ireland
+LOCATION:Workday\, Kings Building\, 152-155 Church Street\, Dublin\, Irelan
+ d
+URL:https://www.accessibilityireland.com/conference
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:european-accessibility-summit-2026@nordic-accessibility-community-group
  .github.io
 DTSTAMP:20260909T000000Z
@@ -1622,6 +1674,22 @@ DESCRIPTION:An international academic conference about universal accessibil
  on\nOrganizer: IARIA
 LOCATION:Lisbon\, Portugal
 URL:https://www.iaria.org/conferences2027/SMARTACCESSIBILITY27.html
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:web4all-2027@nordic-accessibility-community-group.github.io
+DTSTAMP:20261008T000000Z
+LAST-MODIFIED:20261008T000000Z
+SEQUENCE:0
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270512
+SUMMARY:Web4All 2027
+DESCRIPTION:The 24th International Web for All Conference\, focused on web
+  accessibility research and co-located with The ACM Web Conference.\nAtten
+ dance: In person
+LOCATION:Dublin\, Ireland
+URL:https://www.w4a.info/2027/call-for-papers/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
